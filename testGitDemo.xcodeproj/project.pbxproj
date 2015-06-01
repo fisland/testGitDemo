@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13BCFB551B1C9FF100FCC87C /* JFPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCFB541B1C9FF100FCC87C /* JFPopView.m */; };
 		13C06F951B1B635F003773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F941B1B635F003773AB /* main.m */; };
 		13C06F981B1B635F003773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F971B1B635F003773AB /* AppDelegate.m */; };
 		13C06F9B1B1B635F003773AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F9A1B1B635F003773AB /* ViewController.m */; };
@@ -15,7 +14,6 @@
 		13C06FA01B1B635F003773AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C06F9F1B1B635F003773AB /* Images.xcassets */; };
 		13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C06FA11B1B635F003773AB /* LaunchScreen.xib */; };
 		13C06FAF1B1B635F003773AB /* testGitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06FAE1B1B635F003773AB /* testGitDemoTests.m */; };
-		39C565611B1CA19600AEC09E /* WJHotView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39C5655F1B1CA19600AEC09E /* WJHotView.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13BCFB531B1C9FF100FCC87C /* JFPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFPopView.h; sourceTree = "<group>"; };
-		13BCFB541B1C9FF100FCC87C /* JFPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFPopView.m; sourceTree = "<group>"; };
 		13C06F8F1B1B635F003773AB /* testGitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testGitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C06F931B1B635F003773AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C06F941B1B635F003773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,8 +40,6 @@
 		13C06FA81B1B635F003773AB /* testGitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testGitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C06FAD1B1B635F003773AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C06FAE1B1B635F003773AB /* testGitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGitDemoTests.m; sourceTree = "<group>"; };
-		39C5655F1B1CA19600AEC09E /* WJHotView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WJHotView.cpp; sourceTree = "<group>"; };
-		39C565601B1CA19600AEC09E /* WJHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +85,6 @@
 				13C06F971B1B635F003773AB /* AppDelegate.m */,
 				13C06F991B1B635F003773AB /* ViewController.h */,
 				13C06F9A1B1B635F003773AB /* ViewController.m */,
-				13BCFB531B1C9FF100FCC87C /* JFPopView.h */,
-				13BCFB541B1C9FF100FCC87C /* JFPopView.m */,
-				39C5655F1B1CA19600AEC09E /* WJHotView.cpp */,
-				39C565601B1CA19600AEC09E /* WJHotView.h */,
 				13C06F9C1B1B635F003773AB /* Main.storyboard */,
 				13C06F9F1B1B635F003773AB /* Images.xcassets */,
 				13C06FA11B1B635F003773AB /* LaunchScreen.xib */,
@@ -229,8 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39C565611B1CA19600AEC09E /* WJHotView.cpp in Sources */,
-				13BCFB551B1C9FF100FCC87C /* JFPopView.m in Sources */,
 				13C06F9B1B1B635F003773AB /* ViewController.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
 				13C06F951B1B635F003773AB /* main.m in Sources */,
@@ -430,7 +418,6 @@
 				13C06FB41B1B635F003773AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		13C06FB51B1B635F003773AB /* Build configuration list for PBXNativeTarget "testGitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -439,7 +426,6 @@
 				13C06FB71B1B635F003773AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
