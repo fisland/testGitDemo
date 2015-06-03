@@ -1,0 +1,2 @@
+platform :ios
+pod 'JTRevealSidebarDemo', '~> 2.2.1'

@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "MainView.h"
+#import "TWTSideMenuViewController.h"
+#import "WJMenuView.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <TWTSideMenuViewControllerDelegate>
+
+@property (nonatomic, strong) TWTSideMenuViewController *sideMenuView;
+@property (nonatomic, strong) WJMenuView *menuView;
 
 @end
 
@@ -16,6 +22,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    MainView *main = [[MainView alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:main];
+    self.menuView = [[WJMenuView alloc] init];
+    
+    self.sideMenuView =  [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuView mainViewController:nav];
+    self.sideMenuView.shadowColor = [UIColor blackColor];
+    self.sideMenuView.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+    self.sideMenuView.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+    self.sideMenuView.delegate = self;
+    
+    self.window.rootViewController = self.sideMenuView;
+    
     // Override point for customization after application launch.
     return YES;
 }

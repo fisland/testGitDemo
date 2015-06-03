@@ -1,0 +1,10 @@
+PODS:
+  - JTRevealSidebarDemo (2.2.1)
+
+DEPENDENCIES:
+  - JTRevealSidebarDemo (~> 2.2.1)
+
+SPEC CHECKSUMS:
+  JTRevealSidebarDemo: e316c3209f5eef17b11e57d601b8cbfd8b1dd74c
+
+COCOAPODS: 0.37.2

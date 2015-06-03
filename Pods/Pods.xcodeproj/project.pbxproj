@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10D2D7079D5D907D115030F3 /* UINavigationItem+JTRevealSidebarV2.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD908BDDC5EC1E68CFEF03B /* UINavigationItem+JTRevealSidebarV2.h */; };
+		3EE9AF6765C1BF05BC1F6743 /* UIViewController+JTRevealSidebarV2.m in Sources */ = {isa = PBXBuildFile; fileRef = A982433177EAB69D8D184908 /* UIViewController+JTRevealSidebarV2.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		546630ABF17E05B9EBB41F81 /* UIViewController+JTRevealSidebarV2.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6B59004EE90DC3310A8280 /* UIViewController+JTRevealSidebarV2.h */; };
+		64928F1E214D29FC4CCEFE2D /* Pods-JTRevealSidebarDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 916F9383226FDAC00FD69A93 /* Pods-JTRevealSidebarDemo-dummy.m */; };
+		6FDEC2E6B860715AF1FAAD65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D7A5A09E2F9EAC7D2E1044 /* Foundation.framework */; };
+		720A998DD8E85F5A7806A1CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0893C10BA2E1740FC8BFBC /* QuartzCore.framework */; };
+		86C2447C7F174F4A420D0AA1 /* UINavigationItem+JTRevealSidebarV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBCB78326008C9C93CD7E6A /* UINavigationItem+JTRevealSidebarV2.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A9BFEA64A704CF09862171C8 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C0B09CADAF006CB622A36D /* Pods-dummy.m */; };
+		B8AB3051CD6ED1B30851E33B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D7A5A09E2F9EAC7D2E1044 /* Foundation.framework */; };
+		F8FB812A13D8E3198962E30E /* JTRevealSidebarV2Delegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E5365CCD7DAC4B540E95D9 /* JTRevealSidebarV2Delegate.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9C37692B7415DA7EA875154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D776A7D66A0D967D3F16193D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6807FED296B4D80B579041F3;
+			remoteInfo = "Pods-JTRevealSidebarDemo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14BC3AB38F404CF7BA637056 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		2CAA7114134A6A1C4AA9DD55 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		463B0D34DF535CA449A41AAF /* libPods-JTRevealSidebarDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTRevealSidebarDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FBCB78326008C9C93CD7E6A /* UINavigationItem+JTRevealSidebarV2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+JTRevealSidebarV2.m"; path = "JTRevealSidebarV2/UINavigationItem+JTRevealSidebarV2.m"; sourceTree = "<group>"; };
+		77C59CAD74A880E256522059 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7B6B59004EE90DC3310A8280 /* UIViewController+JTRevealSidebarV2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JTRevealSidebarV2.h"; path = "JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.h"; sourceTree = "<group>"; };
+		7BD908BDDC5EC1E68CFEF03B /* UINavigationItem+JTRevealSidebarV2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+JTRevealSidebarV2.h"; path = "JTRevealSidebarV2/UINavigationItem+JTRevealSidebarV2.h"; sourceTree = "<group>"; };
+		916F9383226FDAC00FD69A93 /* Pods-JTRevealSidebarDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JTRevealSidebarDemo-dummy.m"; sourceTree = "<group>"; };
+		A92DF901452EA302D2037ED0 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		A982433177EAB69D8D184908 /* UIViewController+JTRevealSidebarV2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JTRevealSidebarV2.m"; path = "JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.m"; sourceTree = "<group>"; };
+		C8F5C4A60F14010ECDADAC3F /* Pods-JTRevealSidebarDemo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JTRevealSidebarDemo-prefix.pch"; sourceTree = "<group>"; };
+		D1CB41764A2407E6211FD491 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D7A5A09E2F9EAC7D2E1044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DAA68C57BC1B319B69E259E7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DFAECFEC04F668EA0C3637F2 /* Pods-JTRevealSidebarDemo-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JTRevealSidebarDemo-Private.xcconfig"; sourceTree = "<group>"; };
+		E2BC4FA0914BBD7A4E782060 /* Pods-JTRevealSidebarDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JTRevealSidebarDemo.xcconfig"; sourceTree = "<group>"; };
+		F6C0B09CADAF006CB622A36D /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		F7E5365CCD7DAC4B540E95D9 /* JTRevealSidebarV2Delegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTRevealSidebarV2Delegate.h; path = JTRevealSidebarV2/JTRevealSidebarV2Delegate.h; sourceTree = "<group>"; };
+		FAA8BD17EADE27938CD9B8DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		FE40E0D70F6411379630DB76 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		FF0893C10BA2E1740FC8BFBC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05A46DD11E914995E7E6AF5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8AB3051CD6ED1B30851E33B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66143DA3DED206B8B168F363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FDEC2E6B860715AF1FAAD65 /* Foundation.framework in Frameworks */,
+				720A998DD8E85F5A7806A1CE /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40960DCAA3BBD07F544B65D8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E13C6C9DD38238443A93148D /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4AEC1A55AF8908F137787E8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F796D857F3548F653EBA1FCA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7650A301FF715F10336E62A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1CB41764A2407E6211FD491 /* libPods.a */,
+				463B0D34DF535CA449A41AAF /* libPods-JTRevealSidebarDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96A17B42723D2D5A8E1A62A4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2BC4FA0914BBD7A4E782060 /* Pods-JTRevealSidebarDemo.xcconfig */,
+				DFAECFEC04F668EA0C3637F2 /* Pods-JTRevealSidebarDemo-Private.xcconfig */,
+				916F9383226FDAC00FD69A93 /* Pods-JTRevealSidebarDemo-dummy.m */,
+				C8F5C4A60F14010ECDADAC3F /* Pods-JTRevealSidebarDemo-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-JTRevealSidebarDemo";
+			sourceTree = "<group>";
+		};
+		B0338C8E0214C4EF0E4914C3 /* JTRevealSidebarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F7E5365CCD7DAC4B540E95D9 /* JTRevealSidebarV2Delegate.h */,
+				7BD908BDDC5EC1E68CFEF03B /* UINavigationItem+JTRevealSidebarV2.h */,
+				4FBCB78326008C9C93CD7E6A /* UINavigationItem+JTRevealSidebarV2.m */,
+				7B6B59004EE90DC3310A8280 /* UIViewController+JTRevealSidebarV2.h */,
+				A982433177EAB69D8D184908 /* UIViewController+JTRevealSidebarV2.m */,
+				96A17B42723D2D5A8E1A62A4 /* Support Files */,
+			);
+			path = JTRevealSidebarDemo;
+			sourceTree = "<group>";
+		};
+		C25F24B1AFDBB90B45EA1D8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0338C8E0214C4EF0E4914C3 /* JTRevealSidebarDemo */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D3D7083663E6603B5ECB149C = {
+			isa = PBXGroup;
+			children = (
+				DAA68C57BC1B319B69E259E7 /* Podfile */,
+				4AEC1A55AF8908F137787E8C /* Frameworks */,
+				C25F24B1AFDBB90B45EA1D8D /* Pods */,
+				7650A301FF715F10336E62A1 /* Products */,
+				40960DCAA3BBD07F544B65D8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E13C6C9DD38238443A93148D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77C59CAD74A880E256522059 /* Pods-acknowledgements.markdown */,
+				2CAA7114134A6A1C4AA9DD55 /* Pods-acknowledgements.plist */,
+				F6C0B09CADAF006CB622A36D /* Pods-dummy.m */,
+				14BC3AB38F404CF7BA637056 /* Pods-environment.h */,
+				A92DF901452EA302D2037ED0 /* Pods-resources.sh */,
+				FE40E0D70F6411379630DB76 /* Pods.debug.xcconfig */,
+				FAA8BD17EADE27938CD9B8DD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		F796D857F3548F653EBA1FCA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D8D7A5A09E2F9EAC7D2E1044 /* Foundation.framework */,
+				FF0893C10BA2E1740FC8BFBC /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B46036351F43248C9283B98 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8FB812A13D8E3198962E30E /* JTRevealSidebarV2Delegate.h in Headers */,
+				10D2D7079D5D907D115030F3 /* UINavigationItem+JTRevealSidebarV2.h in Headers */,
+				546630ABF17E05B9EBB41F81 /* UIViewController+JTRevealSidebarV2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3345C7528CA966DDEF423008 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F473939AFF44ABC38965CDC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				0B6891FE67683A73E07905F1 /* Sources */,
+				05A46DD11E914995E7E6AF5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEA63CD8584435B639573B0C /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = D1CB41764A2407E6211FD491 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6807FED296B4D80B579041F3 /* Pods-JTRevealSidebarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 326B62917A416154EE49BF4B /* Build configuration list for PBXNativeTarget "Pods-JTRevealSidebarDemo" */;
+			buildPhases = (
+				0E113A1C5380194E3217931B /* Sources */,
+				66143DA3DED206B8B168F363 /* Frameworks */,
+				0B46036351F43248C9283B98 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JTRevealSidebarDemo";
+			productName = "Pods-JTRevealSidebarDemo";
+			productReference = 463B0D34DF535CA449A41AAF /* libPods-JTRevealSidebarDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D776A7D66A0D967D3F16193D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 866AD6980D70D51F979813F6 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D3D7083663E6603B5ECB149C;
+			productRefGroup = 7650A301FF715F10336E62A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3345C7528CA966DDEF423008 /* Pods */,
+				6807FED296B4D80B579041F3 /* Pods-JTRevealSidebarDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B6891FE67683A73E07905F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9BFEA64A704CF09862171C8 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E113A1C5380194E3217931B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64928F1E214D29FC4CCEFE2D /* Pods-JTRevealSidebarDemo-dummy.m in Sources */,
+				86C2447C7F174F4A420D0AA1 /* UINavigationItem+JTRevealSidebarV2.m in Sources */,
+				3EE9AF6765C1BF05BC1F6743 /* UIViewController+JTRevealSidebarV2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEA63CD8584435B639573B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JTRevealSidebarDemo";
+			target = 6807FED296B4D80B579041F3 /* Pods-JTRevealSidebarDemo */;
+			targetProxy = F9C37692B7415DA7EA875154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		067888953C2EDF8B8CBB343B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA8BD17EADE27938CD9B8DD /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2ACA81DC79CA23F917D9F116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE40E0D70F6411379630DB76 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		34BB25A6319E895C0638158B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAECFEC04F668EA0C3637F2 /* Pods-JTRevealSidebarDemo-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JTRevealSidebarDemo/Pods-JTRevealSidebarDemo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		60B822FD6BE69E8894604F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7D4B2E27DF7B1D4E90D8D8A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAECFEC04F668EA0C3637F2 /* Pods-JTRevealSidebarDemo-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JTRevealSidebarDemo/Pods-JTRevealSidebarDemo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		816749E2C077FEBFF11AEE6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		326B62917A416154EE49BF4B /* Build configuration list for PBXNativeTarget "Pods-JTRevealSidebarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D4B2E27DF7B1D4E90D8D8A8 /* Debug */,
+				34BB25A6319E895C0638158B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		866AD6980D70D51F979813F6 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60B822FD6BE69E8894604F0C /* Debug */,
+				816749E2C077FEBFF11AEE6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F473939AFF44ABC38965CDC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ACA81DC79CA23F917D9F116 /* Debug */,
+				067888953C2EDF8B8CBB343B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D776A7D66A0D967D3F16193D /* Project object */;
+}
