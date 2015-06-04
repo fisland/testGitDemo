@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8BB1B2097A400EC2AFE /* LoginVC.m */; };
+		13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8BE1B2097C300EC2AFE /* RegistVC.m */; };
 		13C06F951B1B635F003773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F941B1B635F003773AB /* main.m */; };
 		13C06F981B1B635F003773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F971B1B635F003773AB /* AppDelegate.m */; };
 		13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C06F9C1B1B635F003773AB /* Main.storyboard */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13BCE8BA1B2097A400EC2AFE /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		13BCE8BB1B2097A400EC2AFE /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		13BCE8BD1B2097C300EC2AFE /* RegistVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
+		13BCE8BE1B2097C300EC2AFE /* RegistVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
 		13C06F8F1B1B635F003773AB /* testGitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testGitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C06F931B1B635F003773AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C06F941B1B635F003773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +103,102 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		13BCE8B61B20965400EC2AFE /* thirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				39A525941B1F5C1600BD773F /* LeafMenuViewController */,
+			);
+			name = thirdPart;
+			sourceTree = "<group>";
+		};
+		13BCE8B71B20967300EC2AFE /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		13BCE8B81B20974900EC2AFE /* ViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				13BCE8B91B20976500EC2AFE /* LoginAndRegist */,
+				39A5259E1B1F601300BD773F /* MenuVC */,
+			);
+			name = ViewControl;
+			sourceTree = "<group>";
+		};
+		13BCE8B91B20976500EC2AFE /* LoginAndRegist */ = {
+			isa = PBXGroup;
+			children = (
+				13BCE8C11B2097DD00EC2AFE /* loginVC */,
+				13BCE8C01B2097CA00EC2AFE /* regisetVC */,
+			);
+			name = LoginAndRegist;
+			sourceTree = "<group>";
+		};
+		13BCE8C01B2097CA00EC2AFE /* regisetVC */ = {
+			isa = PBXGroup;
+			children = (
+				13BCE8BD1B2097C300EC2AFE /* RegistVC.h */,
+				13BCE8BE1B2097C300EC2AFE /* RegistVC.m */,
+			);
+			name = regisetVC;
+			sourceTree = "<group>";
+		};
+		13BCE8C11B2097DD00EC2AFE /* loginVC */ = {
+			isa = PBXGroup;
+			children = (
+				13BCE8BA1B2097A400EC2AFE /* LoginVC.h */,
+				13BCE8BB1B2097A400EC2AFE /* LoginVC.m */,
+			);
+			name = loginVC;
+			sourceTree = "<group>";
+		};
+		13BCE8C21B20988300EC2AFE /* Individual */ = {
+			isa = PBXGroup;
+			children = (
+				39A5259F1B1F608E00BD773F /* IndividualVC.h */,
+				39A525A01B1F608E00BD773F /* IndividualVC.m */,
+			);
+			name = Individual;
+			sourceTree = "<group>";
+		};
+		13BCE8C31B20988A00EC2AFE /* pay */ = {
+			isa = PBXGroup;
+			children = (
+				39A525A21B1F609F00BD773F /* PayVC.h */,
+				39A525A31B1F609F00BD773F /* PayVC.m */,
+			);
+			name = pay;
+			sourceTree = "<group>";
+		};
+		13BCE8C41B20989000EC2AFE /* sale */ = {
+			isa = PBXGroup;
+			children = (
+				39A525A51B1F60F500BD773F /* SaleVC.h */,
+				39A525A61B1F60F500BD773F /* SaleVC.m */,
+			);
+			name = sale;
+			sourceTree = "<group>";
+		};
+		13BCE8C51B20989700EC2AFE /* share */ = {
+			isa = PBXGroup;
+			children = (
+				39A525A81B1F610900BD773F /* ShareVC.h */,
+				39A525A91B1F610900BD773F /* ShareVC.m */,
+			);
+			name = share;
+			sourceTree = "<group>";
+		};
+		13BCE8C61B2098A800EC2AFE /* help */ = {
+			isa = PBXGroup;
+			children = (
+				39A525AB1B1F611500BD773F /* HelpVC.h */,
+				39A525AC1B1F611500BD773F /* HelpVC.m */,
+			);
+			name = help;
+			sourceTree = "<group>";
+		};
 		13C06F861B1B635F003773AB = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +222,10 @@
 		13C06F911B1B635F003773AB /* testGitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				13BCE8B71B20967300EC2AFE /* model */,
 				399161931B1F507900F1751D /* Image */,
-				39A525941B1F5C1600BD773F /* LeafMenuViewController */,
-				39A5259E1B1F601300BD773F /* MenuVC */,
+				13BCE8B61B20965400EC2AFE /* thirdPart */,
+				13BCE8B81B20974900EC2AFE /* ViewControl */,
 				13C06F961B1B635F003773AB /* AppDelegate.h */,
 				13C06F971B1B635F003773AB /* AppDelegate.m */,
 				39E88BDA1B1F361100CF1C7E /* MainView.h */,
@@ -191,16 +294,11 @@
 		39A5259E1B1F601300BD773F /* MenuVC */ = {
 			isa = PBXGroup;
 			children = (
-				39A5259F1B1F608E00BD773F /* IndividualVC.h */,
-				39A525A01B1F608E00BD773F /* IndividualVC.m */,
-				39A525A21B1F609F00BD773F /* PayVC.h */,
-				39A525A31B1F609F00BD773F /* PayVC.m */,
-				39A525A51B1F60F500BD773F /* SaleVC.h */,
-				39A525A61B1F60F500BD773F /* SaleVC.m */,
-				39A525A81B1F610900BD773F /* ShareVC.h */,
-				39A525A91B1F610900BD773F /* ShareVC.m */,
-				39A525AB1B1F611500BD773F /* HelpVC.h */,
-				39A525AC1B1F611500BD773F /* HelpVC.m */,
+				13BCE8C21B20988300EC2AFE /* Individual */,
+				13BCE8C31B20988A00EC2AFE /* pay */,
+				13BCE8C41B20989000EC2AFE /* sale */,
+				13BCE8C51B20989700EC2AFE /* share */,
+				13BCE8C61B2098A800EC2AFE /* help */,
 			);
 			name = MenuVC;
 			sourceTree = "<group>";
@@ -345,8 +443,10 @@
 				39A525AD1B1F611500BD773F /* HelpVC.m in Sources */,
 				39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */,
 				39A525A71B1F60F500BD773F /* SaleVC.m in Sources */,
+				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
+				13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */,
 				39A525A41B1F609F00BD773F /* PayVC.m in Sources */,
 				13C06F951B1B635F003773AB /* main.m in Sources */,
 				39A525AA1B1F610900BD773F /* ShareVC.m in Sources */,
