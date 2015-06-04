@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainView.h"
+#import "WJMenuView.h"
 
 @interface AppDelegate ()
 
@@ -20,11 +21,26 @@
     
     MainView *main = [[MainView alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:main];
-
-    self.window.rootViewController = nav;
+    WJMenuView *menu = [[WJMenuView alloc] init];
+    UINavigationController *menuNav = [[UINavigationController alloc] initWithRootViewController:menu];
+    
+    self.leafMenu = [[LeafMenuViewController alloc] initWithLeftVC:menuNav centerVCs:@[nav]];
+    self.leafMenu.shadow = YES;
+    self.leafMenu.springAnimation = NO;
+    
+    self.window.rootViewController = self.leafMenu;
     
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)openMenu {
+//    [self.leafMenu openAtIndex:0 animated:YES];
+    [self.leafMenu closeWithAnimation:YES];
+}
+
+- (void)closeMenu {
+    [self.leafMenu openAtIndex:0 animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@class LeafMenuViewController;
+
 //#import <pop/POP.h>
 @interface LeafMenuViewController : UIViewController<UIGestureRecognizerDelegate>
 @property(nonatomic,strong) UIViewController *leftVC;
@@ -41,5 +44,11 @@
  *  @param animated
  */
 -(void)closeWithAnimation:(BOOL)animated;
+
+@end
+
+@interface UIViewController (LeafMenuViewController)
+
+@property (nonatomic, weak) LeafMenuViewController *leafMenuViewController;
 
 @end

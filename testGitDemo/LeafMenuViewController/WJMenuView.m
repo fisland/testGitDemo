@@ -7,10 +7,18 @@
 //
 
 #import "WJMenuView.h"
+#import "IndividualVC.h"
+#import "PayVC.h"
+#import "SaleVC.h"
+#import "ShareVC.h"
+#import "HelpVC.h"
 
 @interface WJMenuView ()<UITableViewDataSource, UITableViewDelegate>
 {
     UITableView * leftTableView;
+    NSArray * names;
+    NSArray * imgNames;
+    NSInteger currentRow;
 }
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
@@ -22,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     leftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height) style:(UITableViewStylePlain)];
     leftTableView.delegate = self;
     leftTableView.dataSource = self;
@@ -36,33 +45,85 @@
 }
 
 -(void)setTheHeaderView {
-    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
     //view.backgroundColor = [UIColor redColor];
     UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 5, 40, 40)];
     imgView.layer.cornerRadius = 20;
     imgView.clipsToBounds = YES;
-    [imgView setImageWithURL:[NSURL URLWithString:@"http://imgcdn.guoku.com/avatar/large/bd7679e7adfc7c61ff463610338e4981"]];
+    imgView.image = [UIImage imageNamed:@"dog.png"];
     [view addSubview:imgView];
     
-    UILabel * nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 10, 90, 40)];
-    nameLabel.text = @"枫island";
+    UILabel * nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 10, 150, 40)];
+    nameLabel.text = @"French Bulldog";
     nameLabel.font = [UIFont fontWithName:@"Arial" size:15];
     nameLabel.textColor = [UIColor darkGrayColor];
     [view addSubview:nameLabel];
-    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userViewClick)];
-    [view addGestureRecognizer:tap];
+//    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userViewClick)];
+//    [view addGestureRecognizer:tap];
     leftTableView.tableHeaderView = view;
 }
 
 -(void)loadData
 {
-    names = @[@"首页",@"精选",@"热门",@"发现",@"动态",@"消息",@"设置"];
-    imgNames = @[@"bg_allmooc_default",@"bg_mymooc_default",@"bg_mynote_default",@"bg_off-line_default",@"Drawer_iOS7",@"bg_message_default",@"bg_setting_default"];
+    names = @[@"个人资料",@"付款",@"优惠",@"分享",@"帮助"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return names.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = names[indexPath.row];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 0) {
+        IndividualVC *individualVC = [[IndividualVC alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:individualVC];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
+    } else if (indexPath.row == 1) {
+        PayVC *payVC = [[PayVC alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:payVC];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
+    } else if (indexPath.row == 2) {
+        SaleVC *saleVC = [[SaleVC alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:saleVC];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
+    } else if (indexPath.row == 3) {
+        ShareVC *shareVC = [[ShareVC alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shareVC];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
+    } else if (indexPath.row == 4) {
+        HelpVC *helpVC = [[HelpVC alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:helpVC];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
+    }
 }
 
 /*

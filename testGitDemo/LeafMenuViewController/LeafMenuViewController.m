@@ -8,6 +8,7 @@
 
 #import "LeafMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <objc/runtime.h>
 
 #define OPENDISTANCE 260.0f
 #define OPENSWITCH 160.0f
@@ -232,6 +233,24 @@ static LeafMenuViewController *_menu = nil;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+@end
+
+@implementation UIViewController (LeafMenuViewController)
+
+- (void)setLeafMenuViewController:(LeafMenuViewController *)leafMenuViewController
+{
+    objc_setAssociatedObject(self, @selector(leafMenuViewController), leafMenuViewController, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (LeafMenuViewController *)leafMenuViewController
+{
+    LeafMenuViewController *leafMenuViewController = objc_getAssociatedObject(self, @selector(leafMenuViewController));
+    if (!leafMenuViewController) {
+        leafMenuViewController = self.parentViewController.leafMenuViewController;
+    }
+    return leafMenuViewController;
 }
 
 @end
