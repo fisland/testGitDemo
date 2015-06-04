@@ -9,6 +9,7 @@
 #import "LeafMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
+#import "AppDelegate.h"
 
 #define OPENDISTANCE 260.0f
 #define OPENSWITCH 160.0f
@@ -132,6 +133,9 @@ static LeafMenuViewController *_menu = nil;
  *  @param animated
  */
 -(void)closeWithAnimation:(BOOL)animated{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.isLeftBarButtonClick = YES;
+    
     if(animated){
         if(self.isSpringAnimation){
             
@@ -169,6 +173,9 @@ static LeafMenuViewController *_menu = nil;
  *  @param animated
  */
 -(void)openWithAnimation:(BOOL)animated{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.isLeftBarButtonClick = NO;
+    
     if(animated){
         if(self.isSpringAnimation){
 //            POPSpringAnimation *anim = [self.contentView.layer pop_animationForKey:@"springopen"];
@@ -206,6 +213,7 @@ static LeafMenuViewController *_menu = nil;
     [[NSNotificationCenter defaultCenter ]postNotificationName:@"makeTheIsBarButtonClickToNO" object:nil];
 }
 -(void)openAtIndex:(NSInteger)index animated:(BOOL)animated{
+
     if(index<self.viewControllers.count){
         UIViewController *newVC = self.viewControllers[index];
         if(newVC!=self.currentVC){

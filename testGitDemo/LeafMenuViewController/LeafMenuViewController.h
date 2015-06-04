@@ -38,6 +38,7 @@
  *  @param index
  */
 -(void)openAtIndex:(NSInteger)index animated:(BOOL)animated;
+-(void)openWithAnimation:(BOOL)animated;
 /**
  *  关闭内容视图,显示菜单
  *

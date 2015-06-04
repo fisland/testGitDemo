@@ -14,7 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (nonatomic, strong) LeafMenuViewController *leafMenu;
-@property (nonatomic, assign) BOOL                   *isLeftBarButtonClick;
+@property (nonatomic, assign) BOOL                   isLeftBarButtonClick;
 
 - (void)openMenu;
 
