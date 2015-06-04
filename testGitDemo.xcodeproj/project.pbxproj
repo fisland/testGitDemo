@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8BB1B2097A400EC2AFE /* LoginVC.m */; };
 		13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8BE1B2097C300EC2AFE /* RegistVC.m */; };
+		13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8C81B20A1A900EC2AFE /* LoginAndRegistVC.m */; };
 		13C06F951B1B635F003773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F941B1B635F003773AB /* main.m */; };
 		13C06F981B1B635F003773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06F971B1B635F003773AB /* AppDelegate.m */; };
 		13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C06F9C1B1B635F003773AB /* Main.storyboard */; };
@@ -43,6 +44,10 @@
 		13BCE8BB1B2097A400EC2AFE /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		13BCE8BD1B2097C300EC2AFE /* RegistVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
 		13BCE8BE1B2097C300EC2AFE /* RegistVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
+		13BCE8C71B20A1A900EC2AFE /* LoginAndRegistVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginAndRegistVC.h; sourceTree = "<group>"; };
+		13BCE8C81B20A1A900EC2AFE /* LoginAndRegistVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAndRegistVC.m; sourceTree = "<group>"; };
+		13BCE8CB1B20A3DD00EC2AFE /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		13BCE8CC1B20A53D00EC2AFE /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pchFile.pch; sourceTree = "<group>"; };
 		13C06F8F1B1B635F003773AB /* testGitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testGitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C06F931B1B635F003773AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C06F941B1B635F003773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +137,8 @@
 		13BCE8B91B20976500EC2AFE /* LoginAndRegist */ = {
 			isa = PBXGroup;
 			children = (
+				13BCE8C71B20A1A900EC2AFE /* LoginAndRegistVC.h */,
+				13BCE8C81B20A1A900EC2AFE /* LoginAndRegistVC.m */,
 				13BCE8C11B2097DD00EC2AFE /* loginVC */,
 				13BCE8C01B2097CA00EC2AFE /* regisetVC */,
 			);
@@ -201,6 +208,14 @@
 			name = help;
 			sourceTree = "<group>";
 		};
+		13BCE8CA1B20A39F00EC2AFE /* config */ = {
+			isa = PBXGroup;
+			children = (
+				13BCE8CB1B20A3DD00EC2AFE /* Config.h */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
 		13C06F861B1B635F003773AB = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +239,7 @@
 		13C06F911B1B635F003773AB /* testGitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				13BCE8CA1B20A39F00EC2AFE /* config */,
 				13BCE8B71B20967300EC2AFE /* model */,
 				399161931B1F507900F1751D /* Image */,
 				13BCE8B61B20965400EC2AFE /* thirdPart */,
@@ -245,6 +261,7 @@
 			children = (
 				13C06F931B1B635F003773AB /* Info.plist */,
 				13C06F941B1B635F003773AB /* main.m */,
+				13BCE8CC1B20A53D00EC2AFE /* pchFile.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -448,6 +465,7 @@
 				39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */,
 				39A525A71B1F60F500BD773F /* SaleVC.m in Sources */,
 				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
+				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
 				13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */,
@@ -583,6 +601,8 @@
 			baseConfigurationReference = D88CD70C2B9F3EA3585395EF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/testGitDemo/pchFile.pch";
 				INFOPLIST_FILE = testGitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -594,6 +614,8 @@
 			baseConfigurationReference = 9EDE449263ABCEB4B0569F39 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/testGitDemo/pchFile.pch";
 				INFOPLIST_FILE = testGitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

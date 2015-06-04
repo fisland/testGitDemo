@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LeafMenuViewController.h"
-
+#import "LoginAndRegistVC.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -17,8 +17,8 @@
 @property (nonatomic, assign) BOOL                   isLeftBarButtonClick;
 
 - (void)openMenu;
-
 - (void)closeMenu;
-
+- (void)setUpMenuUI;//切换主视图到menu
+- (void)setupLoginRegistUI;//切换主视图到注册登录
 @end
 

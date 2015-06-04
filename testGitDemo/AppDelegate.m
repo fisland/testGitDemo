@@ -19,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
+    NSString * currentUser = [userdefault objectForKey:CurrentLoginUser];
+    if (currentUser == nil || [currentUser isEqualToString:@""]) {
+        [self setupLoginRegistUI];
+    }
+    else
+    {
+        [self setUpMenuUI];
+    }
+    
+    return YES;
+}
+- (void)setUpMenuUI{
     MainView *main = [[MainView alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:main];
     WJMenuView *menu = [[WJMenuView alloc] init];
@@ -29,13 +42,13 @@
     self.leafMenu.springAnimation = NO;
     
     self.window.rootViewController = self.leafMenu;
-    
-    // Override point for customization after application launch.
-    return YES;
 }
-
+- (void)setupLoginRegistUI{
+    LoginAndRegistVC * loginRegistVC = [[LoginAndRegistVC alloc]init];
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:loginRegistVC];
+    self.window.rootViewController = nav;
+}
 - (void)openMenu {
-//    [self.leafMenu openAtIndex:0 animated:YES];
     [self.leafMenu closeWithAnimation:YES];
 }
 
