@@ -31,6 +31,7 @@
     
 
     self.view.backgroundColor = ClearColor;
+    self.navigationController.navigationBarHidden = YES;
     UIImageView *bgImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGTH )];
     bgImgView.userInteractionEnabled = YES;
     bgImgView.image = [UIImage imageNamed:@"Balloon"];
