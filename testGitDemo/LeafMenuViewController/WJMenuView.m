@@ -31,6 +31,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBarHidden = YES;
+    
     leftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height) style:(UITableViewStylePlain)];
     leftTableView.delegate = self;
     leftTableView.dataSource = self;
