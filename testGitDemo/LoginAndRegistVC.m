@@ -9,13 +9,16 @@
 #import "LoginAndRegistVC.h"
 #import "LoginVC.h"
 #import "RegistVC.h"
-#import "AppDelegate.h"
 @interface LoginAndRegistVC ()
 
 @end
 
 @implementation LoginAndRegistVC
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -44,6 +47,7 @@
     loginBtn.backgroundColor = default_blue_color;
     [loginBtn setTitleColor:WhiteColor forState:UIControlStateNormal];
     loginBtn.layer.borderWidth = 1.0;
+    loginBtn.layer.cornerRadius = 5.0;
     loginBtn.layer.borderColor = WhiteColor.CGColor;
     loginBtn.center = CGPointMake(IPHONE_WIDTH/4, loginBtn.center.y);
     [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
@@ -55,6 +59,7 @@
     registBtn.backgroundColor = WhiteColor;
     [registBtn setTitleColor:default_blue_color forState:UIControlStateNormal];
     registBtn.layer.borderWidth = 1.0;
+    registBtn.layer.cornerRadius = 5.0;
     registBtn.center = CGPointMake(IPHONE_WIDTH/4 + IPHONE_WIDTH /2, registBtn.center.y);
     registBtn.layer.borderColor = default_blue_color.CGColor;
     [registBtn addTarget:self action:@selector(registAction) forControlEvents:UIControlEventTouchUpInside];
@@ -62,14 +67,14 @@
 }
 #pragma mark - action
 - (void)loginAction{
-    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
-    [userdefault setObject:@"helloWorld" forKey:CurrentLoginUser];
+    LoginVC *vc = [[LoginVC alloc]init];
     
-    AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
-    [appdelegate setUpMenuUI];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)registAction{
+    RegistVC *vc = [[RegistVC alloc]init];
     
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

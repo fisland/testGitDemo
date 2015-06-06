@@ -51,4 +51,5 @@
 
 //-------------------登录宏定义-------------------
 #define CurrentLoginUser @"CurrentLoginUser"
+#define CurrentLoginPassWord @"currentLoginPassWord"
 #endif
