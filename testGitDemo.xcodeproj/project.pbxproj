@@ -18,6 +18,9 @@
 		13C06FAF1B1B635F003773AB /* testGitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06FAE1B1B635F003773AB /* testGitDemoTests.m */; };
 		13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEB61B2414B40037E563 /* black_envelope_reflected.png */; };
 		13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEB71B2414B40037E563 /* black_envelope_reflected@2x.png */; };
+		13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */; };
+		13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEBC1B242D3F0037E563 /* QRCodeViewController.xib */; };
+		13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEC01B242E5C0037E563 /* washCarQRCode.png */; };
 		39A5259C1B1F5C6600BD773F /* LeafMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525991B1F5C6600BD773F /* LeafMenuViewController.m */; };
 		39A5259D1B1F5C6600BD773F /* WJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A5259B1B1F5C6600BD773F /* WJMenuView.m */; };
 		39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A01B1F608E00BD773F /* IndividualVC.m */; };
@@ -65,6 +68,10 @@
 		13C06FAE1B1B635F003773AB /* testGitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGitDemoTests.m; sourceTree = "<group>"; };
 		13E9EEB61B2414B40037E563 /* black_envelope_reflected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_envelope_reflected.png; sourceTree = "<group>"; };
 		13E9EEB71B2414B40037E563 /* black_envelope_reflected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_envelope_reflected@2x.png"; sourceTree = "<group>"; };
+		13E9EEBA1B242D3F0037E563 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		13E9EEBC1B242D3F0037E563 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		13E9EEC01B242E5C0037E563 /* washCarQRCode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washCarQRCode.png; sourceTree = "<group>"; };
 		39A525981B1F5C6600BD773F /* LeafMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeafMenuViewController.h; path = LeafMenuViewController/LeafMenuViewController.h; sourceTree = "<group>"; };
 		39A525991B1F5C6600BD773F /* LeafMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeafMenuViewController.m; path = LeafMenuViewController/LeafMenuViewController.m; sourceTree = "<group>"; };
 		39A5259A1B1F5C6600BD773F /* WJMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJMenuView.h; path = LeafMenuViewController/WJMenuView.h; sourceTree = "<group>"; };
@@ -140,6 +147,7 @@
 				13BCE8B91B20976500EC2AFE /* LoginAndRegist */,
 				39A5259E1B1F601300BD773F /* MenuVC */,
 				39DFB8381B2413BD0069E37C /* FreeWashVC */,
+				13E9EEBF1B242D460037E563 /* QRCodeVC */,
 			);
 			name = ViewControl;
 			sourceTree = "<group>";
@@ -293,6 +301,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		13E9EEBF1B242D460037E563 /* QRCodeVC */ = {
+			isa = PBXGroup;
+			children = (
+				13E9EEBA1B242D3F0037E563 /* QRCodeViewController.h */,
+				13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */,
+				13E9EEBC1B242D3F0037E563 /* QRCodeViewController.xib */,
+			);
+			name = QRCodeVC;
+			sourceTree = "<group>";
+		};
 		266482F01D3EAF227CB82803 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +322,7 @@
 		399161931B1F507900F1751D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13E9EEC01B242E5C0037E563 /* washCarQRCode.png */,
 				39DFB83C1B24148D0069E37C /* welcome_video.mp4 */,
 				39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */,
 				39DDD0A31B2082D600AFB92D /* dog.png */,
@@ -427,12 +446,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */,
 				39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */,
 				39DDD0A41B2082D600AFB92D /* dog.png in Resources */,
 				13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */,
 				13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
+				13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */,
 				13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
 			);
@@ -490,6 +511,7 @@
 				39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */,
 				39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */,
 				39A525A71B1F60F500BD773F /* SaleVC.m in Sources */,
+				13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */,
 				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
 				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,

@@ -10,6 +10,7 @@
 #import "LeafMenuViewController.h"
 #import "AppDelegate.h"
 #import "VideoPlayerVC.h"
+#import "QRCodeViewController.h"
 
 @interface MainView () <UIAlertViewDelegate> {
 
@@ -81,7 +82,8 @@
     } else if (sender.tag == 101) {
         
     } else if (sender.tag == 102) {
-        
+        QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
+        [self.navigationController pushViewController:qrVC animated:YES];
     }
 }
 
