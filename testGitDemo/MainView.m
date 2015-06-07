@@ -9,8 +9,9 @@
 #import "MainView.h"
 #import "LeafMenuViewController.h"
 #import "AppDelegate.h"
+#import "VideoPlayerVC.h"
 
-@interface MainView () {
+@interface MainView () <UIAlertViewDelegate> {
 
     
 }
@@ -73,11 +74,26 @@
 
 - (void)btnAction:(UIButton *)sender {
     if (sender.tag == 100) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您接下来需要观看100秒视频，建议您在WIFI环境下打开" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        alert.tag = 10086;
+        [alert show];
         
     } else if (sender.tag == 101) {
         
     } else if (sender.tag == 102) {
         
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 10086) {
+        if (buttonIndex == 1) {
+            VideoPlayerVC *videoPlayer = [[VideoPlayerVC alloc] init];
+//            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
+            [self presentViewController:videoPlayer animated:YES completion:^{
+                
+            }];
+        }
     }
 }
 

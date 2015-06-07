@@ -25,6 +25,8 @@
 		39A525AD1B1F611500BD773F /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525AC1B1F611500BD773F /* HelpVC.m */; };
 		39DDD0A41B2082D600AFB92D /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A31B2082D600AFB92D /* dog.png */; };
 		39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */; };
+		39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */; };
+		39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 39DFB83C1B24148D0069E37C /* welcome_video.mp4 */; };
 		39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BDB1B1F361100CF1C7E /* MainView.m */; };
 		EA877C052DCF53904045FE2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA926C48356077FB40A87958 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,9 @@
 		39A525AC1B1F611500BD773F /* HelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
 		39DDD0A31B2082D600AFB92D /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon@2x.png"; sourceTree = "<group>"; };
+		39DFB8391B24143E0069E37C /* VideoPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerVC.h; sourceTree = "<group>"; };
+		39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerVC.m; sourceTree = "<group>"; };
+		39DFB83C1B24148D0069E37C /* welcome_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome_video.mp4; sourceTree = "<group>"; };
 		39E88BDA1B1F361100CF1C7E /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		39E88BDB1B1F361100CF1C7E /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		9EDE449263ABCEB4B0569F39 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 			children = (
 				13BCE8B91B20976500EC2AFE /* LoginAndRegist */,
 				39A5259E1B1F601300BD773F /* MenuVC */,
+				39DFB8381B2413BD0069E37C /* FreeWashVC */,
 			);
 			name = ViewControl;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 		399161931B1F507900F1751D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				39DFB83C1B24148D0069E37C /* welcome_video.mp4 */,
 				39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */,
 				39DDD0A31B2082D600AFB92D /* dog.png */,
 			);
@@ -321,6 +328,15 @@
 				13BCE8C61B2098A800EC2AFE /* help */,
 			);
 			name = MenuVC;
+			sourceTree = "<group>";
+		};
+		39DFB8381B2413BD0069E37C /* FreeWashVC */ = {
+			isa = PBXGroup;
+			children = (
+				39DFB8391B24143E0069E37C /* VideoPlayerVC.h */,
+				39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */,
+			);
+			name = FreeWashVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */,
 				39DDD0A41B2082D600AFB92D /* dog.png in Resources */,
 				13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
@@ -463,6 +480,7 @@
 				39A5259D1B1F5C6600BD773F /* WJMenuView.m in Sources */,
 				39A525AD1B1F611500BD773F /* HelpVC.m in Sources */,
 				39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */,
+				39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */,
 				39A525A71B1F60F500BD773F /* SaleVC.m in Sources */,
 				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
 				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
