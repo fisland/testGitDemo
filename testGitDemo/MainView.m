@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"Open" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
@@ -46,17 +46,22 @@
 
 - (void)initButton {
     UIButton *freeWashBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    freeWashBtn.frame = CGRectMake(self.view.frame.size.width/2-70, 140, 140, 40);
-    freeWashBtn.backgroundColor = [UIColor redColor];
+    
+    freeWashBtn.frame = CGRectMake(100/2, 140, IPHONE_WIDTH - 100/2*2, 44);
+    freeWashBtn.backgroundColor = BlackColor;
     [freeWashBtn setTitle:@"免费洗车" forState:UIControlStateNormal];
     [freeWashBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    freeWashBtn.layer.cornerRadius = 5;
+    freeWashBtn.clipsToBounds = YES;
     [self.view addSubview:freeWashBtn];
     freeWashBtn.tag = 100;
     [freeWashBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *payWashBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    payWashBtn.frame = CGRectMake(self.view.frame.size.width/2-70, 220, 140, 40);
-    payWashBtn.backgroundColor = [UIColor redColor];
+    payWashBtn.frame = CGRectMake(100/2, CGRectGetMaxY(freeWashBtn.frame) +30, IPHONE_WIDTH - 100/2*2, 44);
+    payWashBtn.backgroundColor = default_blue_color;
+    payWashBtn.layer.cornerRadius = 5;
+    payWashBtn.clipsToBounds = YES;
     [payWashBtn setTitle:@"付费洗车" forState:UIControlStateNormal];
     [payWashBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:payWashBtn];
@@ -64,8 +69,10 @@
     [payWashBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *QRBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    QRBtn.frame = CGRectMake(self.view.frame.size.width/2-70, 300, 140, 40);
-    QRBtn.backgroundColor = [UIColor redColor];
+    QRBtn.layer.cornerRadius = 5;
+    QRBtn.clipsToBounds = YES;
+    QRBtn.frame = CGRectMake(100/2, CGRectGetMaxY(payWashBtn.frame) +30, IPHONE_WIDTH - 100/2*2, 44);
+    QRBtn.backgroundColor = RGB_B(78, 207, 58);
     [QRBtn setTitle:@"二维码图标" forState:UIControlStateNormal];
     [QRBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:QRBtn];
