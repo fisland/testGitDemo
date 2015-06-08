@@ -1,2 +1,4 @@
 platform :ios
 pod 'JTRevealSidebarDemo', '~> 2.2.1'
+pod 'AMap2DMap'
+pod 'AMapSearch'

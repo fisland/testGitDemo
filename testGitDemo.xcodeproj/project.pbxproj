@@ -21,6 +21,12 @@
 		13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */; };
 		13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEBC1B242D3F0037E563 /* QRCodeViewController.xib */; };
 		13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEC01B242E5C0037E563 /* washCarQRCode.png */; };
+		13E9EEC81B24A9B10037E563 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EEC71B24A9B10037E563 /* BaseMapViewController.m */; };
+		13E9EECB1B24A9FC0037E563 /* CustomAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EECA1B24A9FC0037E563 /* CustomAnnotationViewController.m */; };
+		13E9EECE1B24AA9D0037E563 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EECD1B24AA9D0037E563 /* CustomCalloutView.m */; };
+		13E9EED11B24AAC60037E563 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EED01B24AAC60037E563 /* CustomAnnotationView.m */; };
+		13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EED21B25DD320037E563 /* blackAnnotation.png */; };
+		13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EED41B25DE4A0037E563 /* marker_outside_chartreuse.png */; };
 		39A5259C1B1F5C6600BD773F /* LeafMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525991B1F5C6600BD773F /* LeafMenuViewController.m */; };
 		39A5259D1B1F5C6600BD773F /* WJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A5259B1B1F5C6600BD773F /* WJMenuView.m */; };
 		39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A01B1F608E00BD773F /* IndividualVC.m */; };
@@ -72,6 +78,17 @@
 		13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		13E9EEBC1B242D3F0037E563 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 		13E9EEC01B242E5C0037E563 /* washCarQRCode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washCarQRCode.png; sourceTree = "<group>"; };
+		13E9EEC41B249AE20037E563 /* MAAPIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAAPIKey.h; sourceTree = "<group>"; };
+		13E9EEC61B24A9B10037E563 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
+		13E9EEC71B24A9B10037E563 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
+		13E9EEC91B24A9FC0037E563 /* CustomAnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationViewController.h; sourceTree = "<group>"; };
+		13E9EECA1B24A9FC0037E563 /* CustomAnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationViewController.m; sourceTree = "<group>"; };
+		13E9EECC1B24AA9D0037E563 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		13E9EECD1B24AA9D0037E563 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		13E9EECF1B24AAC60037E563 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		13E9EED01B24AAC60037E563 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		13E9EED21B25DD320037E563 /* blackAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackAnnotation.png; sourceTree = "<group>"; };
+		13E9EED41B25DE4A0037E563 /* marker_outside_chartreuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_outside_chartreuse.png; sourceTree = "<group>"; };
 		39A525981B1F5C6600BD773F /* LeafMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeafMenuViewController.h; path = LeafMenuViewController/LeafMenuViewController.h; sourceTree = "<group>"; };
 		39A525991B1F5C6600BD773F /* LeafMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeafMenuViewController.m; path = LeafMenuViewController/LeafMenuViewController.m; sourceTree = "<group>"; };
 		39A5259A1B1F5C6600BD773F /* WJMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJMenuView.h; path = LeafMenuViewController/WJMenuView.h; sourceTree = "<group>"; };
@@ -144,6 +161,7 @@
 		13BCE8B81B20974900EC2AFE /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
+				13E9EEC51B24A9820037E563 /* MapVC */,
 				13BCE8B91B20976500EC2AFE /* LoginAndRegist */,
 				39A5259E1B1F601300BD773F /* MenuVC */,
 				39DFB8381B2413BD0069E37C /* FreeWashVC */,
@@ -230,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				13BCE8CB1B20A3DD00EC2AFE /* Config.h */,
+				13E9EEC41B249AE20037E563 /* MAAPIKey.h */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -311,6 +330,21 @@
 			name = QRCodeVC;
 			sourceTree = "<group>";
 		};
+		13E9EEC51B24A9820037E563 /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				13E9EECF1B24AAC60037E563 /* CustomAnnotationView.h */,
+				13E9EED01B24AAC60037E563 /* CustomAnnotationView.m */,
+				13E9EECC1B24AA9D0037E563 /* CustomCalloutView.h */,
+				13E9EECD1B24AA9D0037E563 /* CustomCalloutView.m */,
+				13E9EEC91B24A9FC0037E563 /* CustomAnnotationViewController.h */,
+				13E9EECA1B24A9FC0037E563 /* CustomAnnotationViewController.m */,
+				13E9EEC61B24A9B10037E563 /* BaseMapViewController.h */,
+				13E9EEC71B24A9B10037E563 /* BaseMapViewController.m */,
+			);
+			name = MapVC;
+			sourceTree = "<group>";
+		};
 		266482F01D3EAF227CB82803 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +356,8 @@
 		399161931B1F507900F1751D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13E9EED41B25DE4A0037E563 /* marker_outside_chartreuse.png */,
+				13E9EED21B25DD320037E563 /* blackAnnotation.png */,
 				13E9EEC01B242E5C0037E563 /* washCarQRCode.png */,
 				39DFB83C1B24148D0069E37C /* welcome_video.mp4 */,
 				39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */,
@@ -446,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */,
 				13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */,
 				39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */,
 				39DDD0A41B2082D600AFB92D /* dog.png in Resources */,
@@ -456,6 +493,7 @@
 				13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */,
 				13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
+				13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +547,7 @@
 				39A5259D1B1F5C6600BD773F /* WJMenuView.m in Sources */,
 				39A525AD1B1F611500BD773F /* HelpVC.m in Sources */,
 				39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */,
+				13E9EECB1B24A9FC0037E563 /* CustomAnnotationViewController.m in Sources */,
 				39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */,
 				39A525A71B1F60F500BD773F /* SaleVC.m in Sources */,
 				13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */,
@@ -516,11 +555,14 @@
 				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
+				13E9EEC81B24A9B10037E563 /* BaseMapViewController.m in Sources */,
+				13E9EECE1B24AA9D0037E563 /* CustomCalloutView.m in Sources */,
 				13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */,
 				39A525A41B1F609F00BD773F /* PayVC.m in Sources */,
 				13C06F951B1B635F003773AB /* main.m in Sources */,
 				39A525AA1B1F610900BD773F /* ShareVC.m in Sources */,
 				39A5259C1B1F5C6600BD773F /* LeafMenuViewController.m in Sources */,
+				13E9EED11B24AAC60037E563 /* CustomAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

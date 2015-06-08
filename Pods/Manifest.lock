@@ -1,10 +1,16 @@
 PODS:
+  - AMap2DMap (2.5.0)
+  - AMapSearch (2.5.0)
   - JTRevealSidebarDemo (2.2.1)
 
 DEPENDENCIES:
+  - AMap2DMap
+  - AMapSearch
   - JTRevealSidebarDemo (~> 2.2.1)
 
 SPEC CHECKSUMS:
+  AMap2DMap: 4952d35e7d3abdf36a568115bda21bd2b0d65e9b
+  AMapSearch: eafa5a749b1078a46f15e6108e88307f78f75e9b
   JTRevealSidebarDemo: e316c3209f5eef17b11e57d601b8cbfd8b1dd74c
 
 COCOAPODS: 0.37.2
