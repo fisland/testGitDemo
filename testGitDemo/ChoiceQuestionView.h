@@ -22,6 +22,6 @@
 
 @optional
 
-- (void)choiceQuestionView:(ChoiceQuestionView *)choiceQuestionView clickChoiceAtIndex:(NSInteger)choiceIndex;
+- (void)choiceQuestionView:(ChoiceQuestionView *)choiceQuestionView clickChoiceAtIndex:(NSInteger)choiceIndex isFinish:(BOOL)isFinish;
 
 @end

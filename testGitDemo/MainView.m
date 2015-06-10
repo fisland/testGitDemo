@@ -30,6 +30,8 @@
     self.navigationItem.leftBarButtonItem = openItem;
     
     [self initButton];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRightAnswer:) name:@"rightAnswer" object:nil];
     // Do any additional setup after loading the view.
 }
 
@@ -82,7 +84,7 @@
 
 - (void)btnAction:(UIButton *)sender {
     if (sender.tag == 100) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"免费洗车功能需要您观看100秒的视频和正确回答两道选择题后才能使用。（接下来需要观在线视频，建议您在WIFI环境下打开）" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"免费洗车功能需要您观看100秒的视频和正确回答两道选择题后才能使用。（接下来需要观在线视频，建议您在WIFI环境下打开）" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:@"继续", nil];
         alert.tag = 10086;
         [alert show];
         
@@ -98,12 +100,17 @@
     if (alertView.tag == 10086) {
         if (buttonIndex == 1) {
             VideoPlayerVC *videoPlayer = [[VideoPlayerVC alloc] init];
-//            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
-            [self presentViewController:videoPlayer animated:YES completion:^{
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
+            [self.navigationController presentViewController:nav animated:YES completion:^{
                 
             }];
         }
     }
+}
+
+- (void)didRightAnswer:(NSNotification *)noti {
+    QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
+    [self.navigationController pushViewController:qrVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

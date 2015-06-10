@@ -119,13 +119,15 @@
 
 - (void)btnAction:(UIButton *)sender {
     if (self.index) {
-        if ([self.delegate respondsToSelector:@selector(choiceQuestionView:clickChoiceAtIndex:)]) {
-            [self.delegate choiceQuestionView:self clickChoiceAtIndex:[self.index integerValue]];
-            self.index = nil;
-            
+        if ([self.delegate respondsToSelector:@selector(choiceQuestionView:clickChoiceAtIndex:isFinish:)]) {
+
             if (sender.tag != 10086) {
+                [self.delegate choiceQuestionView:self clickChoiceAtIndex:[self.index integerValue] isFinish:NO];
+                self.index = nil;
                 [bgView setContentOffset:CGPointMake(sender.tag/100*bgView.frame.size.width, 0) animated:YES];
             } else {
+                [self.delegate choiceQuestionView:self clickChoiceAtIndex:[self.index integerValue] isFinish:YES];
+                self.index = nil;
                 [self removeFromSuperview];
             }
             

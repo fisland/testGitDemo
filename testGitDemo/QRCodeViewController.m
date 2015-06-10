@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     self.title = @"二维码";
     [super viewDidLoad];
+    
     [self initSearch];
     [self initMapView];
     // Do any additional setup after loading the view from its nib.
