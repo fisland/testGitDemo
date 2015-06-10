@@ -98,7 +98,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == 10086) {
         if (buttonIndex == 1) {
-            VideoPlayerVC *videoPlayer = [[VideoPlayerVC alloc] init];
+            UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            VideoPlayerVC *videoPlayer = [story instantiateViewControllerWithIdentifier:@"PlayerView"];
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
             [self.navigationController presentViewController:nav animated:YES completion:^{
                 

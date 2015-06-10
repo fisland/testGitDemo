@@ -38,6 +38,12 @@
 		39DBFE6D1B2759C80006EF79 /* ChoiceQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */; };
 		39DDD0A41B2082D600AFB92D /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A31B2082D600AFB92D /* dog.png */; };
 		39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */; };
+		39DF331D1B28B07900E53264 /* MyPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF331C1B28B07900E53264 /* MyPlayerView.m */; };
+		39DF33231B28B0BA00E53264 /* 2011121611432897.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF331E1B28B0BA00E53264 /* 2011121611432897.png */; };
+		39DF33241B28B0BA00E53264 /* moviePause.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF331F1B28B0BA00E53264 /* moviePause.png */; };
+		39DF33251B28B0BA00E53264 /* moviePause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF33201B28B0BA00E53264 /* moviePause@2x.png */; };
+		39DF33261B28B0BA00E53264 /* moviePlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF33211B28B0BA00E53264 /* moviePlay.png */; };
+		39DF33271B28B0BA00E53264 /* moviePlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF33221B28B0BA00E53264 /* moviePlay@2x.png */; };
 		39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */; };
 		39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 39DFB83C1B24148D0069E37C /* welcome_video.mp4 */; };
 		39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BDB1B1F361100CF1C7E /* MainView.m */; };
@@ -111,6 +117,13 @@
 		39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceQuestionView.m; sourceTree = "<group>"; };
 		39DDD0A31B2082D600AFB92D /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon@2x.png"; sourceTree = "<group>"; };
+		39DF331B1B28B07900E53264 /* MyPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPlayerView.h; sourceTree = "<group>"; };
+		39DF331C1B28B07900E53264 /* MyPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPlayerView.m; sourceTree = "<group>"; };
+		39DF331E1B28B0BA00E53264 /* 2011121611432897.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2011121611432897.png; sourceTree = "<group>"; };
+		39DF331F1B28B0BA00E53264 /* moviePause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moviePause.png; sourceTree = "<group>"; };
+		39DF33201B28B0BA00E53264 /* moviePause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moviePause@2x.png"; sourceTree = "<group>"; };
+		39DF33211B28B0BA00E53264 /* moviePlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moviePlay.png; sourceTree = "<group>"; };
+		39DF33221B28B0BA00E53264 /* moviePlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moviePlay@2x.png"; sourceTree = "<group>"; };
 		39DFB8391B24143E0069E37C /* VideoPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerVC.h; sourceTree = "<group>"; };
 		39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerVC.m; sourceTree = "<group>"; };
 		39DFB83C1B24148D0069E37C /* welcome_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome_video.mp4; sourceTree = "<group>"; };
@@ -380,6 +393,11 @@
 		399161931B1F507900F1751D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				39DF331E1B28B0BA00E53264 /* 2011121611432897.png */,
+				39DF331F1B28B0BA00E53264 /* moviePause.png */,
+				39DF33201B28B0BA00E53264 /* moviePause@2x.png */,
+				39DF33211B28B0BA00E53264 /* moviePlay.png */,
+				39DF33221B28B0BA00E53264 /* moviePlay@2x.png */,
 				13E9EED41B25DE4A0037E563 /* marker_outside_chartreuse.png */,
 				13E9EED21B25DD320037E563 /* blackAnnotation.png */,
 				13E9EEC01B242E5C0037E563 /* washCarQRCode.png */,
@@ -418,6 +436,8 @@
 		39DE1C701B25D64800862B8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				39DF331B1B28B07900E53264 /* MyPlayerView.h */,
+				39DF331C1B28B07900E53264 /* MyPlayerView.m */,
 				39DBFE6B1B2759C80006EF79 /* ChoiceQuestionView.h */,
 				39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */,
 			);
@@ -518,14 +538,19 @@
 			files = (
 				13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */,
 				13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */,
+				39DF33251B28B0BA00E53264 /* moviePause@2x.png in Resources */,
 				39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */,
+				39DF33271B28B0BA00E53264 /* moviePlay@2x.png in Resources */,
+				39DF33231B28B0BA00E53264 /* 2011121611432897.png in Resources */,
 				39DDD0A41B2082D600AFB92D /* dog.png in Resources */,
+				39DF33261B28B0BA00E53264 /* moviePlay.png in Resources */,
 				13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */,
 				13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
 				13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */,
 				13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */,
+				39DF33241B28B0BA00E53264 /* moviePause.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
 				13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */,
 			);
@@ -585,6 +610,7 @@
 				39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */,
 				39A525A71B1F60F500BD773F /* SaleVC.m in Sources */,
 				13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */,
+				39DF331D1B28B07900E53264 /* MyPlayerView.m in Sources */,
 				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
 				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
