@@ -34,6 +34,7 @@
 		39A525A71B1F60F500BD773F /* SaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A61B1F60F500BD773F /* SaleVC.m */; };
 		39A525AA1B1F610900BD773F /* ShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A91B1F610900BD773F /* ShareVC.m */; };
 		39A525AD1B1F611500BD773F /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525AC1B1F611500BD773F /* HelpVC.m */; };
+		39DBFE6D1B2759C80006EF79 /* ChoiceQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */; };
 		39DDD0A41B2082D600AFB92D /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A31B2082D600AFB92D /* dog.png */; };
 		39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */; };
 		39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */; };
@@ -103,6 +104,8 @@
 		39A525A91B1F610900BD773F /* ShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareVC.m; sourceTree = "<group>"; };
 		39A525AB1B1F611500BD773F /* HelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
 		39A525AC1B1F611500BD773F /* HelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
+		39DBFE6B1B2759C80006EF79 /* ChoiceQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceQuestionView.h; sourceTree = "<group>"; };
+		39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceQuestionView.m; sourceTree = "<group>"; };
 		39DDD0A31B2082D600AFB92D /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon@2x.png"; sourceTree = "<group>"; };
 		39DFB8391B24143E0069E37C /* VideoPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerVC.h; sourceTree = "<group>"; };
@@ -391,11 +394,21 @@
 			name = MenuVC;
 			sourceTree = "<group>";
 		};
+		39DE1C701B25D64800862B8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39DBFE6B1B2759C80006EF79 /* ChoiceQuestionView.h */,
+				39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		39DFB8381B2413BD0069E37C /* FreeWashVC */ = {
 			isa = PBXGroup;
 			children = (
 				39DFB8391B24143E0069E37C /* VideoPlayerVC.h */,
 				39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */,
+				39DE1C701B25D64800862B8A /* View */,
 			);
 			name = FreeWashVC;
 			sourceTree = "<group>";
@@ -557,6 +570,7 @@
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
 				13E9EEC81B24A9B10037E563 /* BaseMapViewController.m in Sources */,
 				13E9EECE1B24AA9D0037E563 /* CustomCalloutView.m in Sources */,
+				39DBFE6D1B2759C80006EF79 /* ChoiceQuestionView.m in Sources */,
 				13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */,
 				39A525A41B1F609F00BD773F /* PayVC.m in Sources */,
 				13C06F951B1B635F003773AB /* main.m in Sources */,

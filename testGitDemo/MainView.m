@@ -82,7 +82,7 @@
 
 - (void)btnAction:(UIButton *)sender {
     if (sender.tag == 100) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您接下来需要观看100秒视频，建议您在WIFI环境下打开" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"免费洗车功能需要您观看100秒的视频和正确回答两道选择题后才能使用。（接下来需要观在线视频，建议您在WIFI环境下打开）" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
         alert.tag = 10086;
         [alert show];
         

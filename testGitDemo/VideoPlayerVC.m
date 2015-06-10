@@ -8,8 +8,9 @@
 
 #import "VideoPlayerVC.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "ChoiceQuestionView.h"
 
-@interface VideoPlayerVC ()
+@interface VideoPlayerVC () <ChoiceQuestionViewDelegate>
 
 @property (nonatomic, strong) MPMoviePlayerController *movieVC;
 
@@ -35,21 +36,25 @@
     [self.movieVC play];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieFinishedCallback:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.movieVC];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieWillEnterFullScreen:) name:MPMoviePlayerWillEnterFullscreenNotification object:self.movieVC];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieDidEnterFullScreen:) name:MPMoviePlayerDidEnterFullscreenNotification object:self.movieVC];
 }
 
 - (void)movieFinishedCallback:(NSNotification *)noti {
-    MPMoviePlayerController *moviewVC = [noti object];
+    ChoiceQuestionView *choiceQuestion = [[ChoiceQuestionView alloc] initWithMessage:@[@"我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊我跟你们说啊",@"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"] delegate:self otherButtonTitles:@[@"A、123",@"B、234",@"C、345",@"D、456",@"A、123",@"B、234",@"C、345",@"D、456"]];
+    [self.view addSubview:choiceQuestion];
+//    MPMoviePlayerController *moviewVC = [noti object];
     //销毁播放通知
 //    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:moviewVC];
 //    [moviewVC.view removeFromSuperview];
     
 }
 
-- (void)movieWillEnterFullScreen:(NSNotification *)noti {
-    [self.movieVC setFullscreen:NO animated:NO];
-//    self.movieVC.controlStyle = MPMovieControlStyleNone;
+- (void)movieDidEnterFullScreen:(NSNotification *)noti {
+    [self.movieVC setFullscreen:NO animated:YES];
+}
+
+- (void)choiceQuestionView:(ChoiceQuestionView *)choiceQuestionView clickChoiceAtIndex:(NSInteger)choiceIndex {
+    NSLog(@"%ld",choiceIndex);
 }
 
 - (void)didReceiveMemoryWarning {
