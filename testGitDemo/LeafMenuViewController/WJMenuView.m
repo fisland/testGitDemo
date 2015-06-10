@@ -8,7 +8,7 @@
 
 #import "WJMenuView.h"
 #import "IndividualVC.h"
-#import "PayVC.h"
+#import "PayBindVC.h"
 #import "SaleVC.h"
 #import "ShareVC.h"
 #import "HelpVC.h"
@@ -102,7 +102,7 @@
             
         }];
     } else if (indexPath.row == 1) {
-        PayVC *payVC = [[PayVC alloc] init];
+        PayBindVC *payVC = [[PayBindVC alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:payVC];
         [self presentViewController:nav animated:YES completion:^{
             

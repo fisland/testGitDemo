@@ -85,8 +85,7 @@
         {
             /* Construct custom callout. */
             self.calloutView = [[CustomCalloutView alloc] initWithFrame:CGRectMake(0, 0, kCalloutWidth, kCalloutHeight)];
-            self.calloutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,
-                                                  -CGRectGetHeight(self.calloutView.bounds) / 2.f + self.calloutOffset.y);
+            self.calloutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,-CGRectGetHeight(self.calloutView.bounds) / 2.f + self.calloutOffset.y);
             
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
             btn.frame = CGRectMake(10, 10, 40, 40);
@@ -167,27 +166,38 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *string = nil;
+    NSString *urlString = @"http://api.map.baidu.com/direction?origin=latlng:22.536548,113.90797999999999|name:我家&destination=世界之窗&mode=driving&region=深圳&output=html&src=yourCompanyName|yourAppName" ;
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [NSURL URLWithString:urlString];
     switch (buttonIndex) {
         case 0:
         {
             string = @"请开到合适的位置，开始自动洗车";
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:string delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
+            [alert show];
         }
             break;
         case 1:
         {
-            string = @"开始百度地图导航";
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication]openURL:url];
+            }
+//            string = @"开始百度地图导航";
+//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:string delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
+//            [alert show];
         }
             break;
         case 2:
         {
             string = @"开始高德地图导航";
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:string delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
+            [alert show];
         }
             break;
         default:
             break;
     }
     
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:string delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
-    [alert show];
+   
 }
 @end

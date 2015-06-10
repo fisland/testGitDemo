@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131F0E6A1B289434004D090E /* PayBindVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F0E691B289434004D090E /* PayBindVC.m */; };
+		131F0E6D1B2894C7004D090E /* PayWashCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F0E6C1B2894C7004D090E /* PayWashCarVC.m */; };
 		13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8BB1B2097A400EC2AFE /* LoginVC.m */; };
 		13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8BE1B2097C300EC2AFE /* RegistVC.m */; };
 		13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCE8C81B20A1A900EC2AFE /* LoginAndRegistVC.m */; };
@@ -30,7 +32,6 @@
 		39A5259C1B1F5C6600BD773F /* LeafMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525991B1F5C6600BD773F /* LeafMenuViewController.m */; };
 		39A5259D1B1F5C6600BD773F /* WJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A5259B1B1F5C6600BD773F /* WJMenuView.m */; };
 		39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A01B1F608E00BD773F /* IndividualVC.m */; };
-		39A525A41B1F609F00BD773F /* PayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A31B1F609F00BD773F /* PayVC.m */; };
 		39A525A71B1F60F500BD773F /* SaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A61B1F60F500BD773F /* SaleVC.m */; };
 		39A525AA1B1F610900BD773F /* ShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A91B1F610900BD773F /* ShareVC.m */; };
 		39A525AD1B1F611500BD773F /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525AC1B1F611500BD773F /* HelpVC.m */; };
@@ -54,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131F0E681B289434004D090E /* PayBindVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayBindVC.h; sourceTree = "<group>"; };
+		131F0E691B289434004D090E /* PayBindVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayBindVC.m; sourceTree = "<group>"; };
+		131F0E6B1B2894C7004D090E /* PayWashCarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayWashCarVC.h; sourceTree = "<group>"; };
+		131F0E6C1B2894C7004D090E /* PayWashCarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayWashCarVC.m; sourceTree = "<group>"; };
 		13BCE8BA1B2097A400EC2AFE /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		13BCE8BB1B2097A400EC2AFE /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		13BCE8BD1B2097C300EC2AFE /* RegistVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
@@ -96,8 +101,6 @@
 		39A5259B1B1F5C6600BD773F /* WJMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJMenuView.m; path = LeafMenuViewController/WJMenuView.m; sourceTree = "<group>"; };
 		39A5259F1B1F608E00BD773F /* IndividualVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndividualVC.h; sourceTree = "<group>"; };
 		39A525A01B1F608E00BD773F /* IndividualVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndividualVC.m; sourceTree = "<group>"; };
-		39A525A21B1F609F00BD773F /* PayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayVC.h; sourceTree = "<group>"; };
-		39A525A31B1F609F00BD773F /* PayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayVC.m; sourceTree = "<group>"; };
 		39A525A51B1F60F500BD773F /* SaleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleVC.h; sourceTree = "<group>"; };
 		39A525A61B1F60F500BD773F /* SaleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleVC.m; sourceTree = "<group>"; };
 		39A525A81B1F610900BD773F /* ShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareVC.h; sourceTree = "<group>"; };
@@ -146,6 +149,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		131F0E621B28933A004D090E /* PayWashCar */ = {
+			isa = PBXGroup;
+			children = (
+				131F0E6B1B2894C7004D090E /* PayWashCarVC.h */,
+				131F0E6C1B2894C7004D090E /* PayWashCarVC.m */,
+			);
+			name = PayWashCar;
+			sourceTree = "<group>";
+		};
+		131F0E641B289363004D090E /* mainPage */ = {
+			isa = PBXGroup;
+			children = (
+				13E9EEC51B24A9820037E563 /* MapVC */,
+				13E9EEBF1B242D460037E563 /* QRCodeVC */,
+				131F0E621B28933A004D090E /* PayWashCar */,
+			);
+			name = mainPage;
+			sourceTree = "<group>";
+		};
 		13BCE8B61B20965400EC2AFE /* thirdPart */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,11 +186,10 @@
 		13BCE8B81B20974900EC2AFE /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
-				13E9EEC51B24A9820037E563 /* MapVC */,
+				131F0E641B289363004D090E /* mainPage */,
 				13BCE8B91B20976500EC2AFE /* LoginAndRegist */,
 				39A5259E1B1F601300BD773F /* MenuVC */,
 				39DFB8381B2413BD0069E37C /* FreeWashVC */,
-				13E9EEBF1B242D460037E563 /* QRCodeVC */,
 			);
 			name = ViewControl;
 			sourceTree = "<group>";
@@ -214,8 +235,8 @@
 		13BCE8C31B20988A00EC2AFE /* pay */ = {
 			isa = PBXGroup;
 			children = (
-				39A525A21B1F609F00BD773F /* PayVC.h */,
-				39A525A31B1F609F00BD773F /* PayVC.m */,
+				131F0E681B289434004D090E /* PayBindVC.h */,
+				131F0E691B289434004D090E /* PayBindVC.m */,
 			);
 			name = pay;
 			sourceTree = "<group>";
@@ -570,12 +591,13 @@
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
 				13E9EEC81B24A9B10037E563 /* BaseMapViewController.m in Sources */,
 				13E9EECE1B24AA9D0037E563 /* CustomCalloutView.m in Sources */,
+				131F0E6A1B289434004D090E /* PayBindVC.m in Sources */,
 				39DBFE6D1B2759C80006EF79 /* ChoiceQuestionView.m in Sources */,
 				13BCE8BC1B2097A400EC2AFE /* LoginVC.m in Sources */,
-				39A525A41B1F609F00BD773F /* PayVC.m in Sources */,
 				13C06F951B1B635F003773AB /* main.m in Sources */,
 				39A525AA1B1F610900BD773F /* ShareVC.m in Sources */,
 				39A5259C1B1F5C6600BD773F /* LeafMenuViewController.m in Sources */,
+				131F0E6D1B2894C7004D090E /* PayWashCarVC.m in Sources */,
 				13E9EED11B24AAC60037E563 /* CustomAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

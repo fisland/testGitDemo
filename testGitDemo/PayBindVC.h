@@ -1,13 +1,13 @@
 //
-//  PayVC.h
+//  PayBindVC.h
 //  testGitDemo
 //
-//  Created by chanWenJay on 15/6/4.
+//  Created by 张炯枫 on 15/6/10.
 //  Copyright (c) 2015年 fisland. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PayVC : UIViewController
+@interface PayBindVC : UIViewController
 
 @end

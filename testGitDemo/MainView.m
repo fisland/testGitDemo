@@ -11,9 +11,8 @@
 #import "AppDelegate.h"
 #import "VideoPlayerVC.h"
 #import "QRCodeViewController.h"
-
+#import "PayWashCarVC.h"
 @interface MainView () <UIAlertViewDelegate> {
-
     
 }
 
@@ -48,7 +47,6 @@
 
 - (void)initButton {
     UIButton *freeWashBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    
     freeWashBtn.frame = CGRectMake(100/2, 140, IPHONE_WIDTH - 100/2*2, 44);
     freeWashBtn.backgroundColor = BlackColor;
     [freeWashBtn setTitle:@"免费洗车" forState:UIControlStateNormal];
@@ -89,7 +87,8 @@
         [alert show];
         
     } else if (sender.tag == 101) {
-        
+        PayWashCarVC *payWashCarVC = [[PayWashCarVC alloc]init];
+        [self.navigationController pushViewController:payWashCarVC animated:YES];
     } else if (sender.tag == 102) {
         QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
         [self.navigationController pushViewController:qrVC animated:YES];
