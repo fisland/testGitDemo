@@ -19,6 +19,8 @@
     NSArray * names;
     NSArray * imgNames;
     NSInteger currentRow;
+    
+    UIImageView *imgView;
 }
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
@@ -43,16 +45,18 @@
     leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self setTheHeaderView];
     [self loadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:@"updateData" object:nil];
     // Do any additional setup after loading the view.
 }
 
 -(void)setTheHeaderView {
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
     //view.backgroundColor = [UIColor redColor];
-    UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 5, 40, 40)];
+    imgView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 5, 40, 40)];
     imgView.layer.cornerRadius = 20;
     imgView.clipsToBounds = YES;
-    imgView.image = [UIImage imageNamed:@"dog.png"];
+    imgView.image = [UIImage imageWithContentsOfFile:self.user.headerPath];
     [view addSubview:imgView];
     
     UILabel * nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 10, 150, 40)];
@@ -96,7 +100,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-        IndividualVC *individualVC = [[IndividualVC alloc] init];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        IndividualVC *individualVC = [story instantiateViewControllerWithIdentifier:@"Individual"];
+        individualVC.user = self.user;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:individualVC];
         [self presentViewController:nav animated:YES completion:^{
             
@@ -126,6 +132,10 @@
             
         }];
     }
+}
+
+- (void)updateData {
+    imgView.image = [UIImage imageWithContentsOfFile:self.user.headerPath];
 }
 
 /*

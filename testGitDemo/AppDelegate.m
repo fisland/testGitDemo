@@ -11,6 +11,8 @@
 #import "WJMenuView.h"
 #import "MAAPIKey.h"
 #import <MAMapKit/MAMapKit.h>
+#include "User.h"
+
 @interface AppDelegate ()
 
 @end
@@ -51,6 +53,8 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:main];
     WJMenuView *menu = [[WJMenuView alloc] init];
     UINavigationController *menuNav = [[UINavigationController alloc] initWithRootViewController:menu];
+    User *user = [[User alloc] init];
+    menu.user = user;
     
     self.leafMenu = [[LeafMenuViewController alloc] initWithLeftVC:menuNav centerVCs:@[nav]];
     self.leafMenu.shadow = YES;

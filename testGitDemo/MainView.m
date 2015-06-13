@@ -12,6 +12,8 @@
 #import "VideoPlayerVC.h"
 #import "QRCodeViewController.h"
 #import "PayWashCarVC.h"
+#import "User.h"
+
 @interface MainView () <UIAlertViewDelegate> {
     
 }

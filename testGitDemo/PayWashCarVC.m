@@ -7,6 +7,7 @@
 //
 
 #import "PayWashCarVC.h"
+#import "QRCodeViewController.h"
 
 @implementation PayWashCarVC
 - (void)viewDidLoad {
@@ -66,6 +67,15 @@
 
 #pragma mark - action
 - (void)payBtnAction:(UIButton *)sender{
-    
+    if (sender.tag == 100) {
+        QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
+        [self.navigationController pushViewController:qrVC animated:YES];
+    } else if (sender.tag == 101) {
+        QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
+        [self.navigationController pushViewController:qrVC animated:YES];
+    } else if (sender.tag == 102) {
+        QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
+        [self.navigationController pushViewController:qrVC animated:YES];
+    }
 }
 @end

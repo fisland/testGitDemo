@@ -38,7 +38,7 @@
     UIImageView *bgImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGTH )];
     bgImgView.userInteractionEnabled = YES;
     bgImgView.image = [UIImage imageNamed:@"Balloon"];
-    bgImgView.contentMode = UIViewContentModeScaleAspectFit;
+    bgImgView.contentMode = UIViewContentModeScaleToFill;
     [self.view addSubview:bgImgView];
     
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, IPHONE_HEIGTH - 64 , 100, 40)];

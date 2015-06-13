@@ -46,6 +46,36 @@
 		39DF33271B28B0BA00E53264 /* moviePlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF33221B28B0BA00E53264 /* moviePlay@2x.png */; };
 		39DFB83B1B24143E0069E37C /* VideoPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */; };
 		39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 39DFB83C1B24148D0069E37C /* welcome_video.mp4 */; };
+		39E005F51B2C653100999F6C /* alipay_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005F01B2C653100999F6C /* alipay_logo.png */; };
+		39E005F61B2C653100999F6C /* alipay_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005F11B2C653100999F6C /* alipay_logo@2x.png */; };
+		39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005F21B2C653100999F6C /* alipay_logo@3x.png */; };
+		39E005F81B2C653100999F6C /* alipay_profile_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005F31B2C653100999F6C /* alipay_profile_bg.png */; };
+		39E005F91B2C653100999F6C /* alipay_profile_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005F41B2C653100999F6C /* alipay_profile_bg@2x.png */; };
+		39E005FD1B2C65AE00999F6C /* credit_card_large_union_pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005FA1B2C65AE00999F6C /* credit_card_large_union_pay.png */; };
+		39E005FE1B2C65AE00999F6C /* credit_card_large_union_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005FB1B2C65AE00999F6C /* credit_card_large_union_pay@2x.png */; };
+		39E005FF1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E005FC1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png */; };
+		39E006031B2C664B00999F6C /* payment_icon_small_creditcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006001B2C664B00999F6C /* payment_icon_small_creditcard.png */; };
+		39E006041B2C664B00999F6C /* payment_icon_small_creditcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006011B2C664B00999F6C /* payment_icon_small_creditcard@2x.png */; };
+		39E006051B2C664B00999F6C /* payment_icon_small_creditcard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006021B2C664B00999F6C /* payment_icon_small_creditcard@3x.png */; };
+		39E006081B2C666D00999F6C /* paypal_profile_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006061B2C666D00999F6C /* paypal_profile_bg.png */; };
+		39E006091B2C666D00999F6C /* paypal_profile_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006071B2C666D00999F6C /* paypal_profile_bg@2x.png */; };
+		39E0060C1B2C751600999F6C /* card_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E0060A1B2C751600999F6C /* card_plus.png */; };
+		39E0060D1B2C751600999F6C /* card_plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E0060B1B2C751600999F6C /* card_plus@2x.png */; };
+		39E006101B2C800300999F6C /* AddCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0060F1B2C800300999F6C /* AddCardVC.m */; };
+		39E006131B2C839600999F6C /* messages_browser_right_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006111B2C839600999F6C /* messages_browser_right_arrow_down.png */; };
+		39E006141B2C839600999F6C /* messages_browser_right_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006121B2C839600999F6C /* messages_browser_right_arrow_down@2x.png */; };
+		39E006181B2C844700999F6C /* disclosure_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006151B2C844700999F6C /* disclosure_arrow.png */; };
+		39E006191B2C844700999F6C /* disclosure_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006161B2C844700999F6C /* disclosure_arrow@2x.png */; };
+		39E0061A1B2C844700999F6C /* disclosure_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006171B2C844700999F6C /* disclosure_arrow@3x.png */; };
+		39E006231B2C851300999F6C /* AliPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E006221B2C851300999F6C /* AliPayVC.m */; };
+		39E006261B2C853100999F6C /* CreditCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E006251B2C853100999F6C /* CreditCardVC.m */; };
+		39E0062A1B2C90F800999F6C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E006291B2C90F800999F6C /* Card.m */; };
+		39E0062D1B2C93DD00999F6C /* credit_card_large_alipay.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E0062B1B2C93DD00999F6C /* credit_card_large_alipay.png */; };
+		39E0062E1B2C93DD00999F6C /* credit_card_large_alipay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E0062C1B2C93DD00999F6C /* credit_card_large_alipay@2x.png */; };
+		39E006321B2C941000999F6C /* payment_icon_small_alipay.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E0062F1B2C941000999F6C /* payment_icon_small_alipay.png */; };
+		39E006331B2C941000999F6C /* payment_icon_small_alipay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006301B2C941000999F6C /* payment_icon_small_alipay@2x.png */; };
+		39E006341B2C941000999F6C /* payment_icon_small_alipay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006311B2C941000999F6C /* payment_icon_small_alipay@3x.png */; };
+		39E006371B2C9B4C00999F6C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E006361B2C9B4C00999F6C /* User.m */; };
 		39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BDB1B1F361100CF1C7E /* MainView.m */; };
 		EA877C052DCF53904045FE2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA926C48356077FB40A87958 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -127,6 +157,41 @@
 		39DFB8391B24143E0069E37C /* VideoPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerVC.h; sourceTree = "<group>"; };
 		39DFB83A1B24143E0069E37C /* VideoPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerVC.m; sourceTree = "<group>"; };
 		39DFB83C1B24148D0069E37C /* welcome_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome_video.mp4; sourceTree = "<group>"; };
+		39E005F01B2C653100999F6C /* alipay_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_logo.png; sourceTree = "<group>"; };
+		39E005F11B2C653100999F6C /* alipay_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alipay_logo@2x.png"; sourceTree = "<group>"; };
+		39E005F21B2C653100999F6C /* alipay_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alipay_logo@3x.png"; sourceTree = "<group>"; };
+		39E005F31B2C653100999F6C /* alipay_profile_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay_profile_bg.png; sourceTree = "<group>"; };
+		39E005F41B2C653100999F6C /* alipay_profile_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alipay_profile_bg@2x.png"; sourceTree = "<group>"; };
+		39E005FA1B2C65AE00999F6C /* credit_card_large_union_pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card_large_union_pay.png; sourceTree = "<group>"; };
+		39E005FB1B2C65AE00999F6C /* credit_card_large_union_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_card_large_union_pay@2x.png"; sourceTree = "<group>"; };
+		39E005FC1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_card_large_union_pay@3x.png"; sourceTree = "<group>"; };
+		39E006001B2C664B00999F6C /* payment_icon_small_creditcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = payment_icon_small_creditcard.png; sourceTree = "<group>"; };
+		39E006011B2C664B00999F6C /* payment_icon_small_creditcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payment_icon_small_creditcard@2x.png"; sourceTree = "<group>"; };
+		39E006021B2C664B00999F6C /* payment_icon_small_creditcard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payment_icon_small_creditcard@3x.png"; sourceTree = "<group>"; };
+		39E006061B2C666D00999F6C /* paypal_profile_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paypal_profile_bg.png; sourceTree = "<group>"; };
+		39E006071B2C666D00999F6C /* paypal_profile_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal_profile_bg@2x.png"; sourceTree = "<group>"; };
+		39E0060A1B2C751600999F6C /* card_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_plus.png; sourceTree = "<group>"; };
+		39E0060B1B2C751600999F6C /* card_plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card_plus@2x.png"; sourceTree = "<group>"; };
+		39E0060E1B2C800300999F6C /* AddCardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardVC.h; sourceTree = "<group>"; };
+		39E0060F1B2C800300999F6C /* AddCardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardVC.m; sourceTree = "<group>"; };
+		39E006111B2C839600999F6C /* messages_browser_right_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messages_browser_right_arrow_down.png; sourceTree = "<group>"; };
+		39E006121B2C839600999F6C /* messages_browser_right_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messages_browser_right_arrow_down@2x.png"; sourceTree = "<group>"; };
+		39E006151B2C844700999F6C /* disclosure_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_arrow.png; sourceTree = "<group>"; };
+		39E006161B2C844700999F6C /* disclosure_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure_arrow@2x.png"; sourceTree = "<group>"; };
+		39E006171B2C844700999F6C /* disclosure_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure_arrow@3x.png"; sourceTree = "<group>"; };
+		39E006211B2C851300999F6C /* AliPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPayVC.h; sourceTree = "<group>"; };
+		39E006221B2C851300999F6C /* AliPayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPayVC.m; sourceTree = "<group>"; };
+		39E006241B2C853100999F6C /* CreditCardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardVC.h; sourceTree = "<group>"; };
+		39E006251B2C853100999F6C /* CreditCardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardVC.m; sourceTree = "<group>"; };
+		39E006281B2C90F800999F6C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		39E006291B2C90F800999F6C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		39E0062B1B2C93DD00999F6C /* credit_card_large_alipay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card_large_alipay.png; sourceTree = "<group>"; };
+		39E0062C1B2C93DD00999F6C /* credit_card_large_alipay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_card_large_alipay@2x.png"; sourceTree = "<group>"; };
+		39E0062F1B2C941000999F6C /* payment_icon_small_alipay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = payment_icon_small_alipay.png; sourceTree = "<group>"; };
+		39E006301B2C941000999F6C /* payment_icon_small_alipay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payment_icon_small_alipay@2x.png"; sourceTree = "<group>"; };
+		39E006311B2C941000999F6C /* payment_icon_small_alipay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payment_icon_small_alipay@3x.png"; sourceTree = "<group>"; };
+		39E006351B2C9B4C00999F6C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		39E006361B2C9B4C00999F6C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		39E88BDA1B1F361100CF1C7E /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		39E88BDB1B1F361100CF1C7E /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		9EDE449263ABCEB4B0569F39 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +257,8 @@
 		13BCE8B71B20967300EC2AFE /* model */ = {
 			isa = PBXGroup;
 			children = (
+				39E006351B2C9B4C00999F6C /* User.h */,
+				39E006361B2C9B4C00999F6C /* User.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -250,6 +317,13 @@
 			children = (
 				131F0E681B289434004D090E /* PayBindVC.h */,
 				131F0E691B289434004D090E /* PayBindVC.m */,
+				39E0060E1B2C800300999F6C /* AddCardVC.h */,
+				39E0060F1B2C800300999F6C /* AddCardVC.m */,
+				39E006211B2C851300999F6C /* AliPayVC.h */,
+				39E006221B2C851300999F6C /* AliPayVC.m */,
+				39E006241B2C853100999F6C /* CreditCardVC.h */,
+				39E006251B2C853100999F6C /* CreditCardVC.m */,
+				39E006271B2C90DD00999F6C /* model */,
 			);
 			name = pay;
 			sourceTree = "<group>";
@@ -393,6 +467,31 @@
 		399161931B1F507900F1751D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				39E0062F1B2C941000999F6C /* payment_icon_small_alipay.png */,
+				39E006301B2C941000999F6C /* payment_icon_small_alipay@2x.png */,
+				39E006311B2C941000999F6C /* payment_icon_small_alipay@3x.png */,
+				39E0062B1B2C93DD00999F6C /* credit_card_large_alipay.png */,
+				39E0062C1B2C93DD00999F6C /* credit_card_large_alipay@2x.png */,
+				39E006151B2C844700999F6C /* disclosure_arrow.png */,
+				39E006161B2C844700999F6C /* disclosure_arrow@2x.png */,
+				39E006171B2C844700999F6C /* disclosure_arrow@3x.png */,
+				39E006111B2C839600999F6C /* messages_browser_right_arrow_down.png */,
+				39E006121B2C839600999F6C /* messages_browser_right_arrow_down@2x.png */,
+				39E0060A1B2C751600999F6C /* card_plus.png */,
+				39E0060B1B2C751600999F6C /* card_plus@2x.png */,
+				39E006061B2C666D00999F6C /* paypal_profile_bg.png */,
+				39E006071B2C666D00999F6C /* paypal_profile_bg@2x.png */,
+				39E006001B2C664B00999F6C /* payment_icon_small_creditcard.png */,
+				39E006011B2C664B00999F6C /* payment_icon_small_creditcard@2x.png */,
+				39E006021B2C664B00999F6C /* payment_icon_small_creditcard@3x.png */,
+				39E005FA1B2C65AE00999F6C /* credit_card_large_union_pay.png */,
+				39E005FB1B2C65AE00999F6C /* credit_card_large_union_pay@2x.png */,
+				39E005FC1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png */,
+				39E005F01B2C653100999F6C /* alipay_logo.png */,
+				39E005F11B2C653100999F6C /* alipay_logo@2x.png */,
+				39E005F21B2C653100999F6C /* alipay_logo@3x.png */,
+				39E005F31B2C653100999F6C /* alipay_profile_bg.png */,
+				39E005F41B2C653100999F6C /* alipay_profile_bg@2x.png */,
 				39DF331E1B28B0BA00E53264 /* 2011121611432897.png */,
 				39DF331F1B28B0BA00E53264 /* moviePause.png */,
 				39DF33201B28B0BA00E53264 /* moviePause@2x.png */,
@@ -452,6 +551,15 @@
 				39DE1C701B25D64800862B8A /* View */,
 			);
 			name = FreeWashVC;
+			sourceTree = "<group>";
+		};
+		39E006271B2C90DD00999F6C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				39E006281B2C90F800999F6C /* Card.h */,
+				39E006291B2C90F800999F6C /* Card.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,20 +644,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E006331B2C941000999F6C /* payment_icon_small_alipay@2x.png in Resources */,
+				39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */,
 				13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */,
 				13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */,
 				39DF33251B28B0BA00E53264 /* moviePause@2x.png in Resources */,
+				39E006041B2C664B00999F6C /* payment_icon_small_creditcard@2x.png in Resources */,
 				39DFB83D1B24148D0069E37C /* welcome_video.mp4 in Resources */,
 				39DF33271B28B0BA00E53264 /* moviePlay@2x.png in Resources */,
+				39E005FE1B2C65AE00999F6C /* credit_card_large_union_pay@2x.png in Resources */,
 				39DF33231B28B0BA00E53264 /* 2011121611432897.png in Resources */,
+				39E005F91B2C653100999F6C /* alipay_profile_bg@2x.png in Resources */,
+				39E006141B2C839600999F6C /* messages_browser_right_arrow_down@2x.png in Resources */,
+				39E006191B2C844700999F6C /* disclosure_arrow@2x.png in Resources */,
+				39E0060D1B2C751600999F6C /* card_plus@2x.png in Resources */,
+				39E006321B2C941000999F6C /* payment_icon_small_alipay.png in Resources */,
 				39DDD0A41B2082D600AFB92D /* dog.png in Resources */,
 				39DF33261B28B0BA00E53264 /* moviePlay.png in Resources */,
 				13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */,
+				39E0062E1B2C93DD00999F6C /* credit_card_large_alipay@2x.png in Resources */,
 				13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */,
+				39E0060C1B2C751600999F6C /* card_plus.png in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
+				39E005FF1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
+				39E006081B2C666D00999F6C /* paypal_profile_bg.png in Resources */,
+				39E006031B2C664B00999F6C /* payment_icon_small_creditcard.png in Resources */,
+				39E0061A1B2C844700999F6C /* disclosure_arrow@3x.png in Resources */,
 				13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */,
+				39E005FD1B2C65AE00999F6C /* credit_card_large_union_pay.png in Resources */,
+				39E006131B2C839600999F6C /* messages_browser_right_arrow_down.png in Resources */,
+				39E006181B2C844700999F6C /* disclosure_arrow.png in Resources */,
+				39E006051B2C664B00999F6C /* payment_icon_small_creditcard@3x.png in Resources */,
 				13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */,
+				39E0062D1B2C93DD00999F6C /* credit_card_large_alipay.png in Resources */,
+				39E006341B2C941000999F6C /* payment_icon_small_alipay@3x.png in Resources */,
+				39E005F61B2C653100999F6C /* alipay_logo@2x.png in Resources */,
+				39E005F51B2C653100999F6C /* alipay_logo.png in Resources */,
+				39E005F81B2C653100999F6C /* alipay_profile_bg.png in Resources */,
+				39E006091B2C666D00999F6C /* paypal_profile_bg@2x.png in Resources */,
 				39DF33241B28B0BA00E53264 /* moviePause.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
 				13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */,
@@ -603,6 +736,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E006101B2C800300999F6C /* AddCardVC.m in Sources */,
+				39E006261B2C853100999F6C /* CreditCardVC.m in Sources */,
+				39E006371B2C9B4C00999F6C /* User.m in Sources */,
 				39A5259D1B1F5C6600BD773F /* WJMenuView.m in Sources */,
 				39A525AD1B1F611500BD773F /* HelpVC.m in Sources */,
 				39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */,
@@ -614,6 +750,7 @@
 				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
 				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
+				39E0062A1B2C90F800999F6C /* Card.m in Sources */,
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
 				13E9EEC81B24A9B10037E563 /* BaseMapViewController.m in Sources */,
 				13E9EECE1B24AA9D0037E563 /* CustomCalloutView.m in Sources */,
@@ -624,6 +761,7 @@
 				39A525AA1B1F610900BD773F /* ShareVC.m in Sources */,
 				39A5259C1B1F5C6600BD773F /* LeafMenuViewController.m in Sources */,
 				131F0E6D1B2894C7004D090E /* PayWashCarVC.m in Sources */,
+				39E006231B2C851300999F6C /* AliPayVC.m in Sources */,
 				13E9EED11B24AAC60037E563 /* CustomAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

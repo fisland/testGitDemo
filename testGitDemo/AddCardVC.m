@@ -1,55 +1,37 @@
 //
-//  PayBindVC.m
+//  AddCardVC.m
 //  testGitDemo
 //
-//  Created by 张炯枫 on 15/6/10.
+//  Created by chanWenJay on 15/6/13.
 //  Copyright (c) 2015年 fisland. All rights reserved.
 //
 
-#import "PayBindVC.h"
 #import "AddCardVC.h"
-#import "Card.h"
+#import "AliPayVC.h"
+#import "CreditCardVC.h"
 
-@interface PayBindVC () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
+@interface AddCardVC () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
     UICollectionView *_collectionView;
-    NSMutableArray *dataArray;
 }
 
 @end
 
-@implementation PayBindVC
+@implementation AddCardVC
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"支付绑定";
+    self.title = @"添加付款方式";
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     self.navigationItem.backBarButtonItem = backItem;
     backItem.title = @"back";
     self.view.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
-    
-    dataArray = [NSMutableArray array];
     [self initUI];
-    
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
-    self.navigationItem.leftBarButtonItem = openItem;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddCard:) name:@"addCard" object:nil];
     // Do any additional setup after loading the view.
-}
-
-- (void)backButtonPressed {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-
 }
 
 - (void)initUI {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setItemSize:CGSizeMake(self.view.frame.size.width-20, 40)];
+    [flowLayout setItemSize:CGSizeMake(self.view.frame.size.width, 40)];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.sectionInset = UIEdgeInsetsMake(20, 1, 1, 1);
     flowLayout.minimumInteritemSpacing = 1.0f;
@@ -63,7 +45,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return dataArray.count + 1;
+    return 2;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -73,56 +55,62 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    if (indexPath.row == dataArray.count) {
+    if (indexPath.row == 0) {
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 30, 20)];
-        imgView.tag = 2000;
-        imgView.image = [UIImage imageNamed:@"card_plus"];
+        imgView.image = [UIImage imageNamed:@"payment_icon_small_alipay"];
         [cell.contentView addSubview:imgView];
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 150, 20)];
-        label.text = @"添加付款方式";
-        label.tag = 2001;
+        label.text = @"支付宝";
         label.textColor = [UIColor colorWithRed:75/255.0f green:172/255.0f blue:233/255.f alpha:1.0f];
         label.font = [UIFont boldSystemFontOfSize:12.0f];
         [cell.contentView addSubview:label];
+        
+        UIImageView *allowImg = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 30, 13, 10, 14)];
+        allowImg.image = [UIImage imageNamed:@"disclosure_arrow"];
+        [cell.contentView addSubview:allowImg];
     } else {
-        if (dataArray.count > 0) {
-            UIImageView *imgView = (UIImageView *)[cell.contentView viewWithTag:2000];
-            Card *card = dataArray[indexPath.row];
-            if (card.type == 1) {
-                imgView.image = [UIImage imageNamed:@"payment_icon_small_alipay"];
-            } else {
-                imgView.image = [UIImage imageNamed:@"credit_card_large_union_pay"];
-            }
-            [cell.contentView addSubview:imgView];
-            
-            UILabel *label = (UILabel *)[cell.contentView viewWithTag:2001];
-            label.text = card.num;
-            label.textColor = [UIColor blackColor];
-            label.font = [UIFont boldSystemFontOfSize:12.0f];
-            [cell.contentView addSubview:label];
-        }
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 30, 20)];
+        imgView.image = [UIImage imageNamed:@"payment_icon_small_creditcard"];
+        [cell.contentView addSubview:imgView];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 150, 20)];
+        label.text = @"信用卡";
+        label.textColor = [UIColor colorWithRed:75/255.0f green:172/255.0f blue:233/255.f alpha:1.0f];
+        label.font = [UIFont boldSystemFontOfSize:12.0f];
+        [cell.contentView addSubview:label];
+        
+        UIImageView *allowImg = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 30, 13, 10, 14)];
+        allowImg.image = [UIImage imageNamed:@"disclosure_arrow"];
+        [cell.contentView addSubview:allowImg];
     }
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == dataArray.count) {
-        AddCardVC *addCardVC = [[AddCardVC alloc] init];
-        [self.navigationController pushViewController:addCardVC animated:YES];
+    if (indexPath.row == 0 ) {
+        AliPayVC *aliPayVC = [[AliPayVC alloc] init];
+        [self.navigationController pushViewController:aliPayVC animated:YES];
+    } else if (indexPath.row == 1) {
+        CreditCardVC *creditCardVC = [[CreditCardVC alloc] init];
+        [self.navigationController pushViewController:creditCardVC animated:YES];
     }
-}
-
-- (void)didAddCard:(NSNotification *)noti {
-    Card *card = noti.userInfo[@"card"];
-    [dataArray addObject:card];
-    [_collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface WJMenuView : UIViewController
+
+@property (nonatomic, strong) User *user;
 
 @end
