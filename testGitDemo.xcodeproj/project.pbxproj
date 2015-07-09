@@ -389,6 +389,7 @@
 			children = (
 				13BCE8CA1B20A39F00EC2AFE /* config */,
 				13BCE8B71B20967300EC2AFE /* model */,
+				85FD80211B4E778B00B0C9E9 /* UI_Image */,
 				399161931B1F507900F1751D /* Image */,
 				13BCE8B61B20965400EC2AFE /* thirdPart */,
 				13BCE8B81B20974900EC2AFE /* ViewControl */,
@@ -560,6 +561,13 @@
 				39E006291B2C90F800999F6C /* Card.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		85FD80211B4E778B00B0C9E9 /* UI_Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI_Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
