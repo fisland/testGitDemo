@@ -91,8 +91,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog.png" id="tEG-A8-8em">
-                                <rect key="frame" x="130" y="94" width="60" height="61.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head.png" id="tEG-A8-8em">
+                                <rect key="frame" x="130" y="74" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="Scb-3Q-k1C">
@@ -194,7 +194,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dog.png" width="600" height="589"/>
+        <image name="head.png" width="300" height="300"/>
         <image name="moviePause.png" width="20" height="25"/>
         <image name="moviePlay.png" width="20" height="24"/>
     </resources>

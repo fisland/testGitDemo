@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     self.title = @"支付宝";
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0],NSFontAttributeName, nil];
     self.view.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     rightBtn.frame = CGRectMake(0, 0, 40, 20);
@@ -31,9 +32,20 @@
     self.navigationItem.rightBarButtonItem.customView = rightBtn;
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
+    UIButton * leftNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftNacBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftNacBtn setBackgroundImage:[UIImage imageNamed:@"left_nav_button"] forState:UIControlStateNormal];
+    [leftNacBtn addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChangeText) name:UITextFieldTextDidChangeNotification object:nil];
     [self initUI];
     // Do any additional setup after loading the view.
+}
+
+- (void)backButtonPressed {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightBarButtonClick {
