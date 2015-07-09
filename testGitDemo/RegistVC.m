@@ -19,6 +19,12 @@
 
 @implementation RegistVC
 @synthesize nameTextField, passwordTextField, phoneTextField, carNoTextField, carTypeTextField, registBtn;
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
@@ -28,82 +34,74 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - init ui
+- (void)initNavButton
+{
+    UIButton * leftNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftNacBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftNacBtn setBackgroundImage:[UIImage imageNamed:@"left_nav_button"] forState:UIControlStateNormal];
+    [leftNacBtn addTarget:self action:@selector(gotoback) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    UIButton * rightNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightNacBtn.frame = CGRectMake(0, 0, 30, 30);
+    [rightNacBtn setBackgroundImage:[UIImage imageNamed:@"right_nav_button"] forState:UIControlStateNormal];
+    [rightNacBtn addTarget:self action:@selector(registAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightNacBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
 
 - (void)initUI{
-    self.title = @"注册";
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:[[NSBundle mainBundle] pathForResource:@"nav_bg" ofType:@"png"]] forBarMetrics:UIBarMetricsDefault];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self initNavButton];
+    self.title = @"个人资料";
     self.navigationController.navigationBarHidden = NO;
     self.view.backgroundColor = WhiteColor;
-    nameTextField=[[UITextField alloc] initWithFrame:CGRectMake(30/2, 90, IPHONE_WIDTH - 30/2*2, 30)];
-    nameTextField.placeholder=@"姓名";
-    nameTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    nameTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;//取消首字母自动大写
-    nameTextField.borderStyle = UITextBorderStyleRoundedRect;
-    //    self.usernameTextField.delegate = self;
-    nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    nameTextField.font=Font(14.0);
-    [self.view addSubview:self.nameTextField];
+
+    UIImageView *headerImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 50, 100, 100 )];
+    headerImgView.center = CGPointMake(self.view.center.x, headerImgView.center.y);
+    headerImgView.image = [UIImage imageNamed:@"header"];
+    headerImgView.contentMode = UIViewContentModeScaleToFill;
+    [self.view addSubview:headerImgView];
     
-    phoneTextField=[[UITextField alloc] initWithFrame:CGRectMake(30/2, CGRectGetMaxY(nameTextField.frame) + 20, IPHONE_WIDTH - 30/2*2, 30)];
-    phoneTextField.placeholder=@"手机号";
-    phoneTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    phoneTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;//取消首字母自动大写
-    phoneTextField.borderStyle = UITextBorderStyleRoundedRect;
-    //    self.usernameTextField.delegate = self;
-    phoneTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    phoneTextField.font=Font(14.0);
-    [self.view addSubview:self.phoneTextField];
+    UIView *nameView =[self createNormaelTextFieldView:@"姓名" andPointY:CGRectGetMaxY(headerImgView.frame) + 20 andTextfield:nameTextField];
+    [self.view addSubview:nameView];
     
-    carNoTextField=[[UITextField alloc] initWithFrame:CGRectMake(30/2, CGRectGetMaxY(phoneTextField.frame) + 20, IPHONE_WIDTH - 30/2*2, 30)];
-    carNoTextField.placeholder=@"车牌号";
-    carNoTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    carNoTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;//取消首字母自动大写
-    carNoTextField.borderStyle = UITextBorderStyleRoundedRect;
-    //    self.usernameTextField.delegate = self;
-    carNoTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    carNoTextField.font=Font(14.0);
-    [self.view addSubview:self.carNoTextField];
+    UIView *phoneView =[self createNormaelTextFieldView:@"车牌号" andPointY:CGRectGetMaxY(nameView.frame) + 10 andTextfield:phoneTextField];
+    [self.view addSubview:phoneView];
+
     
-    carTypeTextField=[[UITextField alloc] initWithFrame:CGRectMake(30/2, CGRectGetMaxY(carNoTextField.frame) + 20, IPHONE_WIDTH - 30/2*2, 30)];
-    carTypeTextField.placeholder=@"车型";
-    carTypeTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    carTypeTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;//取消首字母自动大写
-    carTypeTextField.borderStyle = UITextBorderStyleRoundedRect;
-    //    self.usernameTextField.delegate = self;
-    carTypeTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    carTypeTextField.font=Font(14.0);
-    [self.view addSubview:self.carTypeTextField];
+    UIView *carNoView =[self createNormaelTextFieldView:@"品牌" andPointY:CGRectGetMaxY(phoneView.frame) + 10 andTextfield:carNoTextField];
+    [self.view addSubview:carNoView];
+
     
-    self.passwordTextField=[[UITextField alloc] initWithFrame:CGRectMake(30/2,  CGRectGetMaxY(carTypeTextField.frame) + 20, IPHONE_WIDTH - 30/2*2, 30)];
-    self.passwordTextField.placeholder=@"登录密码";
-    self.passwordTextField.secureTextEntry=YES;
-    self.passwordTextField.borderStyle=UITextBorderStyleRoundedRect;
-    self.passwordTextField.secureTextEntry=YES;
-    //    self.passwordTextField.delegate = self;
-    self.passwordTextField.font=Font(14.0);
-    self.passwordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    [self.view addSubview:self.passwordTextField];
+    UIView *carTypeView =[self createNormaelTextFieldView:@"车型" andPointY:CGRectGetMaxY(carNoView.frame) + 10 andTextfield:carTypeTextField];
+    [self.view addSubview:carTypeView];
     
-    registBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    registBtn.titleLabel.font = Font(18.0);
-    [registBtn setTitle:@"注册" forState:UIControlStateNormal];
-    [registBtn setTitleColor:WhiteColor forState:UIControlStateNormal];
-    [registBtn setBackgroundColor:default_blue_color];
-    self.registBtn.frame = CGRectMake(30/2, CGRectGetMinY(self.passwordTextField.frame)+60, IPHONE_WIDTH - 30/2*2, 44);
-    self.registBtn.layer.cornerRadius = 5;
-    [self.registBtn.titleLabel setFont:Font(18.0)];
-    [self.registBtn addTarget:self action:@selector(registAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.registBtn];
+    UIView *passwordView =[self createNormaelTextFieldView:@"密码" andPointY:CGRectGetMaxY(carTypeView.frame) + 10 andTextfield:self.passwordTextField];
+    [self.view addSubview:passwordView];
+//    
+//    registBtn = [[UIButton alloc]initWithFrame:CGRectMake((IPHONE_WIDTH - 300)/2, CGRectGetMaxY(passwordView.frame)+25, 300, 40)];
+//    [registBtn setTitle:@"注册" forState:UIControlStateNormal];
+//    [registBtn setBackgroundImage:[UIImage imageNamed:@"normal_button"] forState:UIControlStateNormal];
+//    registBtn.titleLabel.font = Font(18);
+//    [registBtn setTitleColor:WhiteColor forState:UIControlStateNormal];
+//    
+//    [registBtn addTarget:self action:@selector(registAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:registBtn];
 }
 #pragma mark - action
 - (void)registAction{
-    if (![[self judgeRegsitInfo]isEqualToString:@""]) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提醒" message:[self judgeRegsitInfo] delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
-        [alert show];
-        return;
-    }
+//    if (![[self judgeRegsitInfo]isEqualToString:@""]) {
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提醒" message:[self judgeRegsitInfo] delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
+//        [alert show];
+//        return;
+//    }
     NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
-    [userdefault setObject:self.nameTextField.text forKey:CurrentLoginUser];
+    [userdefault setObject:@"企鹅" forKey:CurrentLoginUser];
     
     AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     [appdelegate setUpMenuUI];
@@ -130,5 +128,31 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+}
+- (void)gotoback{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+#pragma mark - ui factory
+- (UIView *)createNormaelTextFieldView:(NSString *)textType andPointY:(CGFloat)pointY andTextfield:(UITextField *)textfield
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake((IPHONE_WIDTH - 300)/2, pointY, 300, 45)];
+    
+    UIImageView *imgview = [[UIImageView alloc]initWithFrame:view.bounds];
+    imgview.userInteractionEnabled = YES;
+    imgview.image = [UIImage imageNamed:@"normal_textfield"];
+    [view addSubview:imgview];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 8, 50, 30)];
+    label.text = textType;
+    label.font = Font(16);
+    label.textColor = RGB_B(60, 160, 180);
+    [view addSubview:label];
+    
+    UITextField *field = [[UITextField alloc]initWithFrame:CGRectMake(60, 8, 140, 30)];
+    textfield = field;
+    field.borderStyle = UITextBorderStyleNone;
+    [view addSubview:field];
+    
+    return view;
 }
 @end

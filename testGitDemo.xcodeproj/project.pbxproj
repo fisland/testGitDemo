@@ -18,6 +18,15 @@
 		13C06FA01B1B635F003773AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C06F9F1B1B635F003773AB /* Images.xcassets */; };
 		13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C06FA11B1B635F003773AB /* LaunchScreen.xib */; };
 		13C06FAF1B1B635F003773AB /* testGitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C06FAE1B1B635F003773AB /* testGitDemoTests.m */; };
+		13E6BA361B4EB3E50078123E /* LaunchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA351B4EB3E50078123E /* LaunchScreen.jpg */; };
+		13E6BA381B4EB5290078123E /* login_regist_backimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA371B4EB5290078123E /* login_regist_backimage.png */; };
+		13E6BA3C1B4EB5900078123E /* normal_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA391B4EB5900078123E /* normal_button.png */; };
+		13E6BA3D1B4EB5900078123E /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA3A1B4EB5900078123E /* header.png */; };
+		13E6BA3E1B4EB5900078123E /* normal_textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA3B1B4EB5900078123E /* normal_textfield.png */; };
+		13E6BA491B4ECF010078123E /* left_nav_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA471B4ECF010078123E /* left_nav_button.png */; };
+		13E6BA4A1B4ECF010078123E /* right_nav_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA481B4ECF010078123E /* right_nav_button.png */; };
+		13E6BA4E1B4ED1E60078123E /* ForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E6BA4D1B4ED1E60078123E /* ForgetVC.m */; };
+		13E6BA501B4ED4AE0078123E /* checkCode.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA4F1B4ED4AE0078123E /* checkCode.png */; };
 		13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEB61B2414B40037E563 /* black_envelope_reflected.png */; };
 		13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEB71B2414B40037E563 /* black_envelope_reflected@2x.png */; };
 		13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */; };
@@ -115,6 +124,16 @@
 		13C06FA81B1B635F003773AB /* testGitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testGitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C06FAD1B1B635F003773AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C06FAE1B1B635F003773AB /* testGitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGitDemoTests.m; sourceTree = "<group>"; };
+		13E6BA351B4EB3E50078123E /* LaunchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchScreen.jpg; sourceTree = "<group>"; };
+		13E6BA371B4EB5290078123E /* login_regist_backimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_regist_backimage.png; sourceTree = "<group>"; };
+		13E6BA391B4EB5900078123E /* normal_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal_button.png; sourceTree = "<group>"; };
+		13E6BA3A1B4EB5900078123E /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		13E6BA3B1B4EB5900078123E /* normal_textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal_textfield.png; sourceTree = "<group>"; };
+		13E6BA471B4ECF010078123E /* left_nav_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_nav_button.png; sourceTree = "<group>"; };
+		13E6BA481B4ECF010078123E /* right_nav_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_nav_button.png; sourceTree = "<group>"; };
+		13E6BA4C1B4ED1E60078123E /* ForgetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetVC.h; sourceTree = "<group>"; };
+		13E6BA4D1B4ED1E60078123E /* ForgetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetVC.m; sourceTree = "<group>"; };
+		13E6BA4F1B4ED4AE0078123E /* checkCode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkCode.png; sourceTree = "<group>"; };
 		13E9EEB61B2414B40037E563 /* black_envelope_reflected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_envelope_reflected.png; sourceTree = "<group>"; };
 		13E9EEB71B2414B40037E563 /* black_envelope_reflected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_envelope_reflected@2x.png"; sourceTree = "<group>"; };
 		13E9EEBA1B242D3F0037E563 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
@@ -281,6 +300,7 @@
 			children = (
 				13BCE8C71B20A1A900EC2AFE /* LoginAndRegistVC.h */,
 				13BCE8C81B20A1A900EC2AFE /* LoginAndRegistVC.m */,
+				13E6BA4B1B4ED1A60078123E /* forgetPasswordVC */,
 				13BCE8C11B2097DD00EC2AFE /* loginVC */,
 				13BCE8C01B2097CA00EC2AFE /* regisetVC */,
 			);
@@ -434,6 +454,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		13E6BA4B1B4ED1A60078123E /* forgetPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				13E6BA4C1B4ED1E60078123E /* ForgetVC.h */,
+				13E6BA4D1B4ED1E60078123E /* ForgetVC.m */,
+			);
+			name = forgetPasswordVC;
+			sourceTree = "<group>";
+		};
 		13E9EEBF1B242D460037E563 /* QRCodeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,7 +597,15 @@
 		85FD80211B4E778B00B0C9E9 /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				13E6BA4F1B4ED4AE0078123E /* checkCode.png */,
+				13E6BA471B4ECF010078123E /* left_nav_button.png */,
+				13E6BA481B4ECF010078123E /* right_nav_button.png */,
+				13E6BA351B4EB3E50078123E /* LaunchScreen.jpg */,
 				39F4F7531B4EAAA100C38CD7 /* nav_bg.png */,
+				13E6BA371B4EB5290078123E /* login_regist_backimage.png */,
+				13E6BA391B4EB5900078123E /* normal_button.png */,
+				13E6BA3A1B4EB5900078123E /* header.png */,
+				13E6BA3B1B4EB5900078123E /* normal_textfield.png */,
 			);
 			name = UI_Image;
 			sourceTree = "<group>";
@@ -657,8 +694,12 @@
 			files = (
 				39E006331B2C941000999F6C /* payment_icon_small_alipay@2x.png in Resources */,
 				39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */,
+				13E6BA501B4ED4AE0078123E /* checkCode.png in Resources */,
+				13E6BA361B4EB3E50078123E /* LaunchScreen.jpg in Resources */,
 				13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */,
+				13E6BA4A1B4ECF010078123E /* right_nav_button.png in Resources */,
 				39F4F7541B4EAAA100C38CD7 /* nav_bg.png in Resources */,
+				13E6BA381B4EB5290078123E /* login_regist_backimage.png in Resources */,
 				13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */,
 				39DF33251B28B0BA00E53264 /* moviePause@2x.png in Resources */,
 				39E006041B2C664B00999F6C /* payment_icon_small_creditcard@2x.png in Resources */,
@@ -677,11 +718,13 @@
 				39E0062E1B2C93DD00999F6C /* credit_card_large_alipay@2x.png in Resources */,
 				13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */,
 				39E0060C1B2C751600999F6C /* card_plus.png in Resources */,
+				13E6BA3E1B4EB5900078123E /* normal_textfield.png in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
 				39E005FF1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
 				39E006081B2C666D00999F6C /* paypal_profile_bg.png in Resources */,
 				39E006031B2C664B00999F6C /* payment_icon_small_creditcard.png in Resources */,
+				13E6BA3C1B4EB5900078123E /* normal_button.png in Resources */,
 				39E0061A1B2C844700999F6C /* disclosure_arrow@3x.png in Resources */,
 				13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */,
 				39E005FD1B2C65AE00999F6C /* credit_card_large_union_pay.png in Resources */,
@@ -694,9 +737,11 @@
 				39E005F61B2C653100999F6C /* alipay_logo@2x.png in Resources */,
 				39E005F51B2C653100999F6C /* alipay_logo.png in Resources */,
 				39E005F81B2C653100999F6C /* alipay_profile_bg.png in Resources */,
+				13E6BA491B4ECF010078123E /* left_nav_button.png in Resources */,
 				39E006091B2C666D00999F6C /* paypal_profile_bg@2x.png in Resources */,
 				39DF33241B28B0BA00E53264 /* moviePause.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
+				13E6BA3D1B4EB5900078123E /* header.png in Resources */,
 				13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +806,7 @@
 				39DF331D1B28B07900E53264 /* MyPlayerView.m in Sources */,
 				13BCE8BF1B2097C300EC2AFE /* RegistVC.m in Sources */,
 				13BCE8C91B20A1A900EC2AFE /* LoginAndRegistVC.m in Sources */,
+				13E6BA4E1B4ED1E60078123E /* ForgetVC.m in Sources */,
 				13C06F981B1B635F003773AB /* AppDelegate.m in Sources */,
 				39E0062A1B2C90F800999F6C /* Card.m in Sources */,
 				39A525A11B1F608F00BD773F /* IndividualVC.m in Sources */,
