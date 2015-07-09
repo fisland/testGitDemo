@@ -83,16 +83,16 @@
             </objects>
             <point key="canvasLocation" x="130.66666666666666" y="209.21333333333334"/>
         </scene>
-        <!--IndividualVC-->
+        <!--View Controller-->
         <scene sceneID="LVH-mX-8Oz">
             <objects>
-                <viewController storyboardIdentifier="Individual" id="k1C-xq-K15" customClass="IndividualVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Individual" id="k1C-xq-K15" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z3Z-ZO-3Xq">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head.png" id="tEG-A8-8em">
-                                <rect key="frame" x="130" y="74" width="80" height="80"/>
+                                <rect key="frame" x="130" y="74" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="Scb-3Q-k1C">

@@ -124,8 +124,8 @@
 
 - (void)controlAction:(UIControl *)sender {
     if (sender.tag == 100) {
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        IndividualVC *individualVC = [story instantiateViewControllerWithIdentifier:@"Individual"];
+//        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        IndividualVC *individualVC = [[IndividualVC alloc] init];
         individualVC.user = self.user;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:individualVC];
         [nav.navigationBar setBackgroundImage:[UIImage imageNamed:[[NSBundle mainBundle] pathForResource:@"nav_bg" ofType:@"png"]] forBarMetrics:UIBarMetricsDefault];

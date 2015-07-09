@@ -11,12 +11,13 @@
 
 @interface IndividualVC : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *headerImgView;
-@property (weak, nonatomic) IBOutlet UITextField *nameTF;
+@property (strong, nonatomic) UIImageView *headerImgView;
+@property (strong, nonatomic) UITextField *nameTF;
 
-@property (weak, nonatomic) IBOutlet UITextField *phoneTF;
-@property (weak, nonatomic) IBOutlet UITextField *carTypeTF;
-@property (weak, nonatomic) IBOutlet UITextField *carNumType;
+@property (strong, nonatomic) UITextField *phoneTF;
+@property (strong, nonatomic) UITextField *carTypeTF;
+@property (strong, nonatomic) UITextField *carNumType;
+@property (nonatomic, strong) UITextField *carModel;
 
 @property (nonatomic, strong) User *user;
 

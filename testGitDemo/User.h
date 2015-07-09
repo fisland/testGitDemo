@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *carType;
 @property (nonatomic, strong) NSString *carNum;
+@property (nonatomic, strong) NSString *carModel;
 
 @property (nonatomic, strong) NSString *headerPath;
 
