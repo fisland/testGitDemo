@@ -77,6 +77,7 @@
 		39E006341B2C941000999F6C /* payment_icon_small_alipay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E006311B2C941000999F6C /* payment_icon_small_alipay@3x.png */; };
 		39E006371B2C9B4C00999F6C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E006361B2C9B4C00999F6C /* User.m */; };
 		39E88BDC1B1F361100CF1C7E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BDB1B1F361100CF1C7E /* MainView.m */; };
+		39F4F7541B4EAAA100C38CD7 /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F4F7531B4EAAA100C38CD7 /* nav_bg.png */; };
 		EA877C052DCF53904045FE2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA926C48356077FB40A87958 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +195,7 @@
 		39E006361B2C9B4C00999F6C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		39E88BDA1B1F361100CF1C7E /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		39E88BDB1B1F361100CF1C7E /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		39F4F7531B4EAAA100C38CD7 /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
 		9EDE449263ABCEB4B0569F39 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA926C48356077FB40A87958 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88CD70C2B9F3EA3585395EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 		85FD80211B4E778B00B0C9E9 /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				39F4F7531B4EAAA100C38CD7 /* nav_bg.png */,
 			);
 			name = UI_Image;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				39E006331B2C941000999F6C /* payment_icon_small_alipay@2x.png in Resources */,
 				39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */,
 				13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */,
+				39F4F7541B4EAAA100C38CD7 /* nav_bg.png in Resources */,
 				13E9EEBE1B242D3F0037E563 /* QRCodeViewController.xib in Resources */,
 				39DF33251B28B0BA00E53264 /* moviePause@2x.png in Resources */,
 				39E006041B2C664B00999F6C /* payment_icon_small_creditcard@2x.png in Resources */,

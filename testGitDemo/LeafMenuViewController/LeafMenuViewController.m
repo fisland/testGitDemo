@@ -26,9 +26,15 @@
 static LeafMenuViewController *_menu = nil;
 
 @implementation LeafMenuViewController
+
 +(instancetype)shareInstance{
     return _menu;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 -(void)prepare{
     _menu = self;
     _contentView = [[UIView alloc] initWithFrame:self.view.bounds];
