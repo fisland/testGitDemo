@@ -39,7 +39,7 @@
 {
     
     CGContextSetLineWidth(context, 2.0);
-    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:0.8].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:16/255.0 green:168/255.0 blue:180/255.0 alpha:1].CGColor);
     
     [self getDrawPath:context];
     CGContextFillPath(context);

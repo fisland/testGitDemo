@@ -27,6 +27,14 @@
 		13E6BA4A1B4ECF010078123E /* right_nav_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA481B4ECF010078123E /* right_nav_button.png */; };
 		13E6BA4E1B4ED1E60078123E /* ForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E6BA4D1B4ED1E60078123E /* ForgetVC.m */; };
 		13E6BA501B4ED4AE0078123E /* checkCode.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA4F1B4ED4AE0078123E /* checkCode.png */; };
+		13E6BA521B4EDF890078123E /* map_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA511B4EDF890078123E /* map_annotation.png */; };
+		13E6BA571B4EEA800078123E /* share_QQ.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA531B4EEA800078123E /* share_QQ.png */; };
+		13E6BA581B4EEA800078123E /* share_weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA541B4EEA800078123E /* share_weibo.png */; };
+		13E6BA591B4EEA800078123E /* share_weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA551B4EEA800078123E /* share_weixin.png */; };
+		13E6BA5A1B4EEA800078123E /* share_weixin_quan.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA561B4EEA800078123E /* share_weixin_quan.png */; };
+		13E6BA5E1B4EEEB40078123E /* invist_mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA5B1B4EEEB40078123E /* invist_mail.png */; };
+		13E6BA5F1B4EEEB40078123E /* invist_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA5C1B4EEEB40078123E /* invist_message.png */; };
+		13E6BA601B4EEEB40078123E /* invist_social.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E6BA5D1B4EEEB40078123E /* invist_social.png */; };
 		13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEB61B2414B40037E563 /* black_envelope_reflected.png */; };
 		13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E9EEB71B2414B40037E563 /* black_envelope_reflected@2x.png */; };
 		13E9EEBD1B242D3F0037E563 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E9EEBB1B242D3F0037E563 /* QRCodeViewController.m */; };
@@ -134,6 +142,14 @@
 		13E6BA4C1B4ED1E60078123E /* ForgetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetVC.h; sourceTree = "<group>"; };
 		13E6BA4D1B4ED1E60078123E /* ForgetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetVC.m; sourceTree = "<group>"; };
 		13E6BA4F1B4ED4AE0078123E /* checkCode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkCode.png; sourceTree = "<group>"; };
+		13E6BA511B4EDF890078123E /* map_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_annotation.png; sourceTree = "<group>"; };
+		13E6BA531B4EEA800078123E /* share_QQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_QQ.png; sourceTree = "<group>"; };
+		13E6BA541B4EEA800078123E /* share_weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_weibo.png; sourceTree = "<group>"; };
+		13E6BA551B4EEA800078123E /* share_weixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_weixin.png; sourceTree = "<group>"; };
+		13E6BA561B4EEA800078123E /* share_weixin_quan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_weixin_quan.png; sourceTree = "<group>"; };
+		13E6BA5B1B4EEEB40078123E /* invist_mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invist_mail.png; sourceTree = "<group>"; };
+		13E6BA5C1B4EEEB40078123E /* invist_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invist_message.png; sourceTree = "<group>"; };
+		13E6BA5D1B4EEEB40078123E /* invist_social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invist_social.png; sourceTree = "<group>"; };
 		13E9EEB61B2414B40037E563 /* black_envelope_reflected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_envelope_reflected.png; sourceTree = "<group>"; };
 		13E9EEB71B2414B40037E563 /* black_envelope_reflected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_envelope_reflected@2x.png"; sourceTree = "<group>"; };
 		13E9EEBA1B242D3F0037E563 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
@@ -597,6 +613,14 @@
 		85FD80211B4E778B00B0C9E9 /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				13E6BA5B1B4EEEB40078123E /* invist_mail.png */,
+				13E6BA5C1B4EEEB40078123E /* invist_message.png */,
+				13E6BA5D1B4EEEB40078123E /* invist_social.png */,
+				13E6BA531B4EEA800078123E /* share_QQ.png */,
+				13E6BA541B4EEA800078123E /* share_weibo.png */,
+				13E6BA551B4EEA800078123E /* share_weixin.png */,
+				13E6BA561B4EEA800078123E /* share_weixin_quan.png */,
+				13E6BA511B4EDF890078123E /* map_annotation.png */,
 				13E6BA4F1B4ED4AE0078123E /* checkCode.png */,
 				13E6BA471B4ECF010078123E /* left_nav_button.png */,
 				13E6BA481B4ECF010078123E /* right_nav_button.png */,
@@ -696,6 +720,8 @@
 				39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */,
 				13E6BA501B4ED4AE0078123E /* checkCode.png in Resources */,
 				13E6BA361B4EB3E50078123E /* LaunchScreen.jpg in Resources */,
+				13E6BA581B4EEA800078123E /* share_weibo.png in Resources */,
+				13E6BA601B4EEEB40078123E /* invist_social.png in Resources */,
 				13E9EED31B25DD320037E563 /* blackAnnotation.png in Resources */,
 				13E6BA4A1B4ECF010078123E /* right_nav_button.png in Resources */,
 				39F4F7541B4EAAA100C38CD7 /* nav_bg.png in Resources */,
@@ -717,15 +743,20 @@
 				13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */,
 				39E0062E1B2C93DD00999F6C /* credit_card_large_alipay@2x.png in Resources */,
 				13C06F9E1B1B635F003773AB /* Main.storyboard in Resources */,
+				13E6BA5A1B4EEA800078123E /* share_weixin_quan.png in Resources */,
+				13E6BA521B4EDF890078123E /* map_annotation.png in Resources */,
 				39E0060C1B2C751600999F6C /* card_plus.png in Resources */,
 				13E6BA3E1B4EB5900078123E /* normal_textfield.png in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
 				39E005FF1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png in Resources */,
+				13E6BA571B4EEA800078123E /* share_QQ.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
 				39E006081B2C666D00999F6C /* paypal_profile_bg.png in Resources */,
 				39E006031B2C664B00999F6C /* payment_icon_small_creditcard.png in Resources */,
 				13E6BA3C1B4EB5900078123E /* normal_button.png in Resources */,
+				13E6BA5E1B4EEEB40078123E /* invist_mail.png in Resources */,
 				39E0061A1B2C844700999F6C /* disclosure_arrow@3x.png in Resources */,
+				13E6BA591B4EEA800078123E /* share_weixin.png in Resources */,
 				13E9EEC11B242E5C0037E563 /* washCarQRCode.png in Resources */,
 				39E005FD1B2C65AE00999F6C /* credit_card_large_union_pay.png in Resources */,
 				39E006131B2C839600999F6C /* messages_browser_right_arrow_down.png in Resources */,
@@ -742,6 +773,7 @@
 				39DF33241B28B0BA00E53264 /* moviePause.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
 				13E6BA3D1B4EB5900078123E /* header.png in Resources */,
+				13E6BA5F1B4EEEB40078123E /* invist_message.png in Resources */,
 				13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

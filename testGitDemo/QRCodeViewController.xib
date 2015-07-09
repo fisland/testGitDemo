@@ -23,12 +23,12 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-Q8-qo7">
-                    <rect key="frame" x="331" y="420" width="120" height="30"/>
-                    <color key="backgroundColor" red="0.31556063137630169" green="0.72222222222222221" blue="0.12556760009373377" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="149" y="420" width="302" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="120" id="UpE-C0-5gG"/>
+                        <constraint firstAttribute="height" constant="50" id="Lc9-xa-IV4"/>
                     </constraints>
-                    <state key="normal" title="现在去洗车">
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="现在去洗车" backgroundImage="normal_button.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -40,13 +40,15 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="gG7-Ub-J26" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="1hP-hf-f7k"/>
-                <constraint firstItem="WV4-Q8-qo7" firstAttribute="trailing" secondItem="gG7-Ub-J26" secondAttribute="trailing" id="Odq-gr-u36"/>
+                <constraint firstItem="WV4-Q8-qo7" firstAttribute="top" secondItem="gG7-Ub-J26" secondAttribute="bottom" constant="37" id="7QO-36-LL4"/>
+                <constraint firstItem="WV4-Q8-qo7" firstAttribute="trailing" secondItem="gG7-Ub-J26" secondAttribute="trailing" id="PYg-I6-yyq"/>
                 <constraint firstItem="gG7-Ub-J26" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZYT-ZH-Bcq"/>
-                <constraint firstItem="WV4-Q8-qo7" firstAttribute="top" secondItem="gG7-Ub-J26" secondAttribute="bottom" constant="37" id="bjy-kx-fIq"/>
+                <constraint firstItem="WV4-Q8-qo7" firstAttribute="leading" secondItem="gG7-Ub-J26" secondAttribute="leading" id="jbr-qT-L1v"/>
             </constraints>
         </view>
     </objects>
     <resources>
+        <image name="normal_button.png" width="805" height="113"/>
         <image name="washCarQRCode.png" width="280" height="280"/>
     </resources>
 </document>

@@ -31,7 +31,16 @@
     [self initMapView];
     // Do any additional setup after loading the view from its nib.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UIButton * leftNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftNacBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftNacBtn setBackgroundImage:[UIImage imageNamed:@"left_nav_button"] forState:UIControlStateNormal];
+    [leftNacBtn addTarget:self action:@selector(gotoback) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,5 +74,8 @@
     subViewController.search  = self.search;
     
     [self.navigationController pushViewController:(UIViewController*)subViewController animated:YES];
+}
+- (void)gotoback{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

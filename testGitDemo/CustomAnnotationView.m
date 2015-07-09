@@ -9,7 +9,7 @@
 #import "CustomAnnotationView.h"
 #import "CustomCalloutView.h"
 
-#define kWidth  50.f
+#define kWidth  35.f
 #define kHeight 50.f
 
 #define kHoriMargin 5.f
@@ -18,7 +18,7 @@
 #define kPortraitWidth  50.f
 #define kPortraitHeight 50.f
 
-#define kCalloutWidth   200.0
+#define kCalloutWidth   220.0
 #define kCalloutHeight  70.0
 
 @interface CustomAnnotationView ()<UIActionSheetDelegate>
@@ -86,23 +86,22 @@
             /* Construct custom callout. */
             self.calloutView = [[CustomCalloutView alloc] initWithFrame:CGRectMake(0, 0, kCalloutWidth, kCalloutHeight)];
             self.calloutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,-CGRectGetHeight(self.calloutView.bounds) / 2.f + self.calloutOffset.y);
-            
+//            self.calloutView.backgroundColor = RGB_B(60, 160, 180);
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
             btn.frame = CGRectMake(10, 10, 40, 40);
             [btn setTitle:@"导航" forState:UIControlStateNormal];
             btn.layer.cornerRadius = 5;
             btn.clipsToBounds = YES;
-            [btn setTitleColor:WhiteColor forState:UIControlStateNormal];
-            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-            [btn setBackgroundColor:RGB_B(78, 207, 58)];
+            [btn setTitleColor:RGB_B(60, 160, 180) forState:UIControlStateNormal];
+            [btn setBackgroundColor:WhiteColor];
             [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
             
             [self.calloutView addSubview:btn];
             
-            UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60+10, 15, 100, 30)];
+            UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(50+10, 15, 150, 30)];
             name.backgroundColor = [UIColor clearColor];
             name.textColor = [UIColor whiteColor];
-            name.text = @"自动洗车机";
+            name.text = @"约需6分钟完成洗车";
             [self.calloutView addSubview:name];
         }
         
@@ -142,22 +141,8 @@
         self.bounds = CGRectMake(0.f, 0.f, kWidth, kHeight);
         
         self.backgroundColor = [UIColor clearColor];
-        
-        /* Create portrait image view and add to view hierarchy. */
-//        self.portraitImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kHoriMargin, kVertMargin, kPortraitWidth, kPortraitHeight)];
         self.portraitImageView = [[UIImageView alloc]initWithFrame:self.bounds];
         [self addSubview:self.portraitImageView];
-        
-        /* Create name label. */
-//        self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitWidth + kHoriMargin,
-//                                                                   kVertMargin,
-//                                                                   kWidth - kPortraitWidth - kHoriMargin,
-//                                                                   kHeight - 2 * kVertMargin)];
-//        self.nameLabel.backgroundColor  = [UIColor clearColor];
-//        self.nameLabel.textAlignment    = UITextAlignmentCenter;
-//        self.nameLabel.textColor        = [UIColor whiteColor];
-//        self.nameLabel.font             = [UIFont systemFontOfSize:15.f];
-//        [self addSubview:self.nameLabel];
     }
     
     return self;
