@@ -12,11 +12,12 @@
 
 - (id)init {
     if (self = [super init]) {
-        self.name = @"French Bulldog";
+        self.name = @"廖 企鹅";
         self.phone = @"12345678901";
         self.carType = @"NISSAN GTR";
         self.carNum = @"66666";
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"dog" ofType:@"png"];
+        self.carModel = @"跑车";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"head" ofType:@"png"];
         self.headerPath = path;
     }
     return  self;

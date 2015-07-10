@@ -24,11 +24,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"首页";
+    self.title = @"企 鹅 洗 车";
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0],NSFontAttributeName, nil];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"Open" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    self.navigationItem.leftBarButtonItem = openItem;
+//    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"Open" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
+    UIButton *leftMenuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftMenuBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftMenuBtn addTarget:self action:@selector(openButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [leftMenuBtn setBackgroundImage:[UIImage imageNamed:@"nav_list"] forState:UIControlStateNormal];
+    UIBarButtonItem *leftMenuBarButton = [[UIBarButtonItem alloc] initWithCustomView:leftMenuBtn];
+    self.navigationItem.leftBarButtonItem = leftMenuBarButton;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:[[NSBundle mainBundle] pathForResource:@"nav_bg" ofType:@"png"]] forBarMetrics:UIBarMetricsDefault];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     

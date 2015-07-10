@@ -58,6 +58,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self initNavButton];
     self.title = @"个人资料";
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0],NSFontAttributeName, nil];
     self.navigationController.navigationBarHidden = NO;
     self.view.backgroundColor = WhiteColor;
 

@@ -14,6 +14,11 @@
     BOOL isMove;
     int movingTag;
     NSString* filePath;
+    
+    UIView *phoneView;
+    UIView *carNumView;
+    UIView *carTypeView;
+    UIView *carModelView;
 }
 
 @end
@@ -24,36 +29,66 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"个人资料";
-    self.headerImgView.center = CGPointMake(self.view.frame.size.width/2, self.headerImgView.center.y);
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0],NSFontAttributeName, nil];
+    self.headerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(IPHONE_WIDTH/2-50, 24, 100, 100)];
     self.headerImgView.layer.cornerRadius = self.headerImgView.frame.size.width/2;
-    self.headerImgView.clipsToBounds = YES;
-    
-    self.nameTF.borderStyle = UITextBorderStyleNone;
-    self.nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.phoneTF.borderStyle = UITextBorderStyleNone;
-    self.phoneTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.carNumType.borderStyle = UITextBorderStyleNone;
-    self.carNumType.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.carTypeTF.borderStyle = UITextBorderStyleNone;
-    self.carTypeTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    
     self.headerImgView.image = [UIImage imageWithContentsOfFile:self.user.headerPath];
+    self.headerImgView.clipsToBounds = YES;
+    [self.view addSubview:self.headerImgView];
+    
+    self.nameTF = [[UITextField alloc] initWithFrame:CGRectMake(IPHONE_WIDTH/2-100, 140, 200, 30)];
     self.nameTF.text = self.user.name;
-    self.phoneTF.text = self.user.phone;
-    self.carTypeTF.text = self.user.carType;
-    self.carNumType.text = self.user.carNum;
-    self.nameTF.delegate = self;
-    self.phoneTF.delegate = self;
-    self.carTypeTF.delegate = self;
-    self.carNumType.delegate = self;
-    
+    self.nameTF.textColor = [UIColor colorWithRed:19/255.0f green:147/255.0f blue:178/255.0f alpha:1.0f];
+    self.nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.nameTF.font = [UIFont boldSystemFontOfSize:22.0f];
+    self.nameTF.textAlignment = NSTextAlignmentCenter;
     self.nameTF.tag = 1000;
-    self.phoneTF.tag = 1001;
-    self.carTypeTF.tag = 1002;
-    self.carNumType.tag = 1003;
+    self.nameTF.delegate = self;
+    [self.view addSubview:self.nameTF];
+
+    phoneView = [self createNormaelTextFieldView:@"手机" andPoint:CGPointMake(100, 210) andIsSecure:NO];
+    phoneView.tag = 2001;
+    [self.view addSubview:phoneView];
+    carNumView = [self createNormaelTextFieldView:@"车牌号" andPoint:CGPointMake(100, 280) andIsSecure:NO];
+    carNumView.tag = 2002;
+    [self.view addSubview:carNumView];
+    carTypeView = [self createNormaelTextFieldView:@"品牌" andPoint:CGPointMake(100, 350) andIsSecure:NO];
+    carTypeView.tag = 2003;
+    [self.view addSubview:carTypeView];
+    carModelView = [self createNormaelTextFieldView:@"车型" andPoint:CGPointMake(100, 420) andIsSecure:NO];
+    carModelView.tag = 2004;
+    [self.view addSubview:carModelView];
     
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
-    self.navigationItem.leftBarButtonItem = openItem;
+//    self.nameTF.borderStyle = UITextBorderStyleNone;
+//    self.nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    self.phoneTF.borderStyle = UITextBorderStyleNone;
+//    self.phoneTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    self.carNumType.borderStyle = UITextBorderStyleNone;
+//    self.carNumType.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    self.carTypeTF.borderStyle = UITextBorderStyleNone;
+//    self.carTypeTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    
+//    self.headerImgView.image = [UIImage imageWithContentsOfFile:self.user.headerPath];
+//    self.nameTF.text = self.user.name;
+//    self.phoneTF.text = self.user.phone;
+//    self.carTypeTF.text = self.user.carType;
+//    self.carNumType.text = self.user.carNum;
+//    self.nameTF.delegate = self;
+//    self.phoneTF.delegate = self;
+//    self.carTypeTF.delegate = self;
+//    self.carNumType.delegate = self;
+//    
+//    self.nameTF.tag = 1000;
+//    self.phoneTF.tag = 1001;
+//    self.carTypeTF.tag = 1002;
+//    self.carNumType.tag = 1003;
+    
+    UIButton * leftNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftNacBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftNacBtn setBackgroundImage:[UIImage imageNamed:@"left_nav_button"] forState:UIControlStateNormal];
+    [leftNacBtn addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick)];
     [self.view addGestureRecognizer:tap];
@@ -77,10 +112,11 @@
     [self.phoneTF resignFirstResponder];
     [self.carNumType resignFirstResponder];
     [self.carTypeTF resignFirstResponder];
+    [self.carModel resignFirstResponder];
     
     if (isMove) {
         [UIView animateWithDuration:0.25f animations:^{
-            self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+            self.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
         }];
         isMove = NO;
     }
@@ -108,10 +144,11 @@
     [self.phoneTF resignFirstResponder];
     [self.carNumType resignFirstResponder];
     [self.carTypeTF resignFirstResponder];
+    [self.carModel resignFirstResponder];
     
     if (isMove) {
         [UIView animateWithDuration:0.25f animations:^{
-            self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+            self.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
         }];
         isMove = NO;
     }
@@ -126,20 +163,24 @@
         self.user.phone = self.phoneTF.text;
     } else if (textField.tag == 1002) {
         self.user.carType = self.carTypeTF.text;
-    } else if (textField.tag == 1003) {
         self.user.carNum = self.carNumType.text;
+    } else if (textField.tag == 1003) {
+        self.user.carType = self.carTypeTF.text;
+    } else if (textField.tag == 1004) {
+        self.user.carModel = self.carModel.text;
     }
     return YES;
 }
 
 - (void)keyboardWillShow:(NSNotification *)noti {
     NSDictionary *dic = [noti userInfo];
-    UITextField *textField = (UITextField *)[self.view viewWithTag:selectTag];
+    UIView *textView = (UIView *)[self.view viewWithTag:selectTag+1000];
     
-    if (textField.frame.origin.y+textField.frame.size.height > self.view.frame.size.height-253) {
+    NSLog(@"%f,%f",textView.frame.origin.y+textView.frame.size.height,self.view.frame.size.height-253);
+    if (textView.frame.origin.y+textView.frame.size.height > self.view.frame.size.height-253) {
         isMove = YES;
         movingTag = selectTag;
-        offset = self.view.frame.size.height-303-textField.frame.origin.y;
+        offset = self.view.frame.size.height-303-textView.frame.origin.y;
         [UIView animateWithDuration:0.25f animations:^{
             self.view.frame = CGRectMake(0, offset, self.view.frame.size.width, self.view.frame.size.height);
         }];
@@ -166,6 +207,8 @@
             break;
     }
 }
+
+
 
 //开始拍照
 -(void)takePhoto
@@ -276,6 +319,60 @@
 -(void)sendInfo
 {
     NSLog(@"图片的路径是：%@", filePath);
+}
+
+- (UIView *)createNormaelTextFieldView:(NSString *)textType andPoint:(CGPoint)point andIsSecure:(BOOL)secure
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake((IPHONE_WIDTH - 300)/2, point.y, 300, 45)];
+    
+    UIImageView *imgview = [[UIImageView alloc]initWithFrame:view.bounds];
+    imgview.userInteractionEnabled = YES;
+    imgview.image = [UIImage imageNamed:@"normal_textfield"];
+    [view addSubview:imgview];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 8, 50, 30)];
+    label.text = textType;
+    label.font = Font(16);
+    label.textColor = RGB_B(60, 160, 180);
+    [view addSubview:label];
+    
+    UITextField *field = [[UITextField alloc]initWithFrame:CGRectMake(80, 8, 200, 30)];
+    if ([textType isEqualToString:@"手机"]) {
+        field.tag = 1001;
+        field.delegate = self;
+        field.text = self.user.phone;
+        field.textColor = [UIColor colorWithRed:19/255.0f green:147/255.0f blue:178/255.0f alpha:1.0f];
+        field.clearButtonMode = UITextFieldViewModeWhileEditing;
+        self.phoneTF = field;
+    } else if ([textType isEqualToString:@"车牌号"]) {
+        field.tag = 1002;
+        field.delegate = self;
+        field.text = self.user.carNum;
+        field.textColor = [UIColor colorWithRed:19/255.0f green:147/255.0f blue:178/255.0f alpha:1.0f];
+        field.clearButtonMode = UITextFieldViewModeWhileEditing;
+        self.carNumType = field;
+    } else if ([textType isEqualToString:@"品牌"]) {
+        field.tag = 1003;
+        field.delegate = self;
+        field.text = self.user.carType;
+        field.textColor = [UIColor colorWithRed:19/255.0f green:147/255.0f blue:178/255.0f alpha:1.0f];
+        field.clearButtonMode = UITextFieldViewModeWhileEditing;
+        self.carTypeTF = field;
+    } else if ([textType isEqualToString:@"车型"]) {
+        field.tag = 1004;
+        field.delegate = self;
+        field.text = self.user.carModel;
+        field.textColor = [UIColor colorWithRed:19/255.0f green:147/255.0f blue:178/255.0f alpha:1.0f];
+        field.clearButtonMode = UITextFieldViewModeWhileEditing;
+        self.carModel = field;
+    }
+    field.borderStyle = UITextBorderStyleNone;
+    if (secure) {
+        field.secureTextEntry = YES;
+    }
+    [view addSubview:field];
+    
+    return view;
 }
 
 - (void)didReceiveMemoryWarning {

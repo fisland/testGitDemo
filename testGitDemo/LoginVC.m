@@ -30,6 +30,7 @@
 - (void)initLoginUI{
     //create account
     self.title = @"登录";
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20.0],NSFontAttributeName, nil];
     
     self.navigationController.navigationBarHidden = NO;
 
