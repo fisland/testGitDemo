@@ -15,6 +15,25 @@
 @interface VideoPlayerVC () <ChoiceQuestionViewDelegate, UIAlertViewDelegate>
 {
     BOOL isHide;
+    
+    UIView *alertBgView;
+    
+    UIView  *choiceBgView;
+    UIImageView *choiceView;
+    UILabel *choiceLabel;
+    UIButton *choiceBtn1;
+    UIButton *choiceBtn2;
+    
+    UIView  *faultBgView;
+    UIImageView *faultView;
+    UILabel *faultLabel;
+    UIButton *faultPlayBackBtn;
+    UIButton *faultPayWashBtn;
+    
+    UIView  *rightBgView;
+    UIImageView *rightView;
+    UILabel *rightLabel;
+    UIImageView *rightQRImage;
 }
 
 //播放器对象（只能安放到AVPlayerLayer才能显示）
@@ -42,16 +61,145 @@
     self.resultArray = [NSMutableArray array];
     self.keyArray = [NSArray arrayWithObjects:[NSNumber numberWithInteger:1],[NSNumber numberWithInteger:3], nil];
     self.navigationController.navigationBarHidden = YES;
-    [self.timeSlider setThumbImage:[UIImage imageNamed:@"2011121611432897"] forState:UIControlStateNormal];
+    [self.timeSlider setThumbImage:[UIImage imageNamed:@"clarity"] forState:UIControlStateNormal];
     [self.timeSlider setMaximumTrackTintColor:[UIColor blackColor]];
+    
+    self.titleLabel.center = CGPointMake(self.view.center.x, self.titleLabel.center.y);
     
     [self playMoview:@"welcome_video"];
     //观察当前视频的状态，如果当前状态处于可以播放状态，才能获取总时间
     [_playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     
+    [self initCustomAlertView];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didPlayToEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
 
     // Do any additional setup after loading the view.
+}
+
+- (void)initCustomAlertView {
+    
+    alertBgView = [[UIView alloc] initWithFrame:self.view.frame];
+    alertBgView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
+    [self.view addSubview:alertBgView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(alertViewTapAction)];
+    [self.view addGestureRecognizer:tap];
+    self.view.userInteractionEnabled = YES;
+    
+    //choice 1
+    choiceBgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
+    [self.view addSubview:choiceBgView];
+    
+    choiceView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, choiceBgView.frame.size.width, choiceBgView.frame.size.height)];
+    choiceView.image = [UIImage imageNamed:@"alert_bg.png"];
+    [choiceBgView addSubview:choiceView];
+    
+    choiceLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, choiceView.frame.size.width-46, 90)];
+    choiceLabel.text = @"这个视频是新浪体育跟哪个品牌的合作?";
+    choiceLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    choiceLabel.textAlignment = NSTextAlignmentCenter;
+    choiceLabel.textColor = [UIColor whiteColor];
+    choiceLabel.numberOfLines = 3;
+    [choiceBgView addSubview:choiceLabel];
+    
+    choiceBtn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    choiceBtn1.frame = CGRectMake(30, choiceLabel.frame.origin.y+choiceLabel.frame.size.height,80, 80);
+    [choiceBtn1 setBackgroundImage:[UIImage imageNamed:@"choice_btn1.png"] forState:UIControlStateNormal];
+    choiceBtn1.showsTouchWhenHighlighted = YES;
+    choiceBtn1.tag = 200;
+    [choiceBgView addSubview:choiceBtn1];
+    [choiceBtn1 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    choiceBtn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    choiceBtn2.frame = CGRectMake(choiceView.frame.size.width-30-choiceBtn1.frame.size.width, choiceBtn1.frame.origin.y,choiceBtn1.frame.size.width, choiceBtn1.frame.size.height);
+    [choiceBtn2 setBackgroundImage:[UIImage imageNamed:@"choice_btn2.png"] forState:UIControlStateNormal];
+    choiceBtn2.showsTouchWhenHighlighted = YES;
+    choiceBtn2.tag = 201;
+    [choiceBgView addSubview:choiceBtn2];
+    [choiceBtn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //fault choice
+    faultBgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
+    [self.view addSubview:faultBgView];
+    
+    faultView= [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, faultBgView.frame.size.width, faultBgView.frame.size.height)];
+    faultView.image = [UIImage imageNamed:@"alert_bg.png"];
+    [faultBgView addSubview:faultView];
+    
+    faultLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, faultView.frame.size.width-46, 90)];
+    faultLabel.text = @"回答错误";
+    faultLabel.textAlignment = NSTextAlignmentCenter;
+    faultLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    faultLabel.textAlignment = NSTextAlignmentCenter;
+    faultLabel.textColor = [UIColor whiteColor];
+    faultLabel.numberOfLines = 3;
+    [faultBgView addSubview:faultLabel];
+    
+    faultPlayBackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    faultPlayBackBtn.frame = CGRectMake(30, faultLabel.frame.origin.y+faultLabel.frame.size.height,80, 80);
+    [faultPlayBackBtn setBackgroundImage:[UIImage imageNamed:@"YES button3.png"] forState:UIControlStateNormal];
+    faultPlayBackBtn.showsTouchWhenHighlighted = YES;
+    faultPlayBackBtn.tag = 300;
+    [faultBgView addSubview:faultPlayBackBtn];
+    [faultPlayBackBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    faultPayWashBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    faultPayWashBtn.frame = CGRectMake(faultView.frame.size.width-30-faultPlayBackBtn.frame.size.width, faultPlayBackBtn.frame.origin.y,faultPlayBackBtn.frame.size.width, faultPlayBackBtn.frame.size.height);
+    [faultPayWashBtn setBackgroundImage:[UIImage imageNamed:@"NO button3.png"] forState:UIControlStateNormal];
+    faultPayWashBtn.showsTouchWhenHighlighted = YES;
+    faultPayWashBtn.tag = 301;
+    [faultBgView addSubview:faultPayWashBtn];
+    [faultPayWashBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    //right choice
+    rightBgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
+    [self.view addSubview:rightBgView];
+    
+    rightView= [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, rightBgView.frame.size.width, rightBgView.frame.size.height)];
+    rightView.image = [UIImage imageNamed:@"alert_bg.png"];
+    [rightBgView addSubview:rightView];
+    
+    rightLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, rightView.frame.size.width-46, 60)];
+    rightLabel.text = @"回答正确\n恭喜您获得免费洗车资格";
+    rightLabel.textAlignment = NSTextAlignmentCenter;
+    rightLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    rightLabel.textAlignment = NSTextAlignmentCenter;
+    rightLabel.textColor = [UIColor whiteColor];
+    rightLabel.numberOfLines = 2;
+    [rightBgView addSubview:rightLabel];
+    
+    rightQRImage = [[UIImageView alloc] initWithFrame:CGRectMake((rightBgView.frame.size.width-100)/2, rightLabel.frame.origin.y+rightLabel.frame.size.height+10, 100, 100)];
+    rightQRImage.image = [UIImage imageNamed:@"washCarQRCode.png"];
+    [rightBgView addSubview:rightQRImage];
+    
+    alertBgView.hidden = YES;
+    choiceBgView.hidden = YES;
+    faultBgView.hidden = YES;
+    rightBgView.hidden = YES;
+    
+}
+
+- (void)btnAction:(UIButton *)sender {
+    if (sender.tag == 200) {
+        choiceBgView.hidden = YES;
+        rightBgView.hidden = NO;
+    } else if (sender.tag == 201) {
+        choiceBgView.hidden = YES;
+        faultBgView.hidden = NO;
+    } else if (sender.tag == 300) {
+        faultBgView.hidden = YES;
+        alertBgView.hidden = YES;
+        [_player play];
+        self.playBtn.selected = YES;
+    } else if (sender.tag == 301) {
+        faultBgView.hidden = YES;
+        alertBgView.hidden = YES;
+        [_player removeTimeObserver:self.observer];
+        [_playerItem removeObserver:self forKeyPath:@"status"];
+        [self dismissViewControllerAnimated:YES completion:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"goToPayWashVC" object:nil];
+        }];
+    }
 }
 
 - (void)playMoview:(NSString *)fileName {
@@ -91,6 +239,28 @@
         self.topBarView.hidden = NO;
         self.bottomBarView.hidden = NO;
         isHide = NO;
+        
+        double delayInSeconds = 2.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            // code to be executed on the main queue after delay
+            if (!self.topBarView.hidden) {
+                [self tapAction];
+            }
+        });
+    }
+}
+
+- (void)alertViewTapAction {
+    if (alertBgView.hidden==NO && rightBgView.hidden==NO) {
+        alertBgView.hidden = YES;
+        rightBgView.hidden = YES;
+        
+        [_player removeTimeObserver:self.observer];
+        [_playerItem removeObserver:self forKeyPath:@"status"];
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
     }
 }
 
@@ -120,6 +290,7 @@
 }
 
 - (void)rightAnswer {
+    [_player removeTimeObserver:self.observer];
     [_playerItem removeObserver:self forKeyPath:@"status"];
     [self dismissViewControllerAnimated:YES completion:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"rightAnswer" object:nil];
@@ -128,6 +299,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
+        [_player removeTimeObserver:self.observer];
         [_playerItem removeObserver:self forKeyPath:@"status"];
         [self dismissViewControllerAnimated:YES completion:^{
             
@@ -145,11 +317,13 @@
     time.value = 0;
     [_playerItem seekToTime:time];
     
-    NSArray *messageArray = @[@"汽车轮胎上的沟纹主要作用是？",@"什么颜色的车交通发生交通事故的比率最高？"];
-    NSArray *titlesArray = @[@"A、减轻车身重量",@"B、排除雨水和泥水",@"C、增加车身的缓冲",@"D、增加与地面的摩擦",@"A、红色",@"B、黑色",@"C、绿色",@"D、白色"];
-    
-    ChoiceQuestionView *choiceQuestion = [[ChoiceQuestionView alloc] initWithMessage:messageArray delegate:self otherButtonTitles:titlesArray];
-    [self.view addSubview:choiceQuestion];
+    alertBgView.hidden = NO;
+    choiceBgView.hidden = NO;
+//    NSArray *messageArray = @[@"汽车轮胎上的沟纹主要作用是？",@"什么颜色的车交通发生交通事故的比率最高？"];
+//    NSArray *titlesArray = @[@"A、减轻车身重量",@"B、排除雨水和泥水",@"C、增加车身的缓冲",@"D、增加与地面的摩擦",@"A、红色",@"B、黑色",@"C、绿色",@"D、白色"];
+//    
+//    ChoiceQuestionView *choiceQuestion = [[ChoiceQuestionView alloc] initWithMessage:messageArray delegate:self otherButtonTitles:titlesArray];
+//    [self.view addSubview:choiceQuestion];
 }
 
 //当观察的值发生变化会自动调用
@@ -222,6 +396,10 @@
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PayWashCarVC.h"
 
 @interface VideoPlayerVC : UIViewController
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *topBarView;
 @property (weak, nonatomic) IBOutlet UIView *bottomBarView;
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 - (IBAction)playBtnClick:(id)sender;
 - (IBAction)doneBtnAction:(id)sender;

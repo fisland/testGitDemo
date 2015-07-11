@@ -53,6 +53,22 @@
 		39A525AA1B1F610900BD773F /* ShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525A91B1F610900BD773F /* ShareVC.m */; };
 		39A525AD1B1F611500BD773F /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A525AC1B1F611500BD773F /* HelpVC.m */; };
 		39DBFE6D1B2759C80006EF79 /* ChoiceQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */; };
+		39DC5F3A1B5168CD00563B7B /* main_btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F371B5168CD00563B7B /* main_btn1.png */; };
+		39DC5F3B1B5168CD00563B7B /* main_btn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F381B5168CD00563B7B /* main_btn2.png */; };
+		39DC5F3C1B5168CD00563B7B /* main_btn3.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F391B5168CD00563B7B /* main_btn3.png */; };
+		39DC5F3E1B516DDD00563B7B /* wrjzr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F3D1B516DDD00563B7B /* wrjzr.ttf */; };
+		39DC5F401B51751700563B7B /* clarity.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F3F1B51751700563B7B /* clarity.png */; };
+		39DC5F421B5180E400563B7B /* alert_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F411B5180E400563B7B /* alert_bg.png */; };
+		39DC5F491B5181B400563B7B /* NO button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F431B5181B400563B7B /* NO button1.png */; };
+		39DC5F4A1B5181B400563B7B /* NO button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F441B5181B400563B7B /* NO button2.png */; };
+		39DC5F4B1B5181B400563B7B /* NO button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F451B5181B400563B7B /* NO button3.png */; };
+		39DC5F4C1B5181B400563B7B /* YES button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F461B5181B400563B7B /* YES button1.png */; };
+		39DC5F4D1B5181B400563B7B /* YES button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F471B5181B400563B7B /* YES button2.png */; };
+		39DC5F4E1B5181B400563B7B /* YES button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F481B5181B400563B7B /* YES button3.png */; };
+		39DC5F511B5181E200563B7B /* awoke_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F4F1B5181E200563B7B /* awoke_select.png */; };
+		39DC5F521B5181E200563B7B /* awoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F501B5181E200563B7B /* awoke.png */; };
+		39DC5F551B51820400563B7B /* choice_btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F531B51820400563B7B /* choice_btn1.png */; };
+		39DC5F561B51820400563B7B /* choice_btn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC5F541B51820400563B7B /* choice_btn2.png */; };
 		39DDD0A41B2082D600AFB92D /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A31B2082D600AFB92D /* dog.png */; };
 		39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */; };
 		39DF331D1B28B07900E53264 /* MyPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF331C1B28B07900E53264 /* MyPlayerView.m */; };
@@ -188,6 +204,22 @@
 		39A525AC1B1F611500BD773F /* HelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
 		39DBFE6B1B2759C80006EF79 /* ChoiceQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceQuestionView.h; sourceTree = "<group>"; };
 		39DBFE6C1B2759C80006EF79 /* ChoiceQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceQuestionView.m; sourceTree = "<group>"; };
+		39DC5F371B5168CD00563B7B /* main_btn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_btn1.png; sourceTree = "<group>"; };
+		39DC5F381B5168CD00563B7B /* main_btn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_btn2.png; sourceTree = "<group>"; };
+		39DC5F391B5168CD00563B7B /* main_btn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_btn3.png; sourceTree = "<group>"; };
+		39DC5F3D1B516DDD00563B7B /* wrjzr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrjzr.ttf; sourceTree = "<group>"; };
+		39DC5F3F1B51751700563B7B /* clarity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clarity.png; sourceTree = "<group>"; };
+		39DC5F411B5180E400563B7B /* alert_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_bg.png; sourceTree = "<group>"; };
+		39DC5F431B5181B400563B7B /* NO button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NO button1.png"; sourceTree = "<group>"; };
+		39DC5F441B5181B400563B7B /* NO button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NO button2.png"; sourceTree = "<group>"; };
+		39DC5F451B5181B400563B7B /* NO button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NO button3.png"; sourceTree = "<group>"; };
+		39DC5F461B5181B400563B7B /* YES button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YES button1.png"; sourceTree = "<group>"; };
+		39DC5F471B5181B400563B7B /* YES button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YES button2.png"; sourceTree = "<group>"; };
+		39DC5F481B5181B400563B7B /* YES button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YES button3.png"; sourceTree = "<group>"; };
+		39DC5F4F1B5181E200563B7B /* awoke_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awoke_select.png; sourceTree = "<group>"; };
+		39DC5F501B5181E200563B7B /* awoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awoke.png; sourceTree = "<group>"; };
+		39DC5F531B51820400563B7B /* choice_btn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choice_btn1.png; sourceTree = "<group>"; };
+		39DC5F541B51820400563B7B /* choice_btn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choice_btn2.png; sourceTree = "<group>"; };
 		39DDD0A31B2082D600AFB92D /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		39DDD0A51B209C5C00AFB92D /* Balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon@2x.png"; sourceTree = "<group>"; };
 		39DF331B1B28B07900E53264 /* MyPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPlayerView.h; sourceTree = "<group>"; };
@@ -410,6 +442,7 @@
 		13BCE8CA1B20A39F00EC2AFE /* config */ = {
 			isa = PBXGroup;
 			children = (
+				39DC5F3D1B516DDD00563B7B /* wrjzr.ttf */,
 				13BCE8CB1B20A3DD00EC2AFE /* Config.h */,
 				13E9EEC41B249AE20037E563 /* MAAPIKey.h */,
 			);
@@ -627,7 +660,21 @@
 		85FD80211B4E778B00B0C9E9 /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
-
+				39DC5F531B51820400563B7B /* choice_btn1.png */,
+				39DC5F541B51820400563B7B /* choice_btn2.png */,
+				39DC5F4F1B5181E200563B7B /* awoke_select.png */,
+				39DC5F501B5181E200563B7B /* awoke.png */,
+				39DC5F431B5181B400563B7B /* NO button1.png */,
+				39DC5F441B5181B400563B7B /* NO button2.png */,
+				39DC5F451B5181B400563B7B /* NO button3.png */,
+				39DC5F461B5181B400563B7B /* YES button1.png */,
+				39DC5F471B5181B400563B7B /* YES button2.png */,
+				39DC5F481B5181B400563B7B /* YES button3.png */,
+				39DC5F411B5180E400563B7B /* alert_bg.png */,
+				39DC5F3F1B51751700563B7B /* clarity.png */,
+				39DC5F371B5168CD00563B7B /* main_btn1.png */,
+				39DC5F381B5168CD00563B7B /* main_btn2.png */,
+				39DC5F391B5168CD00563B7B /* main_btn3.png */,
 				13E6BA5B1B4EEEB40078123E /* invist_mail.png */,
 				13E6BA5C1B4EEEB40078123E /* invist_message.png */,
 				13E6BA5D1B4EEEB40078123E /* invist_social.png */,
@@ -636,7 +683,6 @@
 				13E6BA551B4EEA800078123E /* share_weixin.png */,
 				13E6BA561B4EEA800078123E /* share_weixin_quan.png */,
 				13E6BA511B4EDF890078123E /* map_annotation.png */,
-
 				39F4F76F1B4EE80600C38CD7 /* help_icon.png */,
 				39F4F7701B4EE80600C38CD7 /* pay_icon.png */,
 				39F4F7711B4EE80600C38CD7 /* sale_icon.png */,
@@ -644,7 +690,6 @@
 				39F4F76D1B4EE5A500C38CD7 /* cela_bg.png */,
 				39F4F76B1B4EE3E800C38CD7 /* head.png */,
 				39F4F7691B4EE17500C38CD7 /* nav_list.png */,
-
 				13E6BA4F1B4ED4AE0078123E /* checkCode.png */,
 				13E6BA471B4ECF010078123E /* left_nav_button.png */,
 				13E6BA481B4ECF010078123E /* right_nav_button.png */,
@@ -709,6 +754,7 @@
 				TargetAttributes = {
 					13C06F8E1B1B635F003773AB = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = YPP59HARDJ;
 					};
 					13C06FA71B1B635F003773AB = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -741,6 +787,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E006331B2C941000999F6C /* payment_icon_small_alipay@2x.png in Resources */,
+				39DC5F491B5181B400563B7B /* NO button1.png in Resources */,
 				39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */,
 				13E6BA501B4ED4AE0078123E /* checkCode.png in Resources */,
 				13E6BA361B4EB3E50078123E /* LaunchScreen.jpg in Resources */,
@@ -758,7 +805,10 @@
 				39E005FE1B2C65AE00999F6C /* credit_card_large_union_pay@2x.png in Resources */,
 				39F4F7761B4EE80600C38CD7 /* share_icon.png in Resources */,
 				39DF33231B28B0BA00E53264 /* 2011121611432897.png in Resources */,
+				39DC5F521B5181E200563B7B /* awoke.png in Resources */,
 				39F4F76A1B4EE17500C38CD7 /* nav_list.png in Resources */,
+				39DC5F401B51751700563B7B /* clarity.png in Resources */,
+				39DC5F3C1B5168CD00563B7B /* main_btn3.png in Resources */,
 				39E005F91B2C653100999F6C /* alipay_profile_bg@2x.png in Resources */,
 				39E006141B2C839600999F6C /* messages_browser_right_arrow_down@2x.png in Resources */,
 				39E006191B2C844700999F6C /* disclosure_arrow@2x.png in Resources */,
@@ -768,6 +818,7 @@
 				39DDD0A41B2082D600AFB92D /* dog.png in Resources */,
 				39DF33261B28B0BA00E53264 /* moviePlay.png in Resources */,
 				13E9EEB91B2414B40037E563 /* black_envelope_reflected@2x.png in Resources */,
+				39DC5F3A1B5168CD00563B7B /* main_btn1.png in Resources */,
 				39E0062E1B2C93DD00999F6C /* credit_card_large_alipay@2x.png in Resources */,
 				39F4F7741B4EE80600C38CD7 /* pay_icon.png in Resources */,
 				39F4F7731B4EE80600C38CD7 /* help_icon.png in Resources */,
@@ -776,7 +827,10 @@
 				13E6BA521B4EDF890078123E /* map_annotation.png in Resources */,
 				39E0060C1B2C751600999F6C /* card_plus.png in Resources */,
 				13E6BA3E1B4EB5900078123E /* normal_textfield.png in Resources */,
+				39DC5F421B5180E400563B7B /* alert_bg.png in Resources */,
+				39DC5F561B51820400563B7B /* choice_btn2.png in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
+				39DC5F551B51820400563B7B /* choice_btn1.png in Resources */,
 				39E005FF1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png in Resources */,
 				13E6BA571B4EEA800078123E /* share_QQ.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
@@ -793,18 +847,26 @@
 				39E006131B2C839600999F6C /* messages_browser_right_arrow_down.png in Resources */,
 				39E006181B2C844700999F6C /* disclosure_arrow.png in Resources */,
 				39E006051B2C664B00999F6C /* payment_icon_small_creditcard@3x.png in Resources */,
+				39DC5F4E1B5181B400563B7B /* YES button3.png in Resources */,
 				13E9EEB81B2414B40037E563 /* black_envelope_reflected.png in Resources */,
 				39E0062D1B2C93DD00999F6C /* credit_card_large_alipay.png in Resources */,
+				39DC5F3E1B516DDD00563B7B /* wrjzr.ttf in Resources */,
 				39E006341B2C941000999F6C /* payment_icon_small_alipay@3x.png in Resources */,
 				39E005F61B2C653100999F6C /* alipay_logo@2x.png in Resources */,
 				39E005F51B2C653100999F6C /* alipay_logo.png in Resources */,
 				39E005F81B2C653100999F6C /* alipay_profile_bg.png in Resources */,
 				13E6BA491B4ECF010078123E /* left_nav_button.png in Resources */,
+				39DC5F4A1B5181B400563B7B /* NO button2.png in Resources */,
 				39E006091B2C666D00999F6C /* paypal_profile_bg@2x.png in Resources */,
+				39DC5F4C1B5181B400563B7B /* YES button1.png in Resources */,
 				39DF33241B28B0BA00E53264 /* moviePause.png in Resources */,
+				39DC5F511B5181E200563B7B /* awoke_select.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
 				13E6BA3D1B4EB5900078123E /* header.png in Resources */,
 				13E6BA5F1B4EEEB40078123E /* invist_message.png in Resources */,
+				39DC5F4B1B5181B400563B7B /* NO button3.png in Resources */,
+				39DC5F3B1B5168CD00563B7B /* main_btn2.png in Resources */,
+				39DC5F4D1B5181B400563B7B /* YES button2.png in Resources */,
 				13E9EED51B25DE4A0037E563 /* marker_outside_chartreuse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1012,6 +1074,7 @@
 			baseConfigurationReference = D88CD70C2B9F3EA3585395EF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/testGitDemo/pchFile.pch";
 				INFOPLIST_FILE = testGitDemo/Info.plist;
@@ -1025,6 +1088,7 @@
 			baseConfigurationReference = 9EDE449263ABCEB4B0569F39 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/testGitDemo/pchFile.pch";
 				INFOPLIST_FILE = testGitDemo/Info.plist;
