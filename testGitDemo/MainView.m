@@ -15,6 +15,8 @@
 #import "User.h"
 
 @interface MainView () <UIAlertViewDelegate> {
+    UIView *bgView;
+    
     UIView  *freeWashBgView;
     UIImageView *freeWashView;
     UILabel *freeWashLabel;
@@ -61,6 +63,11 @@
 }
 
 - (void)initCustomAlertView {
+    self.navigationItem.leftBarButtonItem.enabled = NO;
+    bgView = [[UIView alloc] initWithFrame:self.view.frame];
+    bgView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:bgView];
+    
     //check user qr
     freeWashBgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
     [self.view addSubview:freeWashBgView];
@@ -198,8 +205,12 @@
 
 - (void)btnAction:(UIButton *)sender {
     if (sender.tag == 100) {
+        self.navigationItem.leftBarButtonItem.enabled = NO;
+        bgView.hidden = NO;
         if (vedioAwokeBtn.selected) {
             vedioBgView.hidden = YES;
+            bgView.hidden = YES;
+            self.navigationItem.leftBarButtonItem.enabled = YES;
             
             UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
             VideoPlayerVC *videoPlayer = [story instantiateViewControllerWithIdentifier:@"PlayerView"];
@@ -221,12 +232,18 @@
         QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
         [self.navigationController pushViewController:qrVC animated:YES];
     } else if (sender.tag == 200) {
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+        bgView.hidden = YES;
         QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
         [self.navigationController pushViewController:qrVC animated:YES];
         freeWashBgView.hidden = YES;
     } else if (sender.tag == 201) {
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+        bgView.hidden = YES;
         freeWashBgView.hidden = YES;
     } else if (sender.tag == 300) {
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+        bgView.hidden = YES;
         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         VideoPlayerVC *videoPlayer = [story instantiateViewControllerWithIdentifier:@"PlayerView"];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
@@ -234,6 +251,8 @@
             vedioBgView.hidden = YES;
         }];
     } else if (sender.tag == 301) {
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+        bgView.hidden = YES;
         vedioBgView.hidden = YES;
     } else if (sender.tag == 302) {
         vedioAwokeBtn.selected = !vedioAwokeBtn.selected;

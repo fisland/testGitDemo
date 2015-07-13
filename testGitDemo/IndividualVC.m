@@ -59,6 +59,7 @@
     carModelView.tag = 2004;
     [self.view addSubview:carModelView];
     
+    
 //    self.nameTF.borderStyle = UITextBorderStyleNone;
 //    self.nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
 //    self.phoneTF.borderStyle = UITextBorderStyleNone;

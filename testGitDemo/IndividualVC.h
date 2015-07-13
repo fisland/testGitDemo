@@ -19,6 +19,8 @@
 @property (strong, nonatomic) UITextField *carNumType;
 @property (nonatomic, strong) UITextField *carModel;
 
+@property (nonatomic, strong) UIButton *quitBtn;
+
 @property (nonatomic, strong) User *user;
 
 @end
