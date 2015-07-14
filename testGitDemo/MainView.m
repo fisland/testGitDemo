@@ -293,7 +293,7 @@
 #pragma mark - init ui
 - (void)initMapView
 {
-    mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+//    mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
     {
@@ -312,7 +312,7 @@
     BaseMapViewController *subViewController = [[NSClassFromString(@"CustomAnnotationViewController") alloc] init];
     
     subViewController.title   = @"地图";
-    subViewController.mapView = mapView;
+//    subViewController.mapView = mapView;
     subViewController.search  = search;
     
     [self.navigationController pushViewController:(UIViewController*)subViewController animated:YES];

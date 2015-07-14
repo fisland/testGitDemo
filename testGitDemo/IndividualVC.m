@@ -114,7 +114,7 @@
 }
 
 - (void)backButtonPressed {
-    [self dismissViewControllerAnimated:YES completion:^{
+    [self dismissViewControllerAnimated:NO completion:^{
         
     }];
 }

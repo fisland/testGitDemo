@@ -130,6 +130,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIButton * leftNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftNacBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftNacBtn setBackgroundImage:[UIImage imageNamed:@"left_nav_button"] forState:UIControlStateNormal];
+    [leftNacBtn addTarget:self action:@selector(gotoback) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
 
 //    [self initNavigationBar];
    
@@ -140,13 +147,6 @@
     [super viewDidAppear:animated];
     
     [super viewWillAppear:animated];
-    
-    UIButton * leftNacBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftNacBtn.frame = CGRectMake(0, 0, 30, 30);
-    [leftNacBtn setBackgroundImage:[UIImage imageNamed:@"left_nav_button"] forState:UIControlStateNormal];
-    [leftNacBtn addTarget:self action:@selector(gotoback) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
-    self.navigationItem.leftBarButtonItem = leftItem;
     
 //    CLLocationCoordinate2D currentCoordinate = CLLocationCoordinate2DMake(113.46, 22.27);
 //    self.mapView.centerCoordinate = currentCoordinate;

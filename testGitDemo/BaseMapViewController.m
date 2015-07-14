@@ -52,7 +52,7 @@
 
 - (void)initMapView
 {
-    self.mapView.frame = self.view.bounds;
+    self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     
     self.mapView.delegate = self;
     
@@ -77,8 +77,9 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     
     titleLabel.backgroundColor  = [UIColor clearColor];
-    titleLabel.textColor        = [UIColor blackColor];
+    titleLabel.textColor        = [UIColor whiteColor];
     titleLabel.text             = title;
+    titleLabel.font             = [UIFont boldSystemFontOfSize:20.0f];
     [titleLabel sizeToFit];
     
     self.navigationItem.titleView = titleLabel;
@@ -91,6 +92,7 @@
     [super viewDidAppear:animated];
     
     self.mapView.visibleMapRect = MAMapRectMake(220880104, 101476980, 272496, 466656);
+    
 }
 
 - (void)viewDidLoad
@@ -103,7 +105,7 @@
     
     [self initTitle:self.title];
     
-    [self initBaseNavigationBar];
+//    [self initBaseNavigationBar];
     
     
 }
