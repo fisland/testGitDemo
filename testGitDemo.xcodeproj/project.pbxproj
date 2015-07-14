@@ -124,6 +124,13 @@
 		85FE83D21B53AF3400A52A2A /* icon40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FE83CC1B53AF3400A52A2A /* icon40@3x.png */; };
 		85FE83D31B53AF3400A52A2A /* icon60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FE83CD1B53AF3400A52A2A /* icon60@2x.png */; };
 		85FE83D41B53AF3400A52A2A /* icon60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FE83CE1B53AF3400A52A2A /* icon60@3x.png */; };
+		85FF90181B549BA800975F0B /* choiceBtn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90111B549BA800975F0B /* choiceBtn1.png */; };
+		85FF90191B549BA800975F0B /* choiceBtn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90121B549BA800975F0B /* choiceBtn2.png */; };
+		85FF901A1B549BA800975F0B /* choiceBtn3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90131B549BA800975F0B /* choiceBtn3.png */; };
+		85FF901B1B549BA800975F0B /* choiceBtn4.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90141B549BA800975F0B /* choiceBtn4.png */; };
+		85FF901C1B549BA800975F0B /* payBtn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90151B549BA800975F0B /* payBtn1.png */; };
+		85FF901D1B549BA800975F0B /* payBtn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90161B549BA800975F0B /* payBtn2.png */; };
+		85FF901E1B549BA800975F0B /* payBtn3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85FF90171B549BA800975F0B /* payBtn3.png */; };
 		EA877C052DCF53904045FE2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA926C48356077FB40A87958 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -289,6 +296,13 @@
 		85FE83CC1B53AF3400A52A2A /* icon40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon40@3x.png"; sourceTree = "<group>"; };
 		85FE83CD1B53AF3400A52A2A /* icon60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon60@2x.png"; sourceTree = "<group>"; };
 		85FE83CE1B53AF3400A52A2A /* icon60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon60@3x.png"; sourceTree = "<group>"; };
+		85FF90111B549BA800975F0B /* choiceBtn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choiceBtn1.png; sourceTree = "<group>"; };
+		85FF90121B549BA800975F0B /* choiceBtn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choiceBtn2.png; sourceTree = "<group>"; };
+		85FF90131B549BA800975F0B /* choiceBtn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choiceBtn3.png; sourceTree = "<group>"; };
+		85FF90141B549BA800975F0B /* choiceBtn4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choiceBtn4.png; sourceTree = "<group>"; };
+		85FF90151B549BA800975F0B /* payBtn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = payBtn1.png; sourceTree = "<group>"; };
+		85FF90161B549BA800975F0B /* payBtn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = payBtn2.png; sourceTree = "<group>"; };
+		85FF90171B549BA800975F0B /* payBtn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = payBtn3.png; sourceTree = "<group>"; };
 		9EDE449263ABCEB4B0569F39 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA926C48356077FB40A87958 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88CD70C2B9F3EA3585395EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -672,6 +686,13 @@
 		85FD80211B4E778B00B0C9E9 /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				85FF90111B549BA800975F0B /* choiceBtn1.png */,
+				85FF90121B549BA800975F0B /* choiceBtn2.png */,
+				85FF90131B549BA800975F0B /* choiceBtn3.png */,
+				85FF90141B549BA800975F0B /* choiceBtn4.png */,
+				85FF90151B549BA800975F0B /* payBtn1.png */,
+				85FF90161B549BA800975F0B /* payBtn2.png */,
+				85FF90171B549BA800975F0B /* payBtn3.png */,
 				85FE83C91B53AF3400A52A2A /* icon29@2x.png */,
 				85FE83CA1B53AF3400A52A2A /* icon29@3x.png */,
 				85FE83CB1B53AF3400A52A2A /* icon40@2x.png */,
@@ -808,6 +829,7 @@
 				39DC5F491B5181B400563B7B /* NO button1.png in Resources */,
 				39E005F71B2C653100999F6C /* alipay_logo@3x.png in Resources */,
 				13E6BA501B4ED4AE0078123E /* checkCode.png in Resources */,
+				85FF901C1B549BA800975F0B /* payBtn1.png in Resources */,
 				85FE83D41B53AF3400A52A2A /* icon60@3x.png in Resources */,
 				13E6BA361B4EB3E50078123E /* LaunchScreen.jpg in Resources */,
 				13E6BA581B4EEA800078123E /* share_weibo.png in Resources */,
@@ -828,9 +850,11 @@
 				39DC5F521B5181E200563B7B /* awoke.png in Resources */,
 				39F4F76A1B4EE17500C38CD7 /* nav_list.png in Resources */,
 				39DC5F401B51751700563B7B /* clarity.png in Resources */,
+				85FF901B1B549BA800975F0B /* choiceBtn4.png in Resources */,
 				39DC5F3C1B5168CD00563B7B /* main_btn3.png in Resources */,
 				39E005F91B2C653100999F6C /* alipay_profile_bg@2x.png in Resources */,
 				39E006141B2C839600999F6C /* messages_browser_right_arrow_down@2x.png in Resources */,
+				85FF901A1B549BA800975F0B /* choiceBtn3.png in Resources */,
 				85FE83CF1B53AF3400A52A2A /* icon29@2x.png in Resources */,
 				39E006191B2C844700999F6C /* disclosure_arrow@2x.png in Resources */,
 				39F4F7751B4EE80600C38CD7 /* sale_icon.png in Resources */,
@@ -848,14 +872,17 @@
 				13E6BA5A1B4EEA800078123E /* share_weixin_quan.png in Resources */,
 				13E6BA521B4EDF890078123E /* map_annotation.png in Resources */,
 				39E0060C1B2C751600999F6C /* card_plus.png in Resources */,
+				85FF90191B549BA800975F0B /* choiceBtn2.png in Resources */,
 				13E6BA3E1B4EB5900078123E /* normal_textfield.png in Resources */,
 				39DC5F421B5180E400563B7B /* alert_bg.png in Resources */,
 				39DC5F561B51820400563B7B /* choice_btn2.png in Resources */,
 				39DDD0A61B209C5C00AFB92D /* Balloon@2x.png in Resources */,
+				85FF901E1B549BA800975F0B /* payBtn3.png in Resources */,
 				39DC5F551B51820400563B7B /* choice_btn1.png in Resources */,
 				39E005FF1B2C65AE00999F6C /* credit_card_large_union_pay@3x.png in Resources */,
 				85FE83D01B53AF3400A52A2A /* icon29@3x.png in Resources */,
 				13E6BA571B4EEA800078123E /* share_QQ.png in Resources */,
+				85FF90181B549BA800975F0B /* choiceBtn1.png in Resources */,
 				13C06FA31B1B635F003773AB /* LaunchScreen.xib in Resources */,
 				39F4F76C1B4EE3E800C38CD7 /* head.png in Resources */,
 				39E006081B2C666D00999F6C /* paypal_profile_bg.png in Resources */,
@@ -887,6 +914,7 @@
 				39DC5F511B5181E200563B7B /* awoke_select.png in Resources */,
 				13C06FA01B1B635F003773AB /* Images.xcassets in Resources */,
 				13E6BA3D1B4EB5900078123E /* header.png in Resources */,
+				85FF901D1B549BA800975F0B /* payBtn2.png in Resources */,
 				13E6BA5F1B4EEEB40078123E /* invist_message.png in Resources */,
 				39DC5F4B1B5181B400563B7B /* NO button3.png in Resources */,
 				39DC5F3B1B5168CD00563B7B /* main_btn2.png in Resources */,

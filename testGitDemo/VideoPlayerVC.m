@@ -18,11 +18,17 @@
     
     UIView *alertBgView;
     
-    UIView  *choiceBgView;
-    UIImageView *choiceView;
-    UILabel *choiceLabel;
-    UIButton *choiceBtn1;
-    UIButton *choiceBtn2;
+    UIView  *choice1BgView;
+    UIImageView *choice1View;
+    UILabel *choice1Label;
+    UIButton *choice1Btn1;
+    UIButton *choice1Btn2;
+    
+    UIView  *choice2BgView;
+    UIImageView *choice2View;
+    UILabel *choice2Label;
+    UIButton *choice2Btn1;
+    UIButton *choice2Btn2;
     
     UIView  *faultBgView;
     UIImageView *faultView;
@@ -83,40 +89,71 @@
     alertBgView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
     [self.view addSubview:alertBgView];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(alertViewTapAction)];
-    [self.view addGestureRecognizer:tap];
-    self.view.userInteractionEnabled = YES;
+    [alertBgView addGestureRecognizer:tap];
     
     //choice 1
-    choiceBgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
-    [self.view addSubview:choiceBgView];
+    choice1BgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
+    [self.view addSubview:choice1BgView];
     
-    choiceView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, choiceBgView.frame.size.width, choiceBgView.frame.size.height)];
-    choiceView.image = [UIImage imageNamed:@"alert_bg.png"];
-    [choiceBgView addSubview:choiceView];
+    choice1View = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, choice1BgView.frame.size.width, choice1BgView.frame.size.height)];
+    choice1View.image = [UIImage imageNamed:@"alert_bg.png"];
+    [choice1BgView addSubview:choice1View];
     
-    choiceLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, choiceView.frame.size.width-46, 90)];
-    choiceLabel.text = @"这个视频是新浪体育跟哪个品牌的合作?";
-    choiceLabel.font = [UIFont boldSystemFontOfSize:20.0f];
-    choiceLabel.textAlignment = NSTextAlignmentCenter;
-    choiceLabel.textColor = [UIColor whiteColor];
-    choiceLabel.numberOfLines = 3;
-    [choiceBgView addSubview:choiceLabel];
+    choice1Label = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, choice1View.frame.size.width-46, 90)];
+    choice1Label.text = @"视频中司机驾驶的是哪个牌子的汽车?";
+    choice1Label.font = [UIFont boldSystemFontOfSize:20.0f];
+    choice1Label.textAlignment = NSTextAlignmentCenter;
+    choice1Label.textColor = [UIColor whiteColor];
+    choice1Label.numberOfLines = 3;
+    [choice1BgView addSubview:choice1Label];
     
-    choiceBtn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    choiceBtn1.frame = CGRectMake(30, choiceLabel.frame.origin.y+choiceLabel.frame.size.height,80, 80);
-    [choiceBtn1 setBackgroundImage:[UIImage imageNamed:@"choice_btn1.png"] forState:UIControlStateNormal];
-    choiceBtn1.showsTouchWhenHighlighted = YES;
-    choiceBtn1.tag = 200;
-    [choiceBgView addSubview:choiceBtn1];
-    [choiceBtn1 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    choice1Btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    choice1Btn1.frame = CGRectMake(30, choice1Label.frame.origin.y+choice1Label.frame.size.height,80, 80);
+    [choice1Btn1 setBackgroundImage:[UIImage imageNamed:@"choiceBtn1.png"] forState:UIControlStateNormal];
+    choice1Btn1.showsTouchWhenHighlighted = YES;
+    choice1Btn1.tag = 200;
+    [choice1BgView addSubview:choice1Btn1];
+    [choice1Btn1 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    choiceBtn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    choiceBtn2.frame = CGRectMake(choiceView.frame.size.width-30-choiceBtn1.frame.size.width, choiceBtn1.frame.origin.y,choiceBtn1.frame.size.width, choiceBtn1.frame.size.height);
-    [choiceBtn2 setBackgroundImage:[UIImage imageNamed:@"choice_btn2.png"] forState:UIControlStateNormal];
-    choiceBtn2.showsTouchWhenHighlighted = YES;
-    choiceBtn2.tag = 201;
-    [choiceBgView addSubview:choiceBtn2];
-    [choiceBtn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    choice1Btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    choice1Btn2.frame = CGRectMake(choice1View.frame.size.width-30-choice1Btn1.frame.size.width, choice1Btn1.frame.origin.y,choice1Btn1.frame.size.width, choice1Btn1.frame.size.height);
+    [choice1Btn2 setBackgroundImage:[UIImage imageNamed:@"choiceBtn2.png"] forState:UIControlStateNormal];
+    choice1Btn2.showsTouchWhenHighlighted = YES;
+    choice1Btn2.tag = 201;
+    [choice1BgView addSubview:choice1Btn2];
+    [choice1Btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //choice 2
+    choice2BgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
+    [self.view addSubview:choice2BgView];
+    
+    choice2View = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, choice2BgView.frame.size.width, choice2BgView.frame.size.height)];
+    choice2View.image = [UIImage imageNamed:@"alert_bg.png"];
+    [choice2BgView addSubview:choice2View];
+    
+    choice2Label = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, choice2View.frame.size.width-46, 90)];
+    choice2Label.text = @"这个视频是哪个打车软件的广告?";
+    choice2Label.font = [UIFont boldSystemFontOfSize:20.0f];
+    choice2Label.textAlignment = NSTextAlignmentCenter;
+    choice2Label.textColor = [UIColor whiteColor];
+    choice2Label.numberOfLines = 3;
+    [choice2BgView addSubview:choice2Label];
+    
+    choice2Btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    choice2Btn1.frame = CGRectMake(30, choice2Label.frame.origin.y+choice2Label.frame.size.height,80, 80);
+    [choice2Btn1 setBackgroundImage:[UIImage imageNamed:@"choiceBtn3.png"] forState:UIControlStateNormal];
+    choice2Btn1.showsTouchWhenHighlighted = YES;
+    choice2Btn1.tag = 202;
+    [choice2BgView addSubview:choice2Btn1];
+    [choice2Btn1 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    choice2Btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    choice2Btn2.frame = CGRectMake(choice2View.frame.size.width-30-choice2Btn1.frame.size.width, choice2Btn1.frame.origin.y,choice2Btn1.frame.size.width, choice2Btn1.frame.size.height);
+    [choice2Btn2 setBackgroundImage:[UIImage imageNamed:@"choiceBtn4.png"] forState:UIControlStateNormal];
+    choice2Btn2.showsTouchWhenHighlighted = YES;
+    choice2Btn2.tag = 203;
+    [choice2BgView addSubview:choice2Btn2];
+    [choice2Btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     
     //fault choice
     faultBgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
@@ -173,7 +210,8 @@
     [rightBgView addSubview:rightQRImage];
     
     alertBgView.hidden = YES;
-    choiceBgView.hidden = YES;
+    choice1BgView.hidden = YES;
+    choice2BgView.hidden = YES;
     faultBgView.hidden = YES;
     rightBgView.hidden = YES;
     
@@ -181,10 +219,17 @@
 
 - (void)btnAction:(UIButton *)sender {
     if (sender.tag == 200) {
-        choiceBgView.hidden = YES;
-        rightBgView.hidden = NO;
+        choice1BgView.hidden = YES;
+        faultBgView.hidden = NO;
     } else if (sender.tag == 201) {
-        choiceBgView.hidden = YES;
+        choice1BgView.hidden = YES;
+        choice2BgView.hidden = NO;
+    } else if (sender.tag == 202) {
+        choice2BgView.hidden = YES;
+        rightBgView.hidden = NO;
+        alertBgView.userInteractionEnabled = YES;
+    } else if (sender.tag == 203) {
+        choice2BgView.hidden = YES;
         faultBgView.hidden = NO;
     } else if (sender.tag == 300) {
         faultBgView.hidden = YES;
@@ -318,7 +363,7 @@
     [_playerItem seekToTime:time];
     
     alertBgView.hidden = NO;
-    choiceBgView.hidden = NO;
+    choice1BgView.hidden = NO;
 //    NSArray *messageArray = @[@"汽车轮胎上的沟纹主要作用是？",@"什么颜色的车交通发生交通事故的比率最高？"];
 //    NSArray *titlesArray = @[@"A、减轻车身重量",@"B、排除雨水和泥水",@"C、增加车身的缓冲",@"D、增加与地面的摩擦",@"A、红色",@"B、黑色",@"C、绿色",@"D、白色"];
 //    

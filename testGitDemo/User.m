@@ -14,9 +14,9 @@
     if (self = [super init]) {
         self.name = @"廖 企鹅";
         self.phone = @"12345678901";
-        self.carType = @"NISSAN GTR";
+        self.carType = @"大众";
         self.carNum = @"66666";
-        self.carModel = @"跑车";
+        self.carModel = @"朗逸";
         NSString *path = [[NSBundle mainBundle] pathForResource:@"head" ofType:@"png"];
         self.headerPath = path;
     }

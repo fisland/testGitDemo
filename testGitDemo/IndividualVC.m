@@ -46,19 +46,30 @@
     self.nameTF.delegate = self;
     [self.view addSubview:self.nameTF];
 
-    phoneView = [self createNormaelTextFieldView:@"手机" andPoint:CGPointMake(100, 210) andIsSecure:NO];
+    NSInteger btnWidth = 300;
+    NSInteger btnPonintX = (IPHONE_WIDTH - btnWidth) / 2;
+    
+    phoneView = [self createNormaelTextFieldView:@"手机" andPoint:CGPointMake(btnPonintX, 210) andIsSecure:NO];
     phoneView.tag = 2001;
     [self.view addSubview:phoneView];
-    carNumView = [self createNormaelTextFieldView:@"车牌号" andPoint:CGPointMake(100, 280) andIsSecure:NO];
+    carNumView = [self createNormaelTextFieldView:@"车牌号" andPoint:CGPointMake(btnPonintX, 280) andIsSecure:NO];
     carNumView.tag = 2002;
     [self.view addSubview:carNumView];
-    carTypeView = [self createNormaelTextFieldView:@"品牌" andPoint:CGPointMake(100, 350) andIsSecure:NO];
+    carTypeView = [self createNormaelTextFieldView:@"品牌" andPoint:CGPointMake(btnPonintX, 350) andIsSecure:NO];
     carTypeView.tag = 2003;
     [self.view addSubview:carTypeView];
-    carModelView = [self createNormaelTextFieldView:@"车型" andPoint:CGPointMake(100, 420) andIsSecure:NO];
+    carModelView = [self createNormaelTextFieldView:@"车型" andPoint:CGPointMake(btnPonintX, 420) andIsSecure:NO];
     carModelView.tag = 2004;
     [self.view addSubview:carModelView];
     
+    self.quitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.quitBtn.frame = CGRectMake(btnPonintX, 490, btnWidth, 45);
+    [self.quitBtn setBackgroundImage:[UIImage imageNamed:@"normal_button"] forState:UIControlStateNormal];
+    [self.quitBtn setTitle:@"退    出" forState:UIControlStateNormal];
+    [self.quitBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.quitBtn.titleLabel.font = [UIFont boldSystemFontOfSize:24.0f];
+    [self.view addSubview:self.quitBtn];
+    [self.quitBtn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
     
 //    self.nameTF.borderStyle = UITextBorderStyleNone;
 //    self.nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -374,6 +385,13 @@
     [view addSubview:field];
     
     return view;
+}
+
+- (void)btnAction {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    [userdefault setObject:nil forKey:CurrentLoginUser];
+    [appDelegate setupLoginRegistUI];
 }
 
 - (void)didReceiveMemoryWarning {
