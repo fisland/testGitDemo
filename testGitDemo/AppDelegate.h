@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) LeafMenuViewController *leafMenu;
 @property (nonatomic, assign) BOOL                   isLeftBarButtonClick;
+@property (strong, nonatomic) UINavigationController *mainNav;
 
 - (void)openMenu;
 - (void)closeMenu;

@@ -11,6 +11,8 @@
 #import "ChoiceQuestionView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "MyPlayerView.h"
+#import "BaseMapViewController.h"
+#import "AppDelegate.h"
 
 @interface VideoPlayerVC () <ChoiceQuestionViewDelegate, UIAlertViewDelegate>
 {
@@ -309,8 +311,14 @@
         if (self.autoPushTimer) {
             [self.autoPushTimer invalidate];
         }
+
+        BaseMapViewController *subViewController = [[NSClassFromString(@"CustomAnnotationViewController") alloc] init];
+        
+        subViewController.title   = @"地图";
+        AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+        [delegate.mainNav pushViewController:subViewController animated:YES];
+        
         [self dismissViewControllerAnimated:YES completion:^{
-            [[NSNotificationCenter defaultCenter] postNotificationName:PUSH_MAPVIEW object:nil];
         }];
     }
 }
@@ -416,16 +424,6 @@
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)playBtnClick:(UIButton *)sender {
     sender.selected = !sender.selected;
     
@@ -459,8 +457,15 @@
     
     [_player removeTimeObserver:self.observer];
     [_playerItem removeObserver:self forKeyPath:@"status"];
+
+    BaseMapViewController *subViewController = [[NSClassFromString(@"CustomAnnotationViewController") alloc] init];
+    subViewController.title   = @"地图";
+    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [delegate.mainNav pushViewController:subViewController animated:YES];
+    
     [self dismissViewControllerAnimated:YES completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:PUSH_MAPVIEW object:nil];
+
     }];
 }
 

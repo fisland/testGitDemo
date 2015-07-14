@@ -51,6 +51,8 @@
 - (void)setUpMenuUI{
     MainView *main = [[MainView alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:main];
+    self.mainNav = nav;
+    
     WJMenuView *menu = [[WJMenuView alloc] init];
     UINavigationController *menuNav = [[UINavigationController alloc] initWithRootViewController:menu];
     User *user = [[User alloc] init];

@@ -223,6 +223,7 @@
             VideoPlayerVC *videoPlayer = [story instantiateViewControllerWithIdentifier:@"PlayerView"];
             videoPlayer.delegate = self;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
+            
             [self.navigationController presentViewController:nav animated:YES completion:^{
                 
             }];
