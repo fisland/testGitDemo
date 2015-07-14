@@ -35,7 +35,6 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftNacBtn];
     self.navigationItem.leftBarButtonItem = leftItem;
     
-    [self initSearch];
     [self initMapView];
     // Do any additional setup after loading the view from its nib.
 }
@@ -73,11 +72,6 @@
     }
 }
 
-/* 初始化search. */
-- (void)initSearch
-{
-    self.search = [[AMapSearchAPI alloc] initWithSearchKey:[MAMapServices sharedServices].apiKey Delegate:nil];
-}
 #pragma mark - action
 - (IBAction)gotoWashCarAction:(id)sender {
 //    CustomAnnotationViewController *vc = [[CustomAnnotationViewController alloc]init];
@@ -87,7 +81,7 @@
     
     subViewController.title   = @"地图";
 //    subViewController.mapView = self.mapView;
-    subViewController.search  = self.search;
+//    subViewController.search  = self.search;
     
     [self.navigationController pushViewController:(UIViewController*)subViewController animated:YES];
 }
