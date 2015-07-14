@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PayWashCarVC.h"
 
+@protocol UIVideoPlayerDelegate;
+
 @interface VideoPlayerVC : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISlider *timeSlider;
@@ -21,5 +23,15 @@
 
 - (IBAction)playBtnClick:(id)sender;
 - (IBAction)doneBtnAction:(id)sender;
+
+@property (nonatomic, assign) id<UIVideoPlayerDelegate> delegate;
+
+@end
+
+@protocol UIVideoPlayerDelegate <NSObject>
+
+@optional
+
+- (void)pushMapView;
 
 @end

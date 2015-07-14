@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseMapViewController.h"
 
 @interface MainView : UIViewController
 

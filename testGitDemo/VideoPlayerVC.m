@@ -57,6 +57,8 @@
 
 @property (nonatomic, strong) id            observer;
 
+@property (nonatomic, strong) NSTimer       *autoPushTimer;
+
 @end
 
 @implementation VideoPlayerVC
@@ -89,7 +91,7 @@
     alertBgView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
     [self.view addSubview:alertBgView];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(alertViewTapAction)];
-    [alertBgView addGestureRecognizer:tap];
+    [self.view addGestureRecognizer:tap];
     
     //choice 1
     choice1BgView = [[UIView alloc] initWithFrame:CGRectMake(70, (self.view.frame.size.height-200)/2-64, self.view.frame.size.width-70*2, 200)];
@@ -228,6 +230,7 @@
         choice2BgView.hidden = YES;
         rightBgView.hidden = NO;
         alertBgView.userInteractionEnabled = YES;
+        self.autoPushTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(autoPushMapView) userInfo:nil repeats:NO];
     } else if (sender.tag == 203) {
         choice2BgView.hidden = YES;
         faultBgView.hidden = NO;
@@ -303,8 +306,11 @@
         
         [_player removeTimeObserver:self.observer];
         [_playerItem removeObserver:self forKeyPath:@"status"];
+        if (self.autoPushTimer) {
+            [self.autoPushTimer invalidate];
+        }
         [self dismissViewControllerAnimated:YES completion:^{
-            
+            [[NSNotificationCenter defaultCenter] postNotificationName:PUSH_MAPVIEW object:nil];
         }];
     }
 }
@@ -445,6 +451,17 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+- (void)autoPushMapView {
+    alertBgView.hidden = YES;
+    rightBgView.hidden = YES;
+    
+    [_player removeTimeObserver:self.observer];
+    [_playerItem removeObserver:self forKeyPath:@"status"];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:PUSH_MAPVIEW object:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -67,7 +67,7 @@
 - (void)initBaseNavigationBar
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
-                                                                             style:UIBarButtonItemStyleBordered
+                                                                             style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(returnAction)];
 }
@@ -97,13 +97,15 @@
 {
     [super viewDidLoad];
     
+    [self initMapView];
+    
+    [self initSearch];
+    
     [self initTitle:self.title];
     
     [self initBaseNavigationBar];
     
-    [self initMapView];
     
-    [self initSearch];
 }
 
 @end

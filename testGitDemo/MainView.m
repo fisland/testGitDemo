@@ -14,7 +14,7 @@
 #import "PayWashCarVC.h"
 #import "User.h"
 
-@interface MainView () <UIAlertViewDelegate> {
+@interface MainView () <UIAlertViewDelegate, UIVideoPlayerDelegate> {
     UIView *bgView;
     
     UIView  *freeWashBgView;
@@ -31,8 +31,12 @@
     UIButton *vedioAwokeBtn;
     UILabel *vedioAwokeLabel;
     UIControl *vedioControl;
+    MAMapView *mapView;
+    AMapSearchAPI *search;
     
 }
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -56,9 +60,12 @@
     
     [self initButton];
     [self initCustomAlertView];
+    [self initMapView];
+    [self initSearch];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRightAnswer:) name:@"rightAnswer" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goToPayWashVC:) name:@"goToPayWashVC" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushMapView) name:PUSH_MAPVIEW object:nil];
     // Do any additional setup after loading the view.
 }
 
@@ -109,7 +116,7 @@
     [vedioBgView addSubview:vedioView];
     
     vedioTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 10, freeWashView.frame.size.width-46, 90)];
-    vedioTitleLabel.text = @"免费洗车您观看 15秒 视频并正确回答两道问题后使用(建议您再WIFI环境下打开)";
+    vedioTitleLabel.text = @"即将播放 15秒视频，观看完成后正确回答两道问题获得免费洗车资格。";
     vedioTitleLabel.font = [UIFont boldSystemFontOfSize:19.0f];
     vedioTitleLabel.textColor = [UIColor whiteColor];
     vedioTitleLabel.numberOfLines = 3;
@@ -214,6 +221,7 @@
             
             UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
             VideoPlayerVC *videoPlayer = [story instantiateViewControllerWithIdentifier:@"PlayerView"];
+            videoPlayer.delegate = self;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoPlayer];
             [self.navigationController presentViewController:nav animated:YES completion:^{
                 
@@ -234,8 +242,8 @@
     } else if (sender.tag == 200) {
         self.navigationItem.leftBarButtonItem.enabled = YES;
         bgView.hidden = YES;
-        QRCodeViewController *qrVC = [[QRCodeViewController alloc]initWithNibName:@"QRCodeViewController" bundle:nil];
-        [self.navigationController pushViewController:qrVC animated:YES];
+        
+        [self pushMapView];
         freeWashBgView.hidden = YES;
     } else if (sender.tag == 201) {
         self.navigationItem.leftBarButtonItem.enabled = YES;
@@ -280,6 +288,34 @@
 - (void)goToPayWashVC:(NSNotification *)noti {
     PayWashCarVC *payWashCarVC = [[PayWashCarVC alloc]init];
     [self.navigationController pushViewController:payWashCarVC animated:YES];
+}
+
+#pragma mark - init ui
+- (void)initMapView
+{
+    mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+    {
+        self.locationManager = [[CLLocationManager alloc] init];
+        [self.locationManager requestAlwaysAuthorization];
+    }
+}
+
+/* 初始化search. */
+- (void)initSearch
+{
+    search = [[AMapSearchAPI alloc] initWithSearchKey:[MAMapServices sharedServices].apiKey Delegate:nil];
+}
+
+- (void)pushMapView {
+    BaseMapViewController *subViewController = [[NSClassFromString(@"CustomAnnotationViewController") alloc] init];
+    
+    subViewController.title   = @"地图";
+    subViewController.mapView = mapView;
+    subViewController.search  = search;
+    
+    [self.navigationController pushViewController:(UIViewController*)subViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

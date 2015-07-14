@@ -52,6 +52,10 @@
 //-------------------登录宏定义-------------------
 #define CurrentLoginUser @"CurrentLoginUser"
 #define CurrentLoginPassWord @"currentLoginPassWord"
+
+//-------------------通知中心宏定义-------------------
+#define PUSH_MAPVIEW @"pushMapView"
+
 #endif
 
 
